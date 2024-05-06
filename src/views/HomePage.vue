@@ -8,9 +8,9 @@
         <div>
 
         </div>
-        <p>
-            用户购票须知
-        </p>
+        <RouterLink to="/TicketImformation">
+          用户须知
+        </RouterLink>
     </div>
 
     <div class="select">
@@ -24,6 +24,8 @@
 <script setup>
 import { ref } from 'vue'
 import Footer from '@/components/Footer.vue'
+import { RouterLink } from 'vue-router';
+
 </script>
 
 <style >
@@ -35,17 +37,19 @@ import Footer from '@/components/Footer.vue'
 }
 
 .photo {
-  flex: 2; /* Photo组件占据剩余空间 */
-  position: relative; /* 相对定位，用于绝对定位子元素 */
+  flex: 1.5; /* Photo组件占据剩余空间 */
+  display: flex;
 }
 
 .photo img {
+  display: flex;
   width: 100%; /* 图片宽度与父元素相同 */
   height: 100%; /* 图片高度与父元素相同 */
   object-fit: cover; /* 图片填充整个区域，保持比例 */
 }
 
 .notice {
+  display: flex;
   flex: 0.5; /* Notice组件占据剩余空间的2倍 */
   background-color: #dce6b6;
   display: flex; /* 使用Flex布局 */
@@ -54,15 +58,17 @@ import Footer from '@/components/Footer.vue'
 }
 
 .notice p {
+  display: flex;
   margin: 0; /* 去除段落的默认边距 */
 }
 
 .select {
-  flex: 5; /* Select组件占据剩余空间 */
+  flex: 8; /* Select组件占据剩余空间 */
   background-color: #f2f2f2;
 }
 .footer{
-    flex: 0.5;
+  display: flex;
+    flex: 0.4;
     display: flex;
     justify-content: space-around;
     align-items: center;

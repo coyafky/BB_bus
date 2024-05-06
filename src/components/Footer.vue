@@ -3,7 +3,7 @@
 <template>
   <footer class="footer">
     <router-link to="/">首页</router-link>
-    <router-link to="/">购票</router-link>
+    <router-link to="/orderTicket">购票</router-link>
     <router-link to="/user">我的</router-link>
   </footer>
 </template>
