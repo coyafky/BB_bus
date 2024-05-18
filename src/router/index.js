@@ -9,6 +9,14 @@ import addpassnegers from "../views/Addpassengers.vue";
 import useragreement from "../views/UseagreementPage.vue";
 import TicketImformation from "../views/TicketpurchaseinformationPage.vue";
 import OrderTicket from "@/views/OrderPage.vue";
+import voucher from "@/views/voucherPage.vue";
+import unfinished from "@/views/unfinishedPage.vue";
+import already from "@/views/Alreadytraveled.vue";
+import Start from "@/views/Start.vue";
+import End from "@/views/End.vue";
+import QueryPage from "@/views/QueryPage.vue";
+import paymentPage from  "@/views/PaymentPage.vue";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,8 +35,8 @@ const router = createRouter({
       path: "/passengermanagement",
       name: "passengermanagement",
       component: passengermanagement,
-      
     },
+
     {
       path: "/addpassnegers",
       name: "addpassnegers",
@@ -59,7 +67,46 @@ const router = createRouter({
       path: "/orderTicket",
       name: "orderTicket",
       component: OrderTicket,
+
+      children: [
+        {
+          path: "unfinished",
+          name: "unfinished",
+          component: unfinished,
+        },
+
+        {
+          path: "already",
+          name: "already",
+          component: already,
+        },
+      ],
     },
+    {
+      path: "/voucher",
+      name: "voucher",
+      component: voucher,
+    },
+    {
+      path: "/Start",
+      name: "Start",
+      component: Start,
+    },
+    {
+      path: '/End',
+      name: 'End',
+      component: End
+    },
+    {
+      path: "/QueryPage",
+      name: "QueryPage",
+      component: QueryPage,
+    },
+    {
+      path: "/paymentPage",
+      name: "paymentPage",
+      component: paymentPage,
+    }
   ],
 });
 

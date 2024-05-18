@@ -11,6 +11,17 @@
             </router-link>
         </button>
     </header>
+
+    <main>
+        <div>
+            <!-- 服务器传入的数据 -->
+        </div>
+        <div class="rule">
+            根据新规，乘车人必须实名乘车
+            <br>
+            信息录入交通部数据库，保护乘客个人信息安全
+        </div>
+    </main>
     
 </template>
 
@@ -25,7 +36,7 @@ provide('route', route);
 
 </script>
 
-<style >
+<style scoped >
 header{
     background-color: red;
     display: flex;
@@ -45,6 +56,14 @@ header button{
     padding: 5px 10px;
     border-radius: 10px;
     
+}
+
+.rule{
+    font-size: 16x;
+    color: red;
+    padding: 0 10px;
+    text-align: center;
+
 }
 
 

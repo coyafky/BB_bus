@@ -5,24 +5,34 @@
         </div>
         <div class="order-status">
             <div>
-                未完成&待出行
+                <router-link to="/orderTicket/unfinished">
+                    未完成&待出行
+                
+                </router-link >
             </div>
             <div>
-                已完成&已取消
+                <router-link to="/orderTicket/already">
+                    已出行
+                </router-link>
+             
             </div>
-
+      
 
         </div>
 
         <div class="another">
-
+            <RouterView>
+            
+        </RouterView>
         </div>
-        <Footer class="footer2" />
+        <Footer/>
     </div>
 </template>
 
 <script setup>
 import Footer from '@/components/Footer.vue';
+import { RouterLink, RouterView } from 'vue-router';
+
 </script>
 
 <style>
@@ -58,7 +68,7 @@ import Footer from '@/components/Footer.vue';
     justify-content: space-around;
     background-color: aliceblue;
     text-align: center;
-   
+
 }
 
 .order-status div {

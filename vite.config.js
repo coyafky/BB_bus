@@ -21,5 +21,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  devServer: {
+    before: require('./mock/cities.js') // 引入mock数据文件
   }
 })

@@ -6,6 +6,8 @@ import SvgIcon from "vue3-icon";
 import App from './App.vue'
 import router from './router'
 
+import '../mock/cities'
+
 const app = createApp(App)
 
 app.use(createPinia())
