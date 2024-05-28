@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="user-page">
         <div class="container">
             <div class="photo">
                 <!-- 头像组件 -->
@@ -8,26 +8,39 @@
 
             <div class="user-info">
                 <div class="integral">
-                    <router-link to="/">我的积分</router-link>
-                    {{ integral }}
+                    <span>
+                        <router-link to="/">我的积分</router-link>
+                    </span>
+                    <span>
+                        {{ integral }}
+                    </span>
                 </div>
-
+                <div class="divider"></div> <!-- 竖线分隔符 -->
                 <div class="voucher">
                     <!-- 我的优惠券页面 -->
-                    <router-link to="/voucher">我的优惠卷</router-link>
+                    <span>
+                        <router-link to="/voucher">我的优惠卷</router-link>
+                    </span>
                     <!-- 图标 -->
-                    {{ voucher }}
+                    <span>
+                        {{ voucher }}
+                    </span>
                 </div>
             </div>
 
-
+            <el-divider />
             <div class="change">
                 <!-- 使用路由页面 -->
                 <div class="change-item">
                     <!-- 乘车人管理 -->
                     <!-- 图标 -->
-                    <FlFilledPeopleChat />
-                    <router-link to="/passengermanagement">乘车人管理</router-link>
+                    <span>
+                        <FlFilledPeopleChat />
+                    </span>
+                     
+                    <span>
+                        <router-link to="/passengermanagement">乘车人管理</router-link>
+                    </span>
                     
                 </div>
                 <el-divider />
@@ -35,17 +48,25 @@
                 <div class="change-item">
                     <!-- 我的次卡 -->
                     <!-- 图标 -->
-                    <BsBusFrontFill />
-                    <router-link to="/secondarycard">我的次卡</router-link>
-                 
+                    <span>
+                        <BsBusFrontFill />
+                    </span>
+                     <span>
+                        <router-link to="/secondarycard">我的次卡</router-link>
+            
+                     </span>
                 </div>
                 <el-divider />
                 <div class="separator"></div>
 
                 <div class="change-item">
                     <!-- 关于我们 -->
-                    <TaArticle />
+                    <span>
+                        <TaArticle />
+                    </span>
+                  <span>
                     <router-link to="/about">关于我们</router-link>
+                  </span>
                     
                 </div>
                 <el-divider />
@@ -54,8 +75,12 @@
                 <div class="change-item">
                     <!-- 使用协议 -->
 
+                   <span>
                     <FlFilledProtocolHandler />
+                   </span>
+                   <span>
                     <router-link to="/useragreement">使用协议</router-link>
+                   </span>
                   
                 </div>
                 <el-divider />
@@ -63,8 +88,12 @@
 
                 <div class="change-item">
                     <!-- 购票须知 -->
-                    <BsTicketDetailedFill />
-                    <router-link to="/TicketImformation">购票须知</router-link>
+                    <span>
+                        <BsTicketDetailedFill />
+                    </span>
+                    <span>
+                        <router-link to="/TicketImformation">购票须知</router-link>
+                    </span>
                    
                 </div>
                 <el-divider />
@@ -72,8 +101,12 @@
 
                 <div class="change-item">
                     <!-- 客服电话 -->
+                   <span>
                     <CaCustomerService />
-                    <router-link to="/">客服电话</router-link>
+                   </span>
+                    <span>
+                        <router-link to="/">客服电话</router-link>
+                    </span>
                     <!-- 在手机上实现调用手机的电话程序  -->
                    
                 </div>
@@ -106,12 +139,17 @@ const voucher = ref(0);
 
 <style scoped>
 
+.user-page{
+    background-color: #f5f5f5;
+}
+
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-color: white;
 
 }
 .photo{
@@ -127,35 +165,46 @@ const voucher = ref(0);
   display: flex; /* 启用 Flexbox 布局 */
   justify-content: space-between; /* 将元素分散在容器中，留出空间给转换按钮 */
   align-items: center; /* 垂直居中对齐 */
-  background-color: blanchedalmond;
+
   width: 100%;
   height: 40px;
   margin-bottom: 20px;
   margin-top: 10px;
-  text-align: center;
+  font-size: larger;
+ 
 }
 
-.integral{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    background-color: aqua;
-    font-size: 20px;
-}   
-.voucher{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    background-color:aliceblue;
-    font-size: 20px;
+.integral, .voucher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  font-size: larger;
 }
 
+.integral router-link {
+  padding-right: 25px; /* 为 router-link 添加右边距 */
+}
+.voucher router-link {
+  padding-right: 25px; /* 为 router-link 添加左边距 */
+}
+
+.integral  span{
+    margin-left: 10px;
+
+}
+.voucher span{
+    margin-left: 10px;
+}
+
+
+.divider {
+  width: 1px; /* 竖线的宽度 */
+  height: 100%; /* 竖线的高度 */
+  background-color: #ccc; /* 竖线的颜色 */
+}
 .change{
 
     display: flex;
@@ -175,9 +224,12 @@ const voucher = ref(0);
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: aliceblue;
-    font-size: 20px;
+    
+    
     font-size: larger;
+}
+.change-item span{
+    margin-left: 10px;
 }
 
 

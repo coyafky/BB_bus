@@ -1,0 +1,9 @@
+/* 全局CSS文件，如 main.css */
+.router-link-active {
+  text-decoration: none;
+  color: none;
+}
+a{
+    text-decoration: none;
+    color: none;
+}

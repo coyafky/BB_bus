@@ -1,10 +1,7 @@
 <template>
-    <header class="header">
-        <Goback :route="'/user'" />
-        <div class="useragement_header">
-            <h1>使用协议</h1>
-        </div>
-    </header>
+    <Head :message=parentHead>
+
+    </Head>
 
     <div class="content">
         <h1>使用协议</h1>
@@ -170,43 +167,24 @@
 <script setup>
 import Goback from '@/components/goback.vue';
 import { ref, provide } from 'vue';
+import  Head from '@/components/Header.vue';
+
+const parentHead = ref('使用协议')
 
 const route = ref('/user');
 provide('route', route);
 </script>
 
 <style scoped>
-.header{
-    display: flex;
-    align-items: center;
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-}
 
-.useragement_header{
-    margin-left: auto;
-    margin-right: 10px;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 40px;
-    background-color: #f00;
-    border-radius: 10px;
-    border: 1px solid #f00;
-    box-shadow: 0 0 10px #f00;
-}
 
 .content {
   font-size: 16px;
   line-height: 1.6;
   color: #333;
   padding: 20px;
+  height: calc(100vh - 60px); /* 假设header高度为60px，100vh为视口高度 */
+  overflow-y: auto;
 }
 
 h1 {
@@ -229,8 +207,4 @@ p {
   box-shadow: #333;
 }
 
-.header{
-    background-color: red;
-    color: whitesmoke;
-}
 </style>

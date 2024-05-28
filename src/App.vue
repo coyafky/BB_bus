@@ -11,5 +11,12 @@
 </script>
 
 <style>
-
+  .router-link-active {
+  text-decoration: none;
+  color: none;
+}
+a{
+    text-decoration: none;
+    color: none;
+}
 </style>

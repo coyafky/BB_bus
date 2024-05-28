@@ -1,13 +1,21 @@
 <template>
     <div>
-         <header>
-            <h1>选择起点</h1>
-         </header>
+         <Head :message=parenthead>
+
+         </Head>
 
         <div class="current-city">
-            当前城市：
-            <span>{{ currentCity }}</span>
+            <h1>
+                当前城市：
+            </h1>
+            <div>
+                <span>{{ currentCity }}</span>
+            </div>
         </div>
+
+        <h1>
+            已经开通的城市
+        </h1>
 
         <ul class="city-list">
             <li v-for="city in cities" :key="city.id">
@@ -17,60 +25,61 @@
     </div>
 </template>
 
-<script>
-import axios from 'axios';
-import { ref, onMounted } from 'vue';
+<script setup>
+import { ref, onMounted, computed } from 'vue';
 import { useCityStore } from '../stores/cityStore';
 import { useRouter } from 'vue-router';
-import router from '@/router';
+import axios from 'axios';
+import Head from '@/components/Header.vue';
 
-export default {
-    setup() {
-        const cities = ref([]);
-        let currentCity = ref(null);
-       let  cityStore = useCityStore();
-        const router = useRouter();
-        
-        // 从store中获取选定的起点城市
-     currentCity.value = cityStore. selectedStartCity ;
+const currentCity = computed(() => cityStore.selectedStartCity);
+const parenthead = ref('选择起点城市');
 
-        const fetchCities = async () => {
-            try {
-                const response = await axios.get('http://localhost:3000/cities');
-                cities.value = response.data;
-            } catch (error) {
-                console.error(error);
-            }
-        };
+const cities = ref([]);
+const cityStore = useCityStore();
+const selectedStartCity = computed(() => cityStore.selectedStartCity);
+const router = useRouter();
 
-        const selectCity = (city) => {
-            // 更新选中的起点城市
-            cityStore.setSelectedStartCity(city.name);
-            currentCity.value = city.name; // 更新当前城市显示
-            router.push('/');
-        };
-
-        onMounted(() => {
-            fetchCities();
-        });
-
-        return {
-            cities,
-            currentCity,
-            selectCity,
-        };
-    },
+const fetchCities = async () => {
+  try {
+    const response = await axios.get('http://localhost:3000/cities');
+    cities.value = response.data;
+  } catch (error) {
+    console.error(error);
+  }
 };
+
+const selectCity = (city) => {
+  // 检查是否与终点城市相同
+  if (city.name === cityStore.selectedEndCity) {
+    alert('起点城市不能与终点城市相同，请重新选择！');
+    return;
+  }
+  // 更新选中的终点城市
+  cityStore.setSelectedStartCity(city.name);
+  router.push('/');
+};
+
+const navigateToHome = () => {
+  router.push('/');
+};
+
+onMounted(() => {
+  fetchCities();
+});
 </script>
 <style scoped>
 
-.current-city{
-    background-color: blanchedalmond;
-    font-size: medium;
-    padding: 10px;
-    margin-bottom: 20px;
-    
+.current-city {
+  background-color: #e6f9ff; /* 浅蓝色背景 */
+  color: #333; /* 深灰色文本 */
+  font-size: 1em; /* 更大的字体大小 */
+  padding: 15px; /* 增加内边距 */
+  margin-bottom: 20px;
+  border-radius: 8px; /* 添加一些圆角以增加卡片感 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加一些阴影 */
 }
+
 header {
     background-color: red;
     color: white;
@@ -109,4 +118,18 @@ button:hover {
     background-color: purple;
 }
 
+
+.current-city span {
+  display: block;
+  width: 30%;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: default; /* 如果不需要点击，可以设置为默认光标 */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  padding: 10px; /* 根据需要调整内边距 */
+  box-sizing: border-box; /* 包含内边距在宽度内 */
+  text-align: center; /* 根据需要调整文本对齐 */
+}
 </style>

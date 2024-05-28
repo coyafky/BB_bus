@@ -1,9 +1,8 @@
 // 父组件
 <template>
-    <header class="header">
-        <goback />
-    <div class="title">关于我们</div>
-    </header>
+    <Head :message="parentHead">
+
+    </Head>
     <div class="content">
         AA巴士，成立于2015年2月28日，是一家汽车票线上
         预定平台。我们不经营线路，我们的工作是为乘客和运
@@ -30,27 +29,16 @@ import goback from "../components/goback.vue";
 import { GlGoBack } from "@kalimahapps/vue-icons";
 import { useRouter } from 'vue-router';
 import { ref, provide } from 'vue';
-
+import Head from  '@/components/Header.vue';
+const  parentHead = ref('关于我们');
 
 const route = ref('/user');
 provide('route', route);
 </script>
 
 <style scoped>
-.header {
-  display: flex;
-
-  align-items: center;
-  background-color: #f00; /* 红色背景 */
-  color: #fff; /* 白色字体 */
-  padding: 10px 20px;
-}
 
 
-
-.goback-wrapper {
-  /* 如果goback组件需要特定的宽度或高度，可以在这里设置 */
-}
 
 .title {
   margin-left: auto; /* 使标题居右 */

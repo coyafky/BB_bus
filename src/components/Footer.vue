@@ -1,10 +1,35 @@
-
-
 <template>
   <footer class="footer">
-    <router-link to="/"><AkHomeAlt1/>首页</router-link>
-    <router-link to="/orderTicket"><BsTicketPerforatedFill/>购票</router-link>
-    <router-link to="/user"> <BxUserCircle/> 我的</router-link>
+    <router-link to="/">
+      <div class="footer-item">
+        <span>
+        <AkHomeAlt1 />
+      </span>
+      <span>
+        首页
+      </span>
+      </div>
+    </router-link>
+    <router-link to="/orderTicket">
+      <div class="footer-item" >
+        <span>
+        <BsTicketPerforatedFill />
+      </span>
+      <span>
+        购票
+      </span>
+      </div>
+    </router-link>
+    <router-link to="/user">
+      <div class="footer-item">
+        <span>
+        <BxUserCircle />
+      </span>
+      <span>
+        我的
+      </span>
+      </div>
+    </router-link>
   </footer>
 </template>
 
@@ -26,7 +51,8 @@ const props = defineProps()
   justify-content: space-around;
   align-items: center;
   height: 50px;
-  background-color: #f5f5f5;
+  background-color: rgb(255, 255, 255);
+
   position: fixed;
   bottom: 0;
   left: 0;
@@ -37,22 +63,37 @@ const props = defineProps()
 
 .footer .router-link-active {
   display: flex;
-  flex-direction: row; /* 或 row，取决于你希望图标和文字的排列方式 */
+  flex-direction: row;
+  /* 或 row，取决于你希望图标和文字的排列方式 */
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: inherit;
-  margin: 0 3px; /* 添加左右边距 */
+  margin: 0 3px;
+  /* 添加左右边距 */
   background-color: aqua;
   border-radius: 50px;
 }
 
 .footer .router-link-active svg {
-  height: 24px; /* 调整图标高度，确保与文字对齐 */
-  width: 24px; /* 保持宽高比 */
-  margin-bottom: 3px; /* 添加图标和文字之间的间距 */
+  height: 24px;
+  /* 调整图标高度，确保与文字对齐 */
+  width: 24px;
+  /* 保持宽高比 */
+  margin-bottom: 3px;
+  /* 添加图标和文字之间的间距 */
 }
 
 
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 3px;
+  /* 添加左右边距 */
+}
 
 </style>

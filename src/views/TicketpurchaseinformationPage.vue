@@ -1,16 +1,10 @@
 <template>
 
 
-    <div class="T-header">
-        <Goback :route="'/user'">
-            返回
-        </Goback>
+    <Head :message=headername>
 
-        <div>
-            <div>购票须知</div>
-        </div>
-    </div>
-    <div>
+    </Head>
+    <div class="container">
         <div class="p-header">
             一、发车时间及到达时间
         </div>
@@ -71,20 +65,16 @@
 <script setup>
 import Goback from '@/components/goback.vue';
 import { ref, provide } from 'vue';
+import Head from '@/components/Header.vue';
+
+const headername = ref('购票须知');
 
 const route = ref('/user');
 provide('route', route);
 </script>
 
 <style>
-.T-header {
-    display: flex;
-    align-items: center;
-    background-color: red;
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-}
+
 
 .p-header {
     font-size: 18px;
@@ -97,5 +87,11 @@ provide('route', route);
     margin: 10px;
     font-size: 16px;
 
+}
+
+.container {
+    height: calc(100vh - 60px);
+    /* 假设header高度为60px，100vh为视口高度 */
+    overflow-y: auto;
 }
 </style>

@@ -3,7 +3,6 @@ import HomePage from "../views/HomePage.vue";
 import User from "../views/UserPage.vue";
 import passengermanagement from "../views/Passengermanagement.vue";
 import secondarycard from "../views/SecondarycardPage.vue";
-
 import about from "../views/Aboutpage.vue";
 import addpassnegers from "../views/Addpassengers.vue";
 import useragreement from "../views/UseagreementPage.vue";
@@ -16,6 +15,7 @@ import Start from "@/views/Start.vue";
 import End from "@/views/End.vue";
 import QueryPage from "@/views/QueryPage.vue";
 import paymentPage from  "@/views/PaymentPage.vue";
+import Timeperiodfilter from  "@/views/Timeperiodfilter.vue";
 
 
 const router = createRouter({
@@ -106,8 +106,17 @@ const router = createRouter({
       path: "/paymentPage",
       name: "paymentPage",
       component: paymentPage,
+    },
+    {
+      path: "/Timeperiodfilter",
+      name: "Timeperiodfilter",
+      component: Timeperiodfilter,
     }
+
+    
+   
   ],
+
 });
 
 export default router;
