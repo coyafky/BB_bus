@@ -16,6 +16,9 @@ import End from "@/views/End.vue";
 import QueryPage from "@/views/QueryPage.vue";
 import paymentPage from  "@/views/PaymentPage.vue";
 import Timeperiodfilter from  "@/views/Timeperiodfilter.vue";
+import StartPiontPicker from "@/views/StartPointPicker.vue";
+import EndPiontPicker from "@/views/EndPointPicker.vue";
+import StartEndPiontPicker from "@/views/SEPointPicker.vue";
 
 
 const router = createRouter({
@@ -111,8 +114,22 @@ const router = createRouter({
       path: "/Timeperiodfilter",
       name: "Timeperiodfilter",
       component: Timeperiodfilter,
+    },
+    {
+      path: "/StartPiontPicker",
+      name: "StartPiontPicker",
+      component: StartPiontPicker,
+    },
+    {
+      path: "/EndPiontPicker",
+      name:  "EndPiontPicker" ,
+      component:  EndPiontPicker  ,
+    },
+    {
+      path :"/StartEndPiontPicker",
+      name : "StartEndPiontPicker",
+      component : StartEndPiontPicker,
     }
-
     
    
   ],

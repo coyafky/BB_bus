@@ -3,7 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <el-input class="input_name" v-model="name" style="width: 100%;" placeholder="乘车人姓名，必填"></el-input>
+                <el-input class="input_name" v-model="name" style="width: 100%;" placeholder="乘车人姓名，必填">
+                </el-input>
             </div>
         </div>
         <div class="row">
@@ -16,12 +17,13 @@
         </div>
         <div class="row">
             <div class="col">
-                <el-input v-model="id_nums" style="width: 100%;" placeholder="请输入你的证件号"></el-input>
+                <el-input v-model="id_nums" style="width: 100%;" placeholder="证件号必填">
+                </el-input>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <el-select v-model="age_group" placeholder="选择年龄" size="big" style="width: 100%;">
+                <el-select v-model="age_group" placeholder="成人" size="big" style="width: 100%;">
                     <el-option v-for="item in agegroups" :key="item.value" :label="item.label"
                         :value="item.value"></el-option>
                 </el-select>
@@ -29,16 +31,19 @@
         </div>
         <div class="row">
             <div class="col">
-                <el-button type="primary" @click="submitForm" style="width: 100%;">添加乘车人
-                    <IcSubmitDocument />
+                <el-button class="button_submit" @click="submitForm" style="width: 100%;"> <IcSubmitDocument />添加乘车人
+                   
                 </el-button>
             </div>
         </div>
+
         <div class="rule">
-            根据新规，乘车人必须实名乘车<br>
+            根据交通部规定，乘客乘车必须填写实名信息！<br>
             信息录入交通部数据库，保护乘客个人信息安全
         </div>
+        
     </div>
+  
 </template>
 
 <script setup>
@@ -94,20 +99,13 @@ const submitForm = async () => {
 
 
 <style scoped>
-.header {
-    display: flex;
 
-    align-items: center;
-    padding: 10px 20px;
-    background-color: red;
-    border-bottom: 1px solid #f0f0f0;
-}
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px;
 }
 
@@ -120,7 +118,6 @@ const submitForm = async () => {
 
 .col {
     width: 100%;
-
 }
 
 
@@ -134,8 +131,34 @@ const submitForm = async () => {
 
 }
 
+.button_submit {
+    width: 100%;
+  height:100%;
+  background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  
+}
+
 .rule {
-    text-align: center;
+    text-align: flex-start;
+    align-self: start;
+    font-size: 17px;
+    color: red;
+    margin-top: 50px;
+}
+
+.el-input__wrapper {
+    border-radius: 10px;
+}
+
+.el-select-dropdown__item {
+    font-size: 14px;
+}
+
+.el-select-dropdown__item.selected {
+    font-weight: bold;
     margin-top: 20px;
 }
 </style>

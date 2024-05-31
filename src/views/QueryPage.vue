@@ -6,7 +6,7 @@
 
         <!-- 起点名字，终点城市渲染的名字 -->
         <div class="header">
-            <goback />
+            <goback class="goback" />
 
             <div class="city-container">
                 <span>
@@ -23,38 +23,39 @@
         </div>
 
 
-        <div class="time-container">
-            <div class="time-item">
-                <!-- button ，使得value1 -->
-                <RouterLink to="/querytime">
-                    <button>
-                        前一天
-                    </button>
-                </RouterLink>
-
-
-            </div>
-            <div class="time-item2">
-                <div class="block">
+        <div>
+            <div class="datebar">
+                <div class="lastday">
                     
-                    <el-date-picker v-model="value1" type="datetime" placeholder="Select date and time" />
+                        <button>
+                            前一天
+                        </button>
+                  
+
+                </div>
+                <el-divider class="datebar_divider" direction="vertical" border-style="dashed" />
+
+                <div class="date">
+
+                   <button @click="">
+                    
+                   </button>
                     <span> {{ dayOfWeek }}</span>
                 </div>
-
-            </div>
-            <div class="time-item">
-                <RouterLink to="/querytime">
-                    <button>
-                        后一天
-                    </button>
-                </RouterLink>
+                <el-divider class="datebar_divider" direction="vertical" border-style="dashed" />
+                <div class="nextday">
+                    
+                        <button>
+                            后一天
+                        </button>
+                  
+                </div>
 
             </div>
 
 
         </div>
-        <el-divider />
-        <div class="query-container">
+        <div class="fliter">
             <div class="query-item">
                 <TaTopologyBus />
                 所有班次
@@ -71,7 +72,7 @@
             <div class="query-item">
 
                 <!-- 跳转到上车点筛选页面 -->
-                <RouterLink to="">
+                <RouterLink to="/StartPiontPicker">
                     <IcSolidRhombusArrowRight />
                     上车点筛选
 
@@ -80,32 +81,29 @@
             <div class="query-item">
                 <MdRoundPinDrop />
                 <!--  -->
-                <RouterLink to="">
+                <RouterLink to="/EndPiontPicker">
                     下车点筛选
                 </RouterLink>
 
             </div>
         </div>
-        <el-divider />
-        <div class="card">
-            1
-        </div>
-        <div class="card">
-            <!-- 如果是深圳->珠海，从数据库中获取深圳起点-到珠海的班次信息
-            深圳到珠海的时间信息
-            深圳到珠海的价格信息
-            深圳到珠海的出发时间信息 -->
-            2
 
-        </div>
-        <div class="card">
-            3
-        </div>
-        <div class="card">
-            4
-        </div>
-        <div class="card">
-            5
+
+
+        <div class="card_container">
+            <Card>
+
+            </Card>
+            <!-- 根据获取的城市，得到的结果 决定多少个card被渲染 -->
+            <Card>
+
+            </Card>
+            <Card>
+
+            </Card>
+            <Card>
+
+            </Card>
         </div>
 
     </div>
@@ -124,6 +122,7 @@ import { IcSolidRhombusArrowRight } from "@kalimahapps/vue-icons";
 import { TaTopologyBus } from "@kalimahapps/vue-icons";
 const cityStore = useCityStore();
 
+// 从Pinia中获取城市信息
 const startCity = computed(() => cityStore.selectedStartCity);
 const endCity = computed(() => cityStore.selectedEndCity);
 
@@ -133,20 +132,8 @@ const currentTime = ref(new Date());
 const route = ref('/');
 provide('route', route);
 
-const updateTime = (direction) => {
-    const newTime = direction === 'previous'
-        ? new Date(currentTime.value)
-        : new Date(currentTime.value);
 
-    if (direction === 'previous') {
-        newTime.setDate(newTime.getDate() - 1);
-    } else {
-        newTime.setDate(newTime.getDate() + 1);
-    }
-
-    currentTime.value = newTime;
-    value1.value = newTime;
-};
+const date = new Date(value1.value);
 
 const dayOfWeek = computed(() => {
     const date = new Date(value1.value);
@@ -154,7 +141,16 @@ const dayOfWeek = computed(() => {
     return `星期${days[date.getDay()]}`;
 });
 
+
+// 是用start end信息和数据库的进行比对 json——server
+
+
+
+// 获取数据库中的班次信
+
+
 // 如何从数据库中获取citis数据
+
 
 
 // const selectedCity = cities.find(city => city.name === startCity);
@@ -168,6 +164,8 @@ const dayOfWeek = computed(() => {
 
 // // dayOfWeek 
 // // 从数据库中通过 起点城市和终点城市 获取 班次信息
+
+
 
 
 
@@ -188,68 +186,102 @@ const dayOfWeek = computed(() => {
     top: 0;
     z-index: 100;
     /* 确保标题在其他内容之上 */
-
 }
 
-.query-item {
-    display: block;
-    border: 2ch;
-
-    border-radius: 0%;
+.goback {
+    position: absolute;
+    left: 10px;
 }
 
-.city-container {
-    flex-grow: 1;
-    /* 允许文本容器填充剩余空间 */
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.datebar {
+    display: flex;
+    flex: 5;
     text-align: center;
-}
-
-
-
-.query-container {
-    display: flex;
+    align-items: center;
     justify-content: space-around;
-    align-items: center;
-    border: 0cqh;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    height: 100%;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray
 }
 
-.time-item{
+
+
+.nextday {
     display: flex;
-    flex:1;
-    align-items: center;
+    flex: calc(20%);
     justify-content: center;
-    border: 0cqh;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.time-item2{
-    display: flex;
-    flex:1;
     align-items: center;
-    justify-content: center;
-    border: 0cqh;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-left: calc(150%) solid rgb(230, 101, 21);
+
+}
+
+.nextday button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    background-color: inherit; /* 继承父元素的背景色 */
+  border: none; /* 取消边框 */
 }
 
 
-.time-container {
+.lastday {
     display: flex;
-    justify-content: space-around;
+    flex: calc(20%);
+    
+    justify-content: center;
     align-items: center;
    
-    margin-right: 10px; /* 为竖线留出空间 */
 }
 
+.lastday button {
+    width: 100%;
+    height: 100%;
+    background-color: inherit; /* 继承父元素的背景色 */
+  border: none; /* 取消边框 */
+}
+
+
+
+.date {
+    display: flex;
+    flex: calc(60%);
+    background-color: red
+}
+
+
+
+.fliter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid gray;
+}
+
+
+
+.query-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+
+}
 
 .block {
     padding: 10px;

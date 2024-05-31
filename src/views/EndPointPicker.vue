@@ -1,5 +1,5 @@
 <template>
-    <Header :message="'选择上车点'">
+    <Header :message="'选择下车点'">
 
     </Header>
 

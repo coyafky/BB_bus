@@ -71,7 +71,7 @@ onMounted(() => {
 <style scoped>
 
 .current-city {
-  background-color: #e6f9ff; /* 浅蓝色背景 */
+  background-color: #f0f0f0; /* 浅蓝色背景 */
   color: #333; /* 深灰色文本 */
   font-size: 1em; /* 更大的字体大小 */
   padding: 15px; /* 增加内边距 */
