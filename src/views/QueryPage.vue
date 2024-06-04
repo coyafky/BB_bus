@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <!-- 查询页 -->
 
         <!-- 返回组件 -->
@@ -7,7 +7,6 @@
         <!-- 起点名字，终点城市渲染的名字 -->
         <div class="header">
             <goback class="goback" />
-
             <div class="city-container">
                 <span>
                     {{ startCity }}
@@ -23,37 +22,26 @@
         </div>
 
 
-        <div>
-            <div class="datebar">
-                <div class="lastday">
-                    
-                        <button>
-                            前一天
-                        </button>
-                  
+        <div class="date_container">
+    
+                <button>
+                    前一天
+                </button>
+            
 
-                </div>
-                <el-divider class="datebar_divider" direction="vertical" border-style="dashed" />
-
-                <div class="date">
-
-                   <button @click="">
-                    
-                   </button>
-                    <span> {{ dayOfWeek }}</span>
-                </div>
-                <el-divider class="datebar_divider" direction="vertical" border-style="dashed" />
-                <div class="nextday">
-                    
-                        <button>
-                            后一天
-                        </button>
-                  
-                </div>
-
+            <div class="showdate">
+                <el-icon><Calendar /></el-icon>
+                <span>
+                 {{ formattedDate }}
+                </span>
+                <span>
+                    {{ dayOfWeek }}
+                </span>
             </div>
-
-
+                <button>
+                    后一天
+                </button>
+            
         </div>
         <div class="fliter">
             <div class="query-item">
@@ -120,6 +108,7 @@ import { CiTimer } from "@kalimahapps/vue-icons";
 import { MdRoundPinDrop } from "@kalimahapps/vue-icons";
 import { IcSolidRhombusArrowRight } from "@kalimahapps/vue-icons";
 import { TaTopologyBus } from "@kalimahapps/vue-icons";
+import { Calendar} from '@element-plus/icons-vue';
 const cityStore = useCityStore();
 
 // 从Pinia中获取城市信息
@@ -140,7 +129,13 @@ const dayOfWeek = computed(() => {
     const days = ['日', '一', '二', '三', '四', '五', '六'];
     return `星期${days[date.getDay()]}`;
 });
-
+const formattedDate = computed(() => {
+    const date = new Date(value1.value);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // 月份从0开始，所以需要+1
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+});
 
 // 是用start end信息和数据库的进行比对 json——server
 
@@ -173,6 +168,9 @@ const dayOfWeek = computed(() => {
 
 
 <style scoped>
+.container{
+    background-color: #f1f0f5;
+}
 .header {
     display: flex;
     align-items: center;
@@ -190,74 +188,44 @@ const dayOfWeek = computed(() => {
 
 .goback {
     position: absolute;
-    left: 10px;
+    left: 0px;
 }
 
 .card_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    padding: 10px;
+    gap:10px;
 }
-
-.datebar {
+.date_container{
     display: flex;
-    flex: 5;
-    text-align: center;
-    align-items: center;
     justify-content: space-around;
-    padding: 5px;
-    margin-top: 10px;
-    height: 100%;
-    margin-bottom: 10px;
-    border-bottom: 1px solid gray
-}
-
-
-
-.nextday {
-    display: flex;
-    flex: calc(20%);
-    justify-content: center;
     align-items: center;
-    border-left: calc(150%) solid rgb(230, 101, 21);
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #ffffff;
 
 }
 
-.nextday button {
-    width: 100%;
+
+ button{
+    width: 15%;
     height: 100%;
-    padding: 0;
-    margin: 0;
-    flex: 1;
-    background-color: inherit; /* 继承父元素的背景色 */
-  border: none; /* 取消边框 */
-}
-
-
-.lastday {
-    display: flex;
-    flex: calc(20%);
     
+    border: none;
+    background-color: inherit
+}
+
+.showdate{
+    width: 70%;
+    height: 100%;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    display: flex;
     justify-content: center;
     align-items: center;
-   
-}
-
-.lastday button {
-    width: 100%;
-    height: 100%;
-    background-color: inherit; /* 继承父元素的背景色 */
-  border: none; /* 取消边框 */
-}
-
-
-
-.date {
-    display: flex;
-    flex: calc(60%);
-    background-color: red
+    color: red;
 }
 
 
@@ -270,7 +238,8 @@ const dayOfWeek = computed(() => {
     padding-top: 5px;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    border-bottom: 2px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #ffffff;
 }
 
 
@@ -279,7 +248,7 @@ const dayOfWeek = computed(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    
 
 }
 
@@ -287,4 +256,15 @@ const dayOfWeek = computed(() => {
     padding: 10px;
 
 }
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: #e87a74;
+}
+
 </style>

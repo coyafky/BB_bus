@@ -4,28 +4,28 @@
             我的订单
         </div>
         <div class="order-status">
-            <div>
-                <router-link to="/orderTicket/unfinished">
-                    未完成&待出行
-                
-                </router-link >
+
+            <div class="order-status-item">
+                <router-link to="/orderTicket/unfinished" active-class="active">
+                    未支付&待出行
+
+                </router-link>
             </div>
-            <div>
-                <router-link to="/orderTicket/already">
+            <div class="order-status-item">
+                <router-link to="/orderTicket/already" active-class="active">
                     已出行
                 </router-link>
-             
             </div>
-      
 
         </div>
+
 
         <div class="another">
             <RouterView>
-            
-        </RouterView>
+
+            </RouterView>
         </div>
-        <Footer/>
+        <Footer />
     </div>
 </template>
 
@@ -35,9 +35,10 @@ import { RouterLink, RouterView } from 'vue-router';
 
 </script>
 
-<style>
+<style scoped>
 .container1 {
     display: flex;
+
     flex-direction: column;
     /* 垂直方向排列子元素 */
     height: 100vh;
@@ -46,8 +47,8 @@ import { RouterLink, RouterView } from 'vue-router';
 
 
 .order {
-    flex: 0.4;
-    text-align: center;
+    flex: 5%;
+    display: flex;
     font-size: 20px;
     font-weight: bold;
     background-color: red;
@@ -60,36 +61,62 @@ import { RouterLink, RouterView } from 'vue-router';
 }
 
 .footer2 {
-    flex: 0.5;
+    flex: 10%;
 }
 
 .order-status {
     display: flex;
     justify-content: space-around;
-    background-color: aliceblue;
-    text-align: center;
-
-}
-
-.order-status div {
-    width: 200px;
-    height: 50px;
-    text-decoration: none;
-    justify-content: center;
-    /* 水平居中 */
+    background-color: white;
     align-items: center;
-    /* 垂直居中 */
-    font-size: 20px;
-
+    
+    flex: 5%
 }
 
-.order-status div:hover {
-    color: red;
-    text-decoration: underline;
+.order-status :hover {
+   border-bottom: 1px solid red;
 }
+
+
+.order-status-item {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    border-bottom: 1px solid white;
+    /* 设置底部边框 */
+}
+
+
+
+.order-status-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
 
 
 .another {
-    flex: 7;
+    flex: 90%;
+    background-color: #f1f0f5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.active {
+    color: red;
+
 }
 </style>

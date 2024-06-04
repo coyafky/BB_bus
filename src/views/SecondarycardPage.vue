@@ -26,10 +26,7 @@
   <style scoped>
  
   
-  .header-content {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
+
   
   .no-data-background {
  

@@ -63,9 +63,10 @@ const props = defineProps({
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 1rem;
-    border: 2px solid #ccc;
+    padding-bottom: 1rem;
+    background-color: #ffffff;
     border-radius: 5px;
+    gap:10px;
 }
 
 .route {
@@ -108,7 +109,7 @@ const props = defineProps({
     align-items: center;
     height: 50px;
     width: 100%;
-    background-color: #007bff;
+    background-color: #24a4ff;
     color: white;
     border: none;
     border-radius: 5px;

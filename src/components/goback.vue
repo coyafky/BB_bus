@@ -1,13 +1,13 @@
 
 <template>
   <button @click="navigateToRoute">
-    <GlGoBack />
+    <van-icon name="arrow-left" />返回
   </button>
 </template>
 
 <script setup>
 
-import { GlGoBack } from "@kalimahapps/vue-icons";
+
 import { useRouter } from 'vue-router';
 import { inject } from 'vue';
 

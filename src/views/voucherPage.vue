@@ -1,40 +1,45 @@
 <template>
+    <Header :message="'我的优惠卷'">
+
+    </Header>
     <div class="vochercontainer">
-        <div class="header">
-            <Goback>
-                返回
-            </Goback>
-            <div>
-                我的优惠卷
-            </div>
-        </div>
+
 
         <div class="vocherlist">
-            <el-button>
-                添加优惠卷
+            <el-button v-if="!loading" @click="loadMore">
+                加载更多
             </el-button>
+            <div v-else class="no-more-data">
+                没有更多数据
+            </div>
         </div>
     </div>
 </template>
 
-
 <script setup>
-import Goback from '@/components/goback.vue';
+import Header from '@/components/Header.vue';
 import { ref, provide } from 'vue';
 
-const route = ref('/user');
-provide('route', route);
+const loading = ref(false);
+
+const loadMore = () => {
+    loading.value = true;
+    setTimeout(() => {
+        loading.value = false;
+    }, 3000); // 3秒后恢复
+};
 </script>
 
-
 <style scoped>
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: red;
-    border-bottom: 1px solid #f0f0f0;
+.goback {
+    margin-right: auto;
+    /* 将返回按钮推到最左侧 */
+    padding-left: 0;
+}
+
+.title {
+    margin: 0 auto;
+    /* 将标题居中 */
 }
 
 .vochercontainer {
@@ -42,22 +47,19 @@ provide('route', route);
     height: 100vh;
 }
 
-
-.vocherlist{
-    
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-}
-
 .el-button {
-    margin-top: 50%;
-    max-width: 100%;
+    margin-top: 20px;
     width: 100%;
-    
-    background-color: red;
-    color: white;
+    height: 150%;
+    background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
     border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
 }
-
+.no-more-data {
+    margin-top: 20px;
+    text-align: center;
+    color: gray;
+}
 </style>

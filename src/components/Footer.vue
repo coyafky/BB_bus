@@ -13,17 +13,17 @@
     <router-link to="/orderTicket">
       <div class="footer-item" >
         <span>
-        <BsTicketPerforatedFill />
-      </span>
+          <el-icon :class="icons" ><ShoppingCart/></el-icon>
+        </span>
       <span>
-        购票
+        订单
       </span>
       </div>
     </router-link>
     <router-link to="/user">
       <div class="footer-item">
         <span>
-        <BxUserCircle />
+          <el-icon  :class="icons"><User /></el-icon>
       </span>
       <span>
         我的
@@ -37,14 +37,16 @@
 import { defineProps } from 'vue'
 import { AkHomeAlt1 } from "@kalimahapps/vue-icons";
 import { BsTicketPerforatedFill } from "@kalimahapps/vue-icons";
-import { BxUserCircle } from "@kalimahapps/vue-icons";
+import { User } from '@element-plus/icons-vue';
+import { ElIcon } from 'element-plus';
+import { ShoppingCart } from '@element-plus/icons-vue';
 // 定义props，如果需要传递参数可以在这里定义
 const props = defineProps()
 
 // 可以在这里添加其他逻辑或功能
 </script>
 
-<style>
+<style scoped>
 .footer {
   /* 样式定义 */
   display: flex;
@@ -71,7 +73,7 @@ const props = defineProps()
   color: inherit;
   margin: 0 3px;
   /* 添加左右边距 */
-  background-color: aqua;
+
   border-radius: 50px;
 }
 
@@ -95,5 +97,10 @@ const props = defineProps()
   margin: 0 3px;
   /* 添加左右边距 */
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 </style>

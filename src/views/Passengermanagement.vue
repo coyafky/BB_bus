@@ -43,7 +43,7 @@ header{
     flex: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    
     color: white;
     font-size: 18px;
     font-weight: 700;
