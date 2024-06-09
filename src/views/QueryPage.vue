@@ -13,7 +13,7 @@
                 </span>
 
                 <span>
-                   -
+                    -
                 </span>
                 <span>
                     {{ endCity }}
@@ -23,10 +23,12 @@
 
 
         <div class="date_container">
-            <button @click="getPreviousDay">
-                前一天
-            </button>
-
+            <div class="previous_div">
+                <button @click="getPreviousDay" class="previous">
+                    前一天
+                </button>
+            </div>
+            <div class="vertical-line"></div>
             <div class="showdate">
                 <el-icon>
                     <Calendar />
@@ -38,38 +40,46 @@
                     ({{ dayOfWeek }})
                 </span>
             </div>
-            <button @click="getNextDay">
-                后一天
-            </button>
+
+            <div class="vertical-line"></div>
+            <div class="next_div">
+                <button @click="getNextDay" class="next">
+                    后一天
+                </button>
+            </div>
 
         </div>
         <div class="fliter">
             <div class="query-item">
+              <button class="allbus">
                 <TaTopologyBus />
                 所有班次
+              </button>
             </div>
             <div class="query-item">
-                <CiTimer />
-                <RouterLink to="/Timeperiodfilter">
+                
+                 <button @click="Timefilter">
+                    <CiTimer />
                     时间段筛选
-                </RouterLink>
+                </button>
                 <!-- 跳转到时间段筛选夜间 -->
             </div>
             <div class="query-item">
 
                 <!-- 跳转到上车点筛选页面 -->
-                <RouterLink to="/StartPiontPicker">
+               
+                <button @click="StartPointfilter">
                     <IcSolidRhombusArrowRight />
                     上车点筛选
-
-                </RouterLink>
+                </button>
             </div>
             <div class="query-item">
-                <MdRoundPinDrop />
+       
                 <!--  -->
-                <RouterLink to="/EndPiontPicker">
-                    下车点筛选
-                </RouterLink>
+               <button @click="EndPointfilter">
+                <MdRoundPinDrop />
+                下车点筛选
+               </button>
 
             </div>
         </div>
@@ -107,7 +117,12 @@ import { MdRoundPinDrop } from "@kalimahapps/vue-icons";
 import { IcSolidRhombusArrowRight } from "@kalimahapps/vue-icons";
 import { TaTopologyBus } from "@kalimahapps/vue-icons";
 import { Calendar } from '@element-plus/icons-vue';
+
+import { useRouter } from 'vue-router';
+
+
 const cityStore = useCityStore();
+
 
 // 从Pinia中获取城市信息
 const startCity = computed(() => cityStore.selectedStartCity);
@@ -127,6 +142,28 @@ const dayOfWeek = computed(() => {
     const days = ['日', '一', '二', '三', '四', '五', '六'];
     return `星期${days[date.getDay()]}`;
 });
+
+
+const router = useRouter();
+
+function getPreviousDay() {
+
+}
+
+
+function Timefilter() {
+    router.push('/Timeperiodfilter');
+}
+
+function StartPointfilter() {
+    router.push('/StartPiontPicker')
+}
+
+function EndPointfilter() {
+    router.push('/EndPiontPicker')
+}
+
+
 const formattedDate = computed(() => {
     const date = new Date(value1.value);
     const year = date.getFullYear();
@@ -136,7 +173,7 @@ const formattedDate = computed(() => {
 });
 
 
-
+// next 
 
 
 
@@ -146,102 +183,130 @@ const formattedDate = computed(() => {
 
 <style scoped>
 .container {
-    background-color: #f1f0f5;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f2;
+
 }
 
 .header {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* 添加这一行来居中文本 */
-    background-color: red;
+    flex-direction: row;
+    background-color: #d92a27;
     color: white;
-    font-size: 20px;
-    padding: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    /* 确保标题在其他内容之上 */
+    padding: 10px;
+    position: relative;
+    
 }
 
-.goback {
+.city-container {
+    font-size: 25px;
     position: absolute;
-    left: 0px;
-}
-
-.card_container {
-    padding: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .date_container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 16px;
-    background-color: #ffffff;
+  
+    background-color: white;
+    border-bottom: 1px solid #f0f0f2;
+
+    max-height: 55px;
+    min-height: 50px;
+    height: 100%;
+    /* 设置总的div高度为100% */
 
 }
 
-
-button {
-    width: 20%;
-    height: 100%;
-    padding: 16px;
-    border: none;
-    background-color: inherit
-}
-
-.showdate {
-    width: 60%;
-    height: 100%;
-    border: none;
+.date_container>div {
+    flex: 0;
+    /* 设置每个子div的flex比例为1，平均占据可用空间 */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: red;
-    padding: 16px;
-    font-size: 20px;
-   
 }
 
+.date_container>div:nth-child(1),
+.date_container>div:nth-child(5) {
+    flex: 2;
+    /* 让第一个和第三个子div占据1/5的比例 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date_container>div:nth-child(3) {
+    flex: 5;
+    /* 让第二个子div占据3/5的比例 */
+    color: #d92a27;
+    font-size: 20px;
+    
+}
+
+.vertical-line {
+    
+    border-left: 1px solid #dedede;
+    /* 设置竖线的样式，可以调整颜色和粗细 */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.date_container button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: inherit;
+    width: auto;
+    width: 100%
+}
+.showdate el-icon{
+    padding-right: 5px;
+}
+
+.showdate span{
+    padding-right: 5px;
+}
+
+.previous{
+    align-items: center;
+    justify-content: center;
+    color: #a8a8a8;
+}
 
 .fliter {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    margin-bottom: 16px;
-    border-bottom: 1px solid #e6e6e6;
-    background-color: #ffffff;
+    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    border-bottom: 1px solid #f0f0f2;
+    height: 50px;
 }
-
-
-
-.query-item {
+.query-item button{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-
+    border: none;
+    background-color: inherit;
+}
+.allbus{
+    color:#c95353
+}
+.next{
+    color:#c95353
 }
 
-
-
-
-a {
-    text-decoration: none;
-    color: #8c8c8c;
-}
-
-a:hover {
-    color: #e87a74;
-}
 
 
 </style>

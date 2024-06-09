@@ -66,7 +66,8 @@ const props = defineProps({
     flex-direction: row;
     justify-content: space-between;
     margin: 10px auto;
-    padding: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #ffffff;
    
     
