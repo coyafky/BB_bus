@@ -1,28 +1,32 @@
 <template>
-    <div>
-         <Head :message=parenthead>
 
-         </Head>
+  <Head :message=parenthead>
 
-        <div class="current-city">
-            <h1>
-                当前城市：
-            </h1>
-            <div>
-                <span>{{ currentCity }}</span>
-            </div>
-        </div>
+  </Head>
+  <div class="container">
 
-        <h1>
-            已经开通的城市
-        </h1>
 
-        <ul class="city-list">
-            <li v-for="city in cities" :key="city.id">
-                <button @click="selectCity(city)">{{ city.name }}</button>
-            </li>
-        </ul>
+    <div class="current-city">
+      <h3>
+        当前城市：
+      </h3>
+      <div>
+        <span>{{ currentCity }}</span>
+      </div>
     </div>
+    <div class="already">
+
+    <h3>
+      已经开通的城市
+    </h3>
+
+    <ul class="city-list">
+      <li v-for="city in cities" :key="city.id">
+        <button @click="selectCity(city)">{{ city.name }}</button>
+      </li>
+    </ul>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -69,27 +73,9 @@ onMounted(() => {
 });
 </script>
 <style scoped>
-
-.current-city {
-  background-color: #f0f0f0; /* 浅蓝色背景 */
-  color: #333; /* 深灰色文本 */
-  font-size: 1em; /* 更大的字体大小 */
-  padding: 15px; /* 增加内边距 */
-  margin-bottom: 20px;
-  border-radius: 8px; /* 添加一些圆角以增加卡片感 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加一些阴影 */
-}
-
-header {
-    background-color: red;
-    color: white;
-    padding: 10px;
-    text-align: left;
-}
-
-
-h1 {
-    margin: 0;
+.container{
+  background-color: #f1f0f5;
+  padding-left: 10px;
 }
 
 
@@ -97,19 +83,19 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* 在每行中均匀分布按钮 */
-    padding: 10px; /* 容器内边距 */
+ /* 容器内边距 */
     list-style: none; /* 移除默认列表样式 */
 }
 
 .city-list li {
     width: calc(33.33% - 20px); /* 每行3个按钮，减去间距 */
-    margin-bottom: 20px; /* 按钮之间的垂直间距 */
+    margin-bottom: 15px; /* 按钮之间的垂直间距 */
 }
 
 .city-list button {
     width: 100%; /* 按钮宽度填满列表项 */
     height: 50px; /* 按钮高度 */
-    background-color: #f0f0f0; /* 按钮背景色 */
+    background-color:white;/* 按钮背景色 */
     border: none; /* 移除边框 */
     cursor: pointer; /* 鼠标悬停时显示手型 */
 }
@@ -118,12 +104,22 @@ button:hover {
     background-color: purple;
 }
 
+.current-city {
+  background-color: inherit; /* 浅蓝色背景 */
+  color: #333; /* 深灰色文本 */
+  font-size: 1em; /* 更大的字体大小 */
+   /* 增加内边距 */
+  margin-bottom: 20px;
+  border-radius: 8px; /* 添加一些圆角以增加卡片感 */
+
+}
+
 
 .current-city span {
   display: block;
   width: 30%;
   height: 50px;
-  background-color: #f0f0f0;
+  background-color: white;
   border: none;
   cursor: default; /* 如果不需要点击，可以设置为默认光标 */
   border-radius: 4px;
@@ -132,4 +128,9 @@ button:hover {
   box-sizing: border-box; /* 包含内边距在宽度内 */
   text-align: center; /* 根据需要调整文本对齐 */
 }
+
+h3{
+  color: #878787;
+}
+
 </style>

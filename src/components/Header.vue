@@ -31,7 +31,7 @@ const props = defineProps({
   align-items: center;
   justify-content: center;
   /* 添加这一行来居中文本 */
-  background-color: red;
+  background-color: #d92825;
   color: white;
   font-size: 20px;
   padding-right: 10px;
@@ -52,5 +52,6 @@ const props = defineProps({
   text-align: center;
   position: relative;
   left:-15px;
+  color:#fffbfa;
 }
 </style>

@@ -1,20 +1,21 @@
 <!-- End.vue -->
 <template>
-  <div class="container">
-      <Head :message="'选择终点城市'">
+   <Head :message="'选择终点城市'">
 
-      </Head>
+</Head>
+  <div class="container">
+     
 
        <div class="current-city">
-            <h2>
+            <h3>
                 当前城市：
-            </h2>
+            </h3>
             <div>
                 <span>{{ currentCity }}</span>
             </div>
         </div>
 
-        <h2 class="end-city-title">已开通城市</h2>
+      <h3 class="end-city-title">已开通城市</h3>
       <ul class="city-list">
           <li v-for="city in cities" :key="city.id">
               <button @click="selectCity(city)">{{ city.name }}</button>
@@ -64,13 +65,14 @@ onMounted(() => {
 <style scoped>
 .container{
   background-color: #f0f0f0;
+  padding-left: 10px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+ 
 }
 
 
@@ -78,13 +80,13 @@ onMounted(() => {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* 在每行中均匀分布按钮 */
-    padding: 10px; /* 容器内边距 */
+     /* 容器内边距 */
     list-style: none; /* 移除默认列表样式 */
 }
 
 .city-list li {
     width: calc(33.33% - 20px); /* 每行3个按钮，减去间距 */
-    margin-bottom: 20px; /* 按钮之间的垂直间距 */
+    margin-bottom: 15px; /* 按钮之间的垂直间距 */
 }
 
 .city-list button {
@@ -100,34 +102,32 @@ button:hover {
 }
 
 .current-city {
-  background-color: #f0f0f0; /* 浅蓝色背景 */
+  background-color: inherit; /* 浅蓝色背景 */
   color: #333; /* 深灰色文本 */
   font-size: 1em; /* 更大的字体大小 */
-  padding: 15px; /* 增加内边距 */
-  margin-bottom: 20px;
+ 
   border-radius: 8px; /* 添加一些圆角以增加卡片感 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加一些阴影 */
+ 
 }
 
 
 .current-city span {
   display: block;
   width: 30%;
-  height: 50px;
+  height: 40px;
   background-color: white;
   border: none;
   cursor: default; /* 如果不需要点击，可以设置为默认光标 */
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  padding: 10px; /* 根据需要调整内边距 */
+
   box-sizing: border-box; /* 包含内边距在宽度内 */
   text-align: center; /* 根据需要调整文本对齐 */
 }
 
-h2{
-  color: gray;
+h3{
+  color: #878787;
+  
 }
-.end-city-title{
-  padding-left: 15px;
-}
+
 </style>

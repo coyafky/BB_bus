@@ -13,7 +13,7 @@
                 </span>
 
                 <span>
-                    <IcSolidRhombusArrowRight />
+                   -
                 </span>
                 <span>
                     {{ endCity }}
@@ -23,25 +23,25 @@
 
 
         <div class="date_container">
-    
-                <button>
-                    前一天
-                </button>
-            
+            <button @click="getPreviousDay">
+                前一天
+            </button>
 
             <div class="showdate">
-                <el-icon><Calendar /></el-icon>
+                <el-icon>
+                    <Calendar />
+                </el-icon>
                 <span>
-                 {{ formattedDate }}
+                    {{ formattedDate }}
                 </span>
                 <span>
-                    {{ dayOfWeek }}
+                    ({{ dayOfWeek }})
                 </span>
             </div>
-                <button>
-                    后一天
-                </button>
-            
+            <button @click="getNextDay">
+                后一天
+            </button>
+
         </div>
         <div class="fliter">
             <div class="query-item">
@@ -51,9 +51,7 @@
             <div class="query-item">
                 <CiTimer />
                 <RouterLink to="/Timeperiodfilter">
-
                     时间段筛选
-
                 </RouterLink>
                 <!-- 跳转到时间段筛选夜间 -->
             </div>
@@ -108,7 +106,7 @@ import { CiTimer } from "@kalimahapps/vue-icons";
 import { MdRoundPinDrop } from "@kalimahapps/vue-icons";
 import { IcSolidRhombusArrowRight } from "@kalimahapps/vue-icons";
 import { TaTopologyBus } from "@kalimahapps/vue-icons";
-import { Calendar} from '@element-plus/icons-vue';
+import { Calendar } from '@element-plus/icons-vue';
 const cityStore = useCityStore();
 
 // 从Pinia中获取城市信息
@@ -137,28 +135,7 @@ const formattedDate = computed(() => {
     return `${year}-${month}-${day}`;
 });
 
-// 是用start end信息和数据库的进行比对 json——server
 
-
-
-// 获取数据库中的班次信
-
-
-// 如何从数据库中获取citis数据
-
-
-
-// const selectedCity = cities.find(city => city.name === startCity);
-// axios.get('http://localhost:3000/cities').then(
-//     response => {
-//         const cities = response.data;
-//         // 处理返回的城市数据
-//         console.log(cities);
-//     }
-// )
-
-// // dayOfWeek 
-// // 从数据库中通过 起点城市和终点城市 获取 班次信息
 
 
 
@@ -168,9 +145,10 @@ const formattedDate = computed(() => {
 
 
 <style scoped>
-.container{
+.container {
     background-color: #f1f0f5;
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -179,7 +157,7 @@ const formattedDate = computed(() => {
     background-color: red;
     color: white;
     font-size: 20px;
-    padding: 10px;
+    padding: 16px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -192,42 +170,43 @@ const formattedDate = computed(() => {
 }
 
 .card_container {
+    padding: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:10px;
 }
-.date_container{
+
+.date_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid gray;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px;
     background-color: #ffffff;
 
 }
 
 
- button{
-    width: 15%;
+button {
+    width: 20%;
     height: 100%;
-    
+    padding: 16px;
     border: none;
     background-color: inherit
 }
 
-.showdate{
-    width: 70%;
+.showdate {
+    width: 60%;
     height: 100%;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     color: red;
+    padding: 16px;
+    font-size: 20px;
+   
 }
-
 
 
 .fliter {
@@ -237,8 +216,8 @@ const formattedDate = computed(() => {
     align-items: center;
     padding-top: 5px;
     padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid gray;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e6e6e6;
     background-color: #ffffff;
 }
 
@@ -248,23 +227,21 @@ const formattedDate = computed(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding: 16px;
 
 }
 
-.block {
-    padding: 10px;
 
-}
 
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: #8c8c8c;
 }
 
-a:hover{
+a:hover {
     color: #e87a74;
 }
+
 
 </style>

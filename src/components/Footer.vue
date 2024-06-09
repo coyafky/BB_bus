@@ -54,7 +54,7 @@ const props = defineProps()
   align-items: center;
   height: 50px;
   background-color: rgb(255, 255, 255);
-
+  
   position: fixed;
   bottom: 0;
   left: 0;
@@ -71,10 +71,11 @@ const props = defineProps()
   justify-content: center;
   text-decoration: none;
   color: inherit;
-  margin: 0 3px;
+  margin: 0 0;
   /* 添加左右边距 */
-
+  color: red;
   border-radius: 50px;
+  font-weight: bold;
 }
 
 .footer .router-link-active svg {
@@ -82,7 +83,8 @@ const props = defineProps()
   /* 调整图标高度，确保与文字对齐 */
   width: 24px;
   /* 保持宽高比 */
-  margin-bottom: 3px;
+  margin-bottom: 0px;
+
   /* 添加图标和文字之间的间距 */
 }
 
@@ -93,6 +95,7 @@ const props = defineProps()
   align-items: center;
   justify-content: center;
   text-decoration: none;
+ 
   color: inherit;
   margin: 0 3px;
   /* 添加左右边距 */
@@ -101,6 +104,21 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+a:hover {
+    color: #409eff;
+}
+a:after{
+  color: red;
+}
+.icons{
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.footer-item span{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 14px;
+}
 
 </style>

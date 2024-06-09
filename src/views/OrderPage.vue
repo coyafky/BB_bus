@@ -38,7 +38,6 @@ import { RouterLink, RouterView } from 'vue-router';
 <style scoped>
 .container1 {
     display: flex;
-
     flex-direction: column;
     /* 垂直方向排列子元素 */
     height: 100vh;
@@ -88,7 +87,7 @@ import { RouterLink, RouterView } from 'vue-router';
     font-size: 16px;
     font-weight: bold;
     color: black;
-    border-bottom: 1px solid white;
+   
     /* 设置底部边框 */
 }
 

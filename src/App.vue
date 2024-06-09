@@ -23,13 +23,13 @@ a{
     color: none;
 }
 .slide-enter-active, .slide-leave-active {
-    transition: transform 0.5s ease;
+    transition: transform 0.2s ease;
 }
-.slide-enter, .slide-leave-to /* .slide-leave-active in <2.1.8 */ {
+.slide-enter, .slide-leave-to  .slide-leave-active-in  {
     transform: translateX(100%),
     
 }
 .slide-leave-active {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
 }
 </style>

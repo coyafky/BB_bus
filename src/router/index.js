@@ -6,7 +6,7 @@ import secondarycard from "../views/SecondarycardPage.vue";
 import about from "../views/Aboutpage.vue";
 import addpassnegers from "../views/Addpassengers.vue";
 import useragreement from "../views/UseagreementPage.vue";
-import TicketImformation from "../views/TicketpurchaseinformationPage.vue";
+import TicketInformation from "../views/TicketpurchaseinformationPage.vue";
 import OrderTicket from "@/views/OrderPage.vue";
 import voucher from "@/views/voucherPage.vue";
 import unfinished from "@/views/unfinishedPage.vue";
@@ -19,7 +19,7 @@ import Timeperiodfilter from  "@/views/Timeperiodfilter.vue";
 import StartPiontPicker from "@/views/StartPointPicker.vue";
 import EndPiontPicker from "@/views/EndPointPicker.vue";
 import StartEndPiontPicker from "@/views/SEPointPicker.vue";
-
+import editpassenger from "@/views/editpassengerPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -61,9 +61,9 @@ const router = createRouter({
       component: useragreement,
     },
     {
-      path: "/TicketImformation",
-      name: "TicketImformation",
-      component: TicketImformation,
+      path: "/TicketInformation",
+      name: "TicketInformation",
+      component: TicketInformation,
     },
 
     {
@@ -129,6 +129,11 @@ const router = createRouter({
       path :"/StartEndPiontPicker",
       name : "StartEndPiontPicker",
       component : StartEndPiontPicker,
+    },
+    {
+      path: "/editpassenger",
+      name: "editpassenger",
+      component: editpassenger,
     }
     
    

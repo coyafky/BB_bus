@@ -12,18 +12,21 @@
                 <div>
                     end_time
                 </div>
-
             </div>
 
             <div class="route">
                 <div class="start_route">
                     <!-- icon 起 -->
+                    <span>
+                        起
+                    </span>
                     大剧院地铁站c口（前面50米帝王大厦公交站）>车公庙地铁B出口
                     （门口候车）> 深大地铁站A3出口右手边
                 </div>
 
                 <div class="end_route">
                     <!-- icon 终 -->
+                    <span>终</span>
                     大剧院地铁站c口（前面50米帝王大厦公交站）>车公庙地铁B出口
                     （门口候车）> 深大地铁站A3出口右手边
                 </div>
@@ -62,11 +65,11 @@ const props = defineProps({
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 auto;
-    padding-bottom: 1rem;
+    margin: 10px auto;
+    padding: 16px;
     background-color: #ffffff;
-    border-radius: 5px;
-    gap:10px;
+   
+    
 }
 
 .route {
@@ -77,7 +80,7 @@ const props = defineProps({
     width: 100%;
     
     margin: 0 auto;
-    padding: 1rem;
+    padding: 16px;
    
     border-radius: 5px;
     word-wrap: break-word; /* 添加这行来允许文本换行 */
@@ -87,6 +90,8 @@ const props = defineProps({
 .time{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 40%;
     margin: 0 auto;
     padding: 1rem;
@@ -107,12 +112,21 @@ const props = defineProps({
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 35px;
     width: 100%;
     background-color: #24a4ff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+span{
+ 
+
+    align-items: center;
+    color: #c4dea9;
+    border: 1px solid #c4dea9;
+    border-radius: 50%;
 }
 </style>
