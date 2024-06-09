@@ -123,7 +123,8 @@ button:hover {
   cursor: default; /* 如果不需要点击，可以设置为默认光标 */
   border-radius: 4px;
   transition: background-color 0.3s ease;
-
+  align-items: center;
+  padding: 10px; /* 根据需要调整内边距 */
   box-sizing: border-box; /* 包含内边距在宽度内 */
   text-align: center; /* 根据需要调整文本对齐 */
 }
