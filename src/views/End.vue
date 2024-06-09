@@ -102,6 +102,9 @@ button:hover {
 }
 
 .current-city {
+ display: flex;
+ justify-content: center;
+ align-items: center;
   background-color: inherit; /* 浅蓝色背景 */
   color: #333; /* 深灰色文本 */
   font-size: 1em; /* 更大的字体大小 */
