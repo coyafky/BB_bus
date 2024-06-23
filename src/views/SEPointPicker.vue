@@ -1,65 +1,76 @@
+
 <template>
     <Header :message="'选择上下车点'"></Header>
     <div class="maincontainer">
         <div class="content">
             <div class="header">
-                <span class="icon">🚍</span>
+                <span class="icon_bus"> <MdRoundDirectionsBus class="bus_svg"/> </span>
                 <span>选择上下车站点</span>
                 <span class="time">时刻</span>
             </div>
-            <!-- 用组件和数据渲染 -->
         </div>
-
         <div class="stations-list">
-            <div v-for="(station, index) in stations" :key="index" class="station-item">
-                <span class="icon">🛤️</span>
-                <span class="station-info">{{ station.name }}</span>
-                <span class="time">{{ station.time }}</span>
+            <div v-for="(point, index) in departurePoints" :key="index" class="station-item">
+                <span class="station-info">
+                    <button class="station_point_item_picker" @click="selectDeparturePoint(point)">
+                        <span class="departure-icon" :class="{ 'selected-icon': selectedDeparturePoint === point }">上</span>
+                        {{ point }}
+                    </button>
+                </span>
             </div>
         </div>
 
         <div class="dropoff-list">
-            <div v-for="(station, index) in dropoffStations" :key="index" class="dropoff-item">
-                <span class="icon">⬇️</span>
-                <span class="station-info">{{ station.name }}</span>
+            <div v-for="(point, index) in arrivalPoints" :key="index" class="dropoff-item">
+                <span class="station-info">
+                    <button @click="selectArrivalPoint(point)">
+                        <span class="arrival-icon" :class="{ 'selected-arrival-icon': selectedArrivalPoint === point }">下</span>
+                        {{ point }}
+                    </button>
+                </span>
             </div>
         </div>
-        <button @click="goToPayment">下一步</button>
+        <button class="go-next" @click="goToPayment">下一步</button>
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import Header from '@/components/Header.vue';
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import { useStartEndPointsStore } from '@/stores/startEndPointsStore'; // 引入你的 Pinia store
+import { MdRoundDirectionsBus } from '@kalimahapps/vue-icons';
+
+const startEndPointsStore = useStartEndPointsStore();
+const departurePoints = startEndPointsStore.departurePoints;
+const arrivalPoints = startEndPointsStore.arrivalPoints;
+
+const selectedDeparturePoint = ref(null);
+const selectedArrivalPoint = ref(null);
+
+onMounted(() => {
+    const route = useRoute();
+    const query = route.query;
+    if (query.departurePoints && query.arrivalPoints) {
+        // 解析并设置 departurePoints 和 arrivalPoints
+        departurePoints.value = JSON.parse(query.departurePoints);
+        arrivalPoints.value = JSON.parse(query.arrivalPoints);
+    }
+});
 
 const router = useRouter();
 
-const stations = ref([
-    { name: '禾花地铁A出口(平湖平南学校旁)', time: '21:00' },
-    { name: '坑梓地铁C出口（公交车站）', time: '21:10' },
-    { name: '坪山国惠康坪山国公交通（往爱联方向）', time: '21:30' },
-    { name: '观澜(茜坑地铁站南公交通D口出)', time: '21:30' },
-    { name: '民治地铁A出口', time: '21:40' },
-    { name: '大浪商业中心公交通(友谊书城旗杆旁)', time: '21:45' },
-    { name: '龙岗木棉湾地铁站C口', time: '21:50' },
-    { name: '龙胜地铁站C出口', time: '21:50' },
-    { name: '龙岗昌盛百货侧门如意轩茶餐厅门口（爱联地铁站D出口右转）', time: '22:00' },
-    { name: '宝燃油站公交通站站对面(近石岩官田地铁)', time: '22:00' }
-]);
-
-const dropoffStations = ref([
-    { name: '高桥德耀路口' },
-    { name: '横山供电所' },
-    { name: '青平供电所路口' },
-    { name: '红江农场路口' },
-    { name: '石主坡路口' },
-    { name: '安铺高速路口' },
-    { name: '营仔路口' }
-]);
-
 const goToPayment = () => {
     router.push('/paymentPage');
+};
+
+const selectDeparturePoint = (point) => {
+    selectedDeparturePoint.value = point;
+};
+
+const selectArrivalPoint = (point) => {
+    selectedArrivalPoint.value = point;
 };
 </script>
 
@@ -68,7 +79,6 @@ const goToPayment = () => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 100%;
     height: 100%;
     padding: 16px;
@@ -80,13 +90,13 @@ const goToPayment = () => {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0;
 }
 
 .header {
     display: flex;
-    justify-content: space-between;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .stations-list {
@@ -101,19 +111,28 @@ const goToPayment = () => {
     justify-content: flex-start;
     align-items: center;
     padding: 8px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px dashed #ddd;
+    width: 100%;
+    
 }
 
-.icon {
-    margin-right: 8px;
-    color: #f08990;
-    /* 设置图标颜色 */
+.icon_bus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5px;
+}
+
+.bus_svg {
+    height: 20px;
+    width: 20px;
 }
 
 .station-info {
     flex-grow: 1;
     text-align: left;
-    /* 确保文本左对齐 */
+    padding: 10px;
+    padding-left: 0px;
 }
 
 .time {
@@ -121,6 +140,7 @@ const goToPayment = () => {
     color: red;
     position: absolute;
     right: 10px;
+
 }
 
 .dropoff-list {
@@ -138,19 +158,13 @@ const goToPayment = () => {
     border-bottom: 1px dashed #ddd;
 }
 
-.dropoff-item .icon {
-    margin-right: 8px;
-    color: #f08990;
-    /* 设置图标颜色 */
-}
-
-.dropoff-item .station-info {
-    flex-grow: 1;
-    text-align: left;
-    /* 确保文本左对齐 */
-}
-
 button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.go-next {
     width: 100%;
     height: 40px;
     background-image: linear-gradient(to left, #f83600 0%, #f9d423 100%);
@@ -160,5 +174,33 @@ button {
     position: relative;
     left: -13px;
     bottom: -20px;
+}
+
+.departure-icon {
+    color: #dcedca;
+    border: 1px solid #dcedca;
+    border-radius: 50%;
+    font-size: 0.8em;
+    padding: 1px;
+    margin-left: 8px;
+}
+
+.arrival-icon {
+    color: #f83600;
+    border: 1px solid #f83600;
+    border-radius: 50%;
+    font-size: 0.8em;
+    padding: 1px;
+    margin-left: 8px;
+   
+}
+
+.selected-icon {
+    background-color: #f0ab4a;
+    color: white;
+}
+.selected-arrival-icon {
+    background-color: #f76d52;
+    color: white;
 }
 </style>

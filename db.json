@@ -1,955 +1,2130 @@
 {
   "cities": [
-    {
-      "id": "1",
-      "name": "广州",
-      "pickupPoints": [
-        "广州上车点1",
-        "广州上车点2",
-        "广州上车点3",
-        "广州上车点4",
-        "广州上车点5"
-      ],
-      "dropoffPoints": [
-        "广州下车点1",
-        "广州下车点2",
-        "广州下车点3",
-        "广州下车点4",
-        "广州下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "广州上车点1",
-          "dropoffPoint": "广州下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "广州上车点2",
-          "dropoffPoint": "广州下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "广州上车点3",
-          "dropoffPoint": "广州下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "广州上车点4",
-          "dropoffPoint": "广州下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "广州上车点5",
-          "dropoffPoint": "广州下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "广州上车点1",
-          "dropoffPoint": "广州下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "广州上车点2",
-          "dropoffPoint": "广州下车点2"
-        }
-      ],
-      "prices": {
-        "深圳": 50,
-        "湛江": 100,
-        "佛山": 150,
-        "茂名": 200,
-        "东莞": 250,
-        "中山": 300
-      }
-    },
-    {
-      "id": "2",
-      "name": "深圳",
-      "pickupPoints": [
-        "深圳上车点1",
-        "深圳上车点2",
-        "深圳上车点3",
-        "深圳上车点4",
-        "深圳上车点5"
-      ],
-      "dropoffPoints": [
-        "深圳下车点1",
-        "深圳下车点2",
-        "深圳下车点3",
-        "深圳下车点4",
-        "深圳下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "深圳上车点1",
-          "dropoffPoint": "广州下车点1",
-          "destinationCity": "广州"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "深圳上车点2",
-          "dropoffPoint": "广州下车点2",
-          "destinationCity": "广州"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "深圳上车点3",
-          "dropoffPoint": "佛山下车点3",
-          "destinationCity": "佛山"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "深圳上车点4",
-          "dropoffPoint": "东莞下车点4",
-          "destinationCity": "东莞"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "深圳上车点5",
-          "dropoffPoint": "深圳下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "深圳上车点1",
-          "dropoffPoint": "深圳下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "深圳上车点2",
-          "dropoffPoint": "深圳下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 50,
-        "湛江": 120,
-        "佛山": 160,
-        "茂名": 210,
-        "东莞": 260,
-        "中山": 310,
-        "珠海": 520
-      }
-    },
-    {
-      "id": "3",
-      "name": "湛江",
-      "pickupPoints": [
-        "湛江上车点1",
-        "湛江上车点2",
-        "湛江上车点3",
-        "湛江上车点4",
-        "湛江上车点5"
-      ],
-      "dropoffPoints": [
-        "湛江下车点1",
-        "湛江下车点2",
-        "湛江下车点3",
-        "湛江下车点4",
-        "湛江下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "湛江上车点1",
-          "dropoffPoint": "湛江下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "湛江上车点2",
-          "dropoffPoint": "湛江下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "湛江上车点3",
-          "dropoffPoint": "湛江下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "湛江上车点4",
-          "dropoffPoint": "湛江下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "湛江上车点5",
-          "dropoffPoint": "湛江下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "湛江上车点1",
-          "dropoffPoint": "湛江下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "湛江上车点2",
-          "dropoffPoint": "湛江下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 100,
-        "深圳": 120,
-        "佛山": 150,
-        "茂名": 200,
-        "东莞": 250,
-        "中山": 300
-      }
-    },
-    {
-      "id": "4",
-      "name": "佛山",
-      "pickupPoints": [
-        "佛山上车点1",
-        "佛山上车点2",
-        "佛山上车点3",
-        "佛山上车点4",
-        "佛山上车点5"
-      ],
-      "dropoffPoints": [
-        "佛山下车点1",
-        "佛山下车点2",
-        "佛山下车点3",
-        "佛山上车点4",
-        "佛山下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "佛山上车点1",
-          "dropoffPoint": "佛山下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "佛山上车点2",
-          "dropoffPoint": "佛山下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "佛山上车点3",
-          "dropoffPoint": "佛山下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "佛山上车点4",
-          "dropoffPoint": "佛山下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "佛山上车点5",
-          "dropoffPoint": "佛山下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "佛山上车点1",
-          "dropoffPoint": "佛山下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "佛山上车点2",
-          "dropoffPoint": "佛山下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 150,
-        "深圳": 160,
-        "湛江": 170,
-        "茂名": 220,
-        "东莞": 270,
-        "中山": 320
-      }
-    },
-    {
-      "id": "5",
-      "name": "茂名",
-      "pickupPoints": [
-        "茂名上车点1",
-        "茂名上车点2",
-        "茂名上车点3",
-        "茂名上车点4",
-        "茂名上车点5"
-      ],
-      "dropoffPoints": [
-        "茂名下车点1",
-        "茂名下车点2",
-        "茂名下车点3",
-        "茂名下车点4",
-        "茂名下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "茂名上车点1",
-          "dropoffPoint": "茂名下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "茂名上车点2",
-          "dropoffPoint": "茂名下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "茂名上车点3",
-          "dropoffPoint": "茂名下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "茂名上车点4",
-          "dropoffPoint": "茂名下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "茂名上车点5",
-          "dropoffPoint": "茂名下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "茂名上车点1",
-          "dropoffPoint": "茂名下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "茂名上车点2",
-          "dropoffPoint": "茂名下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 200,
-        "深圳": 210,
-        "湛江": 220,
-        "佛山": 230,
-        "东莞": 280,
-        "中山": 330
-      }
-    },
-    {
-      "id": "6",
-      "name": "东莞",
-      "pickupPoints": [
-        "东莞上车点1",
-        "东莞上车点2",
-        "东莞上车点3",
-        "东莞上车点4",
-        "东莞上车点5"
-      ],
-      "dropoffPoints": [
-        "东莞下车点1",
-        "东莞下车点2",
-        "东莞下车点3",
-        "东莞上车点4",
-        "东莞下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "东莞上车点1",
-          "dropoffPoint": "东莞下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "东莞上车点2",
-          "dropoffPoint": "东莞下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "东莞上车点3",
-          "dropoffPoint": "东莞下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "东莞上车点4",
-          "dropoffPoint": "东莞下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "东莞上车点5",
-          "dropoffPoint": "东莞下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "东莞上车点1",
-          "dropoffPoint": "东莞下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "东莞上车点2",
-          "dropoffPoint": "东莞下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 250,
-        "深圳": 260,
-        "湛江": 270,
-        "佛山": 280,
-        "茂名": 290,
-        "中山": 340
-      }
-    },
-    {
-      "id": "7",
-      "name": "中山",
-      "pickupPoints": [
-        "中山上车点1",
-        "中山上车点2",
-        "中山上车点3",
-        "中山上车点4",
-        "中山上车点5"
-      ],
-      "dropoffPoints": [
-        "中山下车点1",
-        "中山下车点2",
-        "中山下车点3",
-        "中山上车点4",
-        "中山下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "中山上车点1",
-          "dropoffPoint": "中山下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "中山上车点2",
-          "dropoffPoint": "中山下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "中山上车点3",
-          "dropoffPoint": "中山下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "中山上车点4",
-          "dropoffPoint": "中山下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "中山上车点5",
-          "dropoffPoint": "中山下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "中山上车点1",
-          "dropoffPoint": "中山下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "中山上车点2",
-          "dropoffPoint": "中山下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 300,
-        "深圳": 310,
-        "湛江": 320,
-        "佛山": 330,
-        "茂名": 340,
-        "东莞": 350
-      }
-    },
-    {
-      "id": "8",
-      "name": "珠海",
-      "pickupPoints": [
-        "珠海上车点1",
-        "珠海上车点2",
-        "珠海上车点3",
-        "珠海上车点4",
-        "珠海上车点5"
-      ],
-      "dropoffPoints": [
-        "珠海下车点1",
-        "珠海下车点2",
-        "珠海下车点3",
-        "珠海上车点4",
-        "珠海下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "珠海上车点1",
-          "dropoffPoint": "珠海下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "珠海上车点2",
-          "dropoffPoint": "珠海下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "珠海上车点3",
-          "dropoffPoint": "珠海下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "珠海上车点4",
-          "dropoffPoint": "珠海下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "珠海上车点5",
-          "dropoffPoint": "珠海下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "珠海上车点1",
-          "dropoffPoint": "珠海下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "珠海上车点2",
-          "dropoffPoint": "珠海下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 350,
-        "深圳": 360,
-        "湛江": 370,
-        "佛山": 380,
-        "茂名": 390,
-        "东莞": 400,
-        "中山": 410
-      }
-    },
-    {
-      "id": "9",
-      "name": "惠州",
-      "pickupPoints": [
-        "惠州上车点1",
-        "惠州上车点2",
-        "惠州上车点3",
-        "惠州上车点4",
-        "惠州上车点5"
-      ],
-      "dropoffPoints": [
-        "惠州下车点1",
-        "惠州下车点2",
-        "惠州下车点3",
-        "惠州上车点4",
-        "惠州下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "惠州上车点1",
-          "dropoffPoint": "惠州下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "惠州上车点2",
-          "dropoffPoint": "惠州下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "惠州上车点3",
-          "dropoffPoint": "惠州下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "惠州上车点4",
-          "dropoffPoint": "惠州下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "惠州上车点5",
-          "dropoffPoint": "惠州下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "惠州上车点1",
-          "dropoffPoint": "惠州下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "惠州上车点2",
-          "dropoffPoint": "惠州下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 450,
-        "深圳": 460,
-        "湛江": 470,
-        "佛山": 480,
-        "茂名": 490,
-        "东莞": 500,
-        "中山": 510,
-        "珠海": 520
-      }
-    },
-    {
-      "id": "10",
-      "name": "江门",
-      "pickupPoints": [
-        "江门上车点1",
-        "江门上车点2",
-        "江门上车点3",
-        "江门上车点4",
-        "江门上车点5"
-      ],
-      "dropoffPoints": [
-        "江门下车点1",
-        "江门下车点2",
-        "江门下车点3",
-        "江门上车点4",
-        "江门下车点5"
-      ],
-      "schedules": [
-        {
-          "day": "周一",
-          "pickupTime": "08:00",
-          "dropoffTime": "10:00",
-          "pickupPoint": "江门上车点1",
-          "dropoffPoint": "江门下车点1"
-        },
-        {
-          "day": "周二",
-          "pickupTime": "08:30",
-          "dropoffTime": "10:30",
-          "pickupPoint": "江门上车点2",
-          "dropoffPoint": "江门下车点2"
-        },
-        {
-          "day": "周三",
-          "pickupTime": "09:00",
-          "dropoffTime": "11:00",
-          "pickupPoint": "江门上车点3",
-          "dropoffPoint": "江门下车点3"
-        },
-        {
-          "day": "周四",
-          "pickupTime": "09:30",
-          "dropoffTime": "11:30",
-          "pickupPoint": "江门上车点4",
-          "dropoffPoint": "江门下车点4"
-        },
-        {
-          "day": "周五",
-          "pickupTime": "10:00",
-          "dropoffTime": "12:00",
-          "pickupPoint": "江门上车点5",
-          "dropoffPoint": "江门下车点5"
-        },
-        {
-          "day": "周六",
-          "pickupTime": "10:30",
-          "dropoffTime": "12:30",
-          "pickupPoint": "江门上车点1",
-          "dropoffPoint": "江门下车点1"
-        },
-        {
-          "day": "周日",
-          "pickupTime": "11:00",
-          "dropoffTime": "13:00",
-          "pickupPoint": "江门上车点2",
-          "dropoffPoint": "江门下车点2"
-        }
-      ],
-      "prices": {
-        "广州": 550,
-        "深圳": 560,
-        "湛江": 570,
-        "佛山": 580,
-        "茂名": 590,
-        "东莞": 600,
-        "中山": 610,
-        "珠海": 620,
-        "惠州": 630
-      }
-    }
+    { "id": 1, "name": "徐闻" },
+    { "id": 2, "name": "江门" },
+    { "id": 3, "name": "雷州" },
+    { "id": 4, "name": "阳江" },
+    { "id": 5, "name": "惠州" },
+    { "id": 6, "name": "中山" },
+    { "id": 7, "name": "深圳" },
+    { "id": 8, "name": "广州" },
+    { "id": 9, "name": "珠海" },
+    { "id": 10, "name": "佛山" },
+    { "id": 11, "name": "东莞" },
+    {"id": 12, "name": "汕头"}
   ],
-  "users": [
+  "routes": [
     {
-      "id": "1",
-      "name": "张三",
-      "id_title": "身份证",
-      "id_nums": "123456",
-      "agegroup": "成人"
+      "start": "徐闻",
+      "end": "汕头",
+      "status": "无班次"
     },
     {
-      "id": "2",
-      "name": "李四",
-      "id_title": "身份证",
-      "id_nums": "13800138001",
-      "agegroup": "成人"
+      "start": "徐闻",
+      "end": "广州",
+      "status": "7day内",
+      "departurePoints": [
+        "迈陈 (拾来家具城)",
+        "徐闻人民公园门口",
+        "新国线中心客运站(公交站)",
+        "下桥车站"
+      ],
+      "arrivalPoints": [
+        "广州市站 (省站)",
+        "体育西路地铁站",
+        "车南地铁站",
+        "嘉禾望岗地铁站H口路边"
+      ],
+      "schedules": [
+        {
+          "departureTime": "19:00",
+          "departurePoint": "迈陈 (拾来家具城)",
+          "arrivalPoints": [
+            "广州市站 (省站)",
+            "体育西路地铁站",
+            "车南地铁站",
+            "嘉禾望岗地铁站H口路边"
+          ],
+          "price": 110,
+          "ticketType": "正价票"
+        },
+        {
+          "departureTime": "19:30至20:20",
+          "departurePoints": [
+            "徐闻人民公园门口",
+            "新国线中心客运站(公交站)",
+            "下桥车站"
+          ],
+          "arrivalPoints": [
+            "广州市站 (省站)",
+            "体育西地铁站",
+            "车南地铁站",
+            "嘉禾望岗地铁站H口路边"
+          ],
+          "price": 100,
+          "ticketType": "正价票"
+        },
+        {
+          "departureTime": "21:20",
+          "departurePoint": "迈陈 (拾来家具城)",
+          "arrivalPoints": [
+            "广州市站 (省站)",
+            "体育西路地铁站",
+            "车南地铁站",
+            "嘉禾望岗地铁站H口路边"
+          ],
+          "price": 110,
+          "ticketType": "正价票"
+        },
+        {
+          "departureTime": "22:20至22:50",
+          "departurePoints": [
+            "徐闻人民公园门口",
+            "新国线中心客运站(公交站)",
+            "下桥车站"
+          ],
+          "arrivalPoints": [
+            "体育西地铁站",
+            "广州市站 (省站)",
+            "嘉禾望岗地铁站H口路边",
+            "车破南地铁站V"
+          ],
+          "price": 100,
+          "ticketType": "正价票"
+        }
+      ]
     },
     {
-      "id": "ea39",
-      "name": "1",
-      "id_type": "选项1",
-      "id_nums": "111",
-      "age_group": "选项1"
+      "start": "徐闻",
+      "end": "佛山",
+      "status": "有班次",
+      "departurePoints": [
+        "迈陈（拾来家具城）",
+        "徐闻人民公园门口",
+        "新国线中心客运站（公交站）",
+        "下桥车站"
+      ],
+      "arrivalPoints": ["佛山大桥（乐安）公交站", "龙山（顺德）"],
+      "schedules": [
+        {
+          "departureTime": "19:00",
+          "departurePoint": "迈陈（拾来家具城）",
+          "arrivalPoints": ["佛山大桥（乐安）公交站", "龙山（顺德）"],
+          "price": 110,
+          "ticketType": "正价票",
+          "remarks": "小车接送，寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "19:30至20:20",
+          "departurePoints": [
+            "徐闻人民公园门口",
+            "新国线中心客运站（公交站）",
+            "下桥车站"
+          ],
+          "arrivalPoints": ["龙山（顺德）", "佛山大桥（乐安）公交站"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "21:20",
+          "departurePoint": "迈陈（拾来家具城）",
+          "arrivalPoints": ["佛山大桥（乐安）公交站", "龙山（顺德）"],
+          "price": 110,
+          "ticketType": "正价票",
+          "remarks": "小车接送，寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
     },
     {
-      "id": "4731",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "徐闻",
+      "end": "珠海",
+      "status": "有班次",
+      "departurePoints": [
+        "新寮（卫生院路口）",
+        "下洋车站",
+        "和安（陈家路口）",
+        "前山（糖厂小卖部）",
+        "锦和中学花坛（往曲界方向）",
+        "曲界镇新城商行（海鸥路口）",
+        "迈陈（拾来家具城）",
+        "徐闻公园",
+        "新国线车站",
+        "下桥车站"
+      ],
+      "arrivalPoints": [
+        "东澳村（公交站）",
+        "月堂公交站",
+        "湖心路口公交站",
+        "广生公交车站",
+        "南泉路口公交站",
+        "翠微公交站",
+        "上冲公交站",
+        "香洲港星饭店",
+        "北理工东门（对面马路天桥底）",
+        "金鼎市场（公交站）"
+      ],
+      "schedules": [
+        {
+          "departureTime": "18:00至20:10",
+          "departurePoints": [
+            "新寮（卫生院路口）",
+            "下洋车站",
+            "和安（陈家路口）",
+            "前山（糖厂小卖部）",
+            "锦和中学花坛（往曲界方向）",
+            "曲界镇新城商行（海鸥路口）",
+            "迈陈（拾来家具城）",
+            "徐闻公园",
+            "新国线车站",
+            "下桥车站"
+          ],
+          "arrivalPoints": [
+            "东澳村（公交站）",
+            "月堂公交站",
+            "湖心路口公交站",
+            "广生公交车站",
+            "南泉路口公交站",
+            "翠微公交站",
+            "上冲公交站",
+            "香洲港星饭店",
+            "北理工东门（对面马路天桥底）",
+            "金鼎市场（公交站）"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181106，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
     },
     {
-      "id": "482a",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "徐闻",
+      "end": "中山",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+      "arrivalPoints": [
+        "港口收费站",
+        "小榄收费站",
+        "中山总站公交站",
+        "中山汽车总站",
+        "小榄车站"
+      ],
+      "schedules": [
+        {
+          "departureTime": "07:50",
+          "arrivalTime": "08:00",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": ["港口收费站", "小榄收费站", "中山总站公交站"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "19:00",
+          "arrivalTime": "19:30",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": ["中山汽车总站", "小榄车站"],
+          "price": 130,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        }
+      ]
     },
     {
-      "id": "44bb",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "徐闻",
+      "end": "江门",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+      "arrivalPoints": [
+        "开平水口收费站",
+        "外海高速路口公交站",
+        "龙湾高速路口BP加油站",
+        "江门汽车总站"
+      ],
+      "schedules": [
+        {
+          "departureTime": "07:50",
+          "arrivalTime": "08:00",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "开平水口收费站",
+            "外海高速路口公交站",
+            "龙湾高速路口BP加油站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "19:00",
+          "arrivalTime": "19:30",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "开平水口收费站",
+            "外海高速路口公交站",
+            "江门汽车总站"
+          ],
+          "price": 130,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        }
+      ]
+    },
+
+    {
+      "start": "徐闻",
+      "end": "东莞",
+      "status": "有班次",
+      "date": "2024-06-15",
+      "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+      "arrivalPoints": [
+        "虎门北栅银新酒店门口",
+        "长安北站钟楼下",
+        "河田路口（公交站）",
+        "东莞南城（公交站）",
+        "荒榄路口（公交站）",
+        "鸿图广场（公交站）",
+        "东坑路口站（公交站）",
+        "马屋村（公交站）",
+        "九江水隧道（公交站）",
+        "塘厦天桥（公交站）"
+      ],
+      "schedules": [
+        {
+          "departureTime": "18:00",
+          "arrivalTime": "18:10",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": ["虎门北栅银新酒店门口", "长安北站钟楼下"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827185500"
+        },
+        {
+          "departureTime": "19:00",
+          "arrivalTime": "19:10",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "河田路口（公交站）",
+            "东莞南城（公交站）",
+            "荒榄路口（公交站）",
+            "鸿图广场（公交站）",
+            "东坑路口站（公交站）",
+            "马屋村（公交站）",
+            "九江水隧道（公交站）",
+            "塘厦天桥（公交站）"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827189534"
+        },
+        {
+          "departureTime": "19:00",
+          "arrivalTime": "19:10",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": ["长安北站钟楼下", "虎门北栅银新酒店门口"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客户服务 13827185500"
+        }
+      ]
     },
     {
-      "id": "efd2",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "徐闻",
+      "end": "深圳",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+      "arrivalPoints": [
+        "福田竹子林A出口",
+        "南头检查站",
+        "西乡大门",
+        "三围路口",
+        "福永汽车站",
+        "沙井客运站",
+        "爱联地铁站",
+        "石岩台湾工业区公交站",
+        "福田汽车站",
+        "龙华汽车站（劳油松加油站）",
+        "华南城（上木古村公交站）",
+        "坑梓（卧龙轩酒店）"
+      ],
+      "schedules": [
+        {
+          "departureTime": "07:00",
+          "arrivalTime": "07:10",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "福田竹子林A出口",
+            "南头检查站",
+            "西乡大门",
+            "三围路口",
+            "福永汽车站",
+            "沙井客运站",
+            "爱联地铁站",
+            "石岩台湾工业区公交站",
+            "福田汽车站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827185500"
+        },
+        {
+          "departureTime": "07:50",
+          "arrivalTime": "08:00",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永汽车站公交站",
+            "三围路口",
+            "西乡大门",
+            "南头检查站",
+            "石岩台湾工业区公交站",
+            "龙华汽车站（劳油松加油站）",
+            "爱联地铁站",
+            "福田汽车站",
+            "坑梓（卧龙轩酒店）"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客户服务 13827185500"
+        },
+        {
+          "departureTime": "19:00",
+          "arrivalTime": "19:10",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永客运站对面",
+            "三围路口",
+            "西乡立交",
+            "南头检查站",
+            "石岩（台湾工业区公交站）",
+            "龙华汽车站（劳油松加油站）",
+            "华南城（上木古村公交站）",
+            "爱联地铁站",
+            "福田汽车站",
+            "坑梓（卧龙轩酒店）"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客户服务 13827185500"
+        },
+        {
+          "departureTime": "20:30",
+          "arrivalTime": "20:40",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永汽车站公交站",
+            "三围路口",
+            "西乡大门",
+            "深南北环立交3公交站",
+            "龙华汽车站（劳油松加油站）"
+          ],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "座席：客户服务 13827185500"
+        }
+      ]
     },
     {
-      "id": "7be6",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "徐闻",
+      "end": "惠州",
+      "status": "有班次",
+      "date": "2024-06-17",
+      "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+      "arrivalPoints": ["金辉学校公交站"],
+      "schedules": [
+        {
+          "departureTime": "07:50",
+          "arrivalTime": "08:00",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": ["金辉学校公交站"],
+          "price": 180,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "19:00",
+          "arrivalTime": "19:10",
+          "departurePoints": ["新国线中心客运站（公交站）", "下桥车站"],
+          "arrivalPoints": ["金辉学校公交站"],
+          "price": 180,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        }
+      ]
     },
     {
-      "id": "40a3",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "广州",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+      "arrivalPoints": [
+        "广州市站（省站）",
+        "体育西路地铁站",
+        "车陂南地铁站",
+        "嘉禾望岗地铁站H口路边"
+      ],
+      "schedules": [
+        {
+          "departureTime": "09:30",
+          "arrivalTime": "09:50",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": [
+            "广州市站（省站）",
+            "体育西路地铁站",
+            "车陂南地铁站",
+            "嘉禾望岗地铁站H口路边"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:30",
+          "arrivalTime": "20:40",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": [
+            "广州市站（省站）",
+            "体育西路地铁站",
+            "车陂南地铁站",
+            "嘉禾望岗地铁站H口路边"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "23:00",
+          "arrivalTime": "23:20",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": [
+            "体育西地铁站",
+            "广州市站（省站）",
+            "嘉禾望岗地铁站H口路边",
+            "车陂南地铁站"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
     },
     {
-      "id": "1705",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "佛山",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+      "arrivalPoints": ["佛山大桥（乐安）公交站", "龙山（顺德）"],
+      "schedules": [
+        {
+          "departureTime": "09:30",
+          "arrivalTime": "09:50",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": ["佛山大桥（乐安）公交站", "龙山（顺德）"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:30",
+          "arrivalTime": "20:40",
+          "departurePoints": ["英利车站", "龙门车站"],
+          "arrivalPoints": ["龙山（顺德）", "佛山大桥（乐安）公交站"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "23:00",
+          "arrivalTime": "23:20",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": ["佛山大桥（乐安）公交站", "龙山（顺德）"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
     },
     {
-      "id": "b8c7",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "珠海",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+      "arrivalPoints": [
+        "东澳村（公交站）",
+        "月堂公交站",
+        "湖心路口公交站",
+        "广生公交车站",
+        "南泉路口公交站",
+        "翠微公交站",
+        "上冲公交站",
+        "香洲港星饭店",
+        "北理工东门（对面马路天桥底）",
+        "金鼎市场（公交站）"
+      ],
+      "schedules": [
+        {
+          "departureTime": "08:50",
+          "arrivalTime": "09:10",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": [
+            "东澳村（公交站）",
+            "月堂公交站",
+            "湖心路口公交站",
+            "广生公交车站",
+            "南泉路口公交站",
+            "翠微公交站",
+            "上冲公交站",
+            "香洲港星饭店",
+            "北理工东门（对面马路天桥底）",
+            "金鼎市场（公交站）"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181106，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:20",
+          "arrivalTime": "20:50",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": [
+            "东澳村（公交站）",
+            "月堂公交站",
+            "湖心路口公交站",
+            "广生公交车站",
+            "南泉路口公交站",
+            "翠微公交站",
+            "上冲公交站",
+            "香洲港星饭店",
+            "北理工东门（对面马路天桥底）",
+            "金鼎市场（公交站）"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181106，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
     },
     {
-      "id": "8d88",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "深圳",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "调风海鲜酒楼",
+        "东里供电所",
+        "雷高糖厂",
+        "英利车站",
+        "龙门车站",
+        "南兴客运站",
+        "雷州华侨宾馆"
+      ],
+      "arrivalPoints": [
+        "沙井客运站",
+        "福永汽车站",
+        "三围路口",
+        "西乡大门",
+        "南头检查站",
+        "石岩（台湾工业区公交站台）",
+        "龙华汽车站（劳油松加油站）",
+        "华南城（上木古村公交站）",
+        "爱联地铁站",
+        "福田汽车站",
+        "坑梓（卧龙轩酒店）"
+      ],
+      "schedules": [
+        {
+          "departureTime": "06:50",
+          "arrivalTime": "07:50",
+          "departurePoints": ["调风海鲜酒楼", "东里供电所", "雷高糖厂"],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永汽车站",
+            "三围路口",
+            "西乡大门",
+            "南头检查站",
+            "石岩（台湾工业区公交站台）",
+            "龙华汽车站（劳油松加油站）",
+            "华南城（上木古村公交站）",
+            "爱联地铁站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        },
+        {
+          "departureTime": "07:30",
+          "arrivalTime": "08:00",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "客路车站公交站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": [
+            "福田竹子林A出口",
+            "南头检查站",
+            "西乡大门",
+            "三围路口",
+            "福永汽车站",
+            "沙井客运站",
+            "爱联地铁站",
+            "石岩台湾工业区公交站",
+            "福田汽车站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827185500"
+        },
+        {
+          "departureTime": "08:10",
+          "arrivalTime": "08:40",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴客运站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永汽车站公交站",
+            "三围路口",
+            "西乡大门",
+            "南头检查站",
+            "石岩（台湾工业区公交站台）",
+            "龙华汽车站（劳油松加油站）",
+            "爱联地铁站",
+            "福田汽车站",
+            "坑梓（卧龙轩酒店）"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        },
+        {
+          "departureTime": "16:50",
+          "arrivalTime": "17:50",
+          "departurePoints": ["调风海鲜酒楼", "东里供电所", "雷高糖厂"],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永汽车站",
+            "三围路口",
+            "西乡大门",
+            "南头检查站",
+            "石岩（台湾工业区公交站台）",
+            "龙华汽车站（劳油松加油站）",
+            "华南城（上木古村公交站）",
+            "爱联地铁站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        },
+        {
+          "departureTime": "18:30",
+          "arrivalTime": "19:00",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴客运站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永汽车站公交站",
+            "三围路口",
+            "西乡立交",
+            "南头检查站",
+            "石岩（台湾工业区公交站台）",
+            "龙华汽车站（劳油松加油站）",
+            "爱联地铁站",
+            "福田汽车站",
+            "福田竹子林A出口"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827185500"
+        },
+        {
+          "departureTime": "19:30",
+          "arrivalTime": "20:00",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": [
+            "沙井客运站",
+            "福永客运站对面",
+            "三围路口",
+            "西乡立交",
+            "南头检查站",
+            "石岩（台湾工业区公交站台）",
+            "龙华汽车站（劳油松加油站）",
+            "华南城（上木古村公交站）",
+            "爱联地铁站",
+            "福田汽车站",
+            "坑梓（卧龙轩酒店）"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        }
+      ]
     },
     {
-      "id": "b1e8",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "东莞",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "调风海鲜酒楼",
+        "东里供电所",
+        "雷高糖厂",
+        "英利车站",
+        "龙门车站",
+        "客路车站公交站",
+        "南兴车站",
+        "雷州华侨宾馆"
+      ],
+      "arrivalPoints": [
+        "长安北站钟楼下",
+        "虎门北栅银新酒店门口",
+        "河田路口（公交站）",
+        "东莞南城（公交站）",
+        "荒榄路口（公交站）",
+        "鸿图广场（公交站）",
+        "东坑路口站（公交站）",
+        "马屋村（公交站）",
+        "九江水隧道（公交站）",
+        "塘厦天桥（公交站）"
+      ],
+      "schedules": [
+        {
+          "departureTime": "06:50",
+          "arrivalTime": "07:50",
+          "departurePoints": ["调风海鲜酒楼", "东里供电所", "雷高糖厂"],
+          "arrivalPoints": ["长安北站钟楼下", "虎门北栅银新酒店门口"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        },
+        {
+          "departureTime": "07:30",
+          "arrivalTime": "08:00",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "客路车站公交站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": ["长安北站钟楼下", "虎门北栅银新酒店门口"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827185500"
+        },
+        {
+          "departureTime": "08:10",
+          "arrivalTime": "08:40",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴客运站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": ["长安北站钟楼下", "虎门北栅银新酒店门口"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        },
+        {
+          "departureTime": "16:50",
+          "arrivalTime": "17:50",
+          "departurePoints": ["调风海鲜酒楼", "东里供电所", "雷高糖厂"],
+          "arrivalPoints": ["长安北站钟楼下", "虎门北栅银新酒店门口"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        },
+        {
+          "departureTime": "18:30",
+          "arrivalTime": "19:00",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": ["虎门北栅银新酒店门口", "长安北站钟楼下"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827185500"
+        },
+        {
+          "departureTime": "19:20",
+          "arrivalTime": "19:40",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": [
+            "河田路口（公交站）",
+            "东莞南城（公交站）",
+            "荒榄路口（公交站）",
+            "鸿图广场（公交站）",
+            "东坑路口站（公交站）",
+            "马屋村（公交站）",
+            "九江水隧道（公交站）",
+            "塘厦天桥（公交站）"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：请联系客户服务 13827189534"
+        },
+        {
+          "departureTime": "19:30",
+          "arrivalTime": "20:00",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": ["长安北站钟楼下", "虎门北栅银新酒店门口"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "座席：客服 13827185500"
+        }
+      ]
     },
     {
-      "id": "5247",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "中山",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "英利车站",
+        "龙门车站",
+        "南兴车站",
+        "雷州华侨宾馆",
+        "雷州邦塘中国石化加油站"
+      ],
+      "arrivalPoints": [
+        "港口收费站",
+        "小榄收费站",
+        "中山总站公交站",
+        "中山汽车总站",
+        "小榄车站"
+      ],
+      "schedules": [
+        {
+          "departureTime": "08:20",
+          "arrivalTime": "08:50",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": ["港口收费站", "小榄收费站", "中山总站公交站"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "19:40",
+          "arrivalTime": "20:20",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": ["中山汽车总站", "小榄车站"],
+          "price": 130,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        }
+      ]
     },
     {
-      "id": "a8b3",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "江门",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "英利车站",
+        "龙门车站",
+        "南兴车站",
+        "雷州华侨宾馆",
+        "雷州邦塘中国石化加油站"
+      ],
+      "arrivalPoints": [
+        "开平水口收费站",
+        "外海高速路口公交站",
+        "龙湾高速路口BP加油站",
+        "江门汽车总站"
+      ],
+      "schedules": [
+        {
+          "departureTime": "08:20",
+          "arrivalTime": "08:50",
+          "departurePoints": [
+            "英利车站",
+            "龙门车站",
+            "南兴车站",
+            "雷州华侨宾馆"
+          ],
+          "arrivalPoints": [
+            "开平水口收费站",
+            "外海高速路口公交站",
+            "龙湾高速路口BP加油站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "19:40",
+          "arrivalTime": "20:20",
+          "departurePoints": ["英利车站", "龙门车站", "雷州邦塘中国石化加油站"],
+          "arrivalPoints": [
+            "开平水口收费站",
+            "外海高速路口公交站",
+            "江门汽车总站"
+          ],
+          "price": 130,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        }
+      ]
     },
     {
-      "id": "c580",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "雷州",
+      "end": "惠州",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": ["英利车站", "龙门车站", "雷州华侨宾馆"],
+      "arrivalPoints": ["金辉学校公交站"],
+      "schedules": [
+        {
+          "departureTime": "08:20",
+          "arrivalTime": "08:40",
+          "departurePoints": ["英利车站", "龙门车站", "雷州华侨宾馆"],
+          "arrivalPoints": ["金辉学校公交站"],
+          "price": 180,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "19:30",
+          "arrivalTime": "19:50",
+          "departurePoints": ["英利车站", "龙门车站", "雷州华侨宾馆"],
+          "arrivalPoints": ["金辉学校公交站"],
+          "price": 180,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        }
+      ]
+    },
+
+    {
+      "start": "广州",
+      "end": "深圳",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "中环西路公交站(广工马路对面)",
+        "广大生活区公交站广大1号天桥下 (靠商中)",
+        "中大天桥下(靠GOGO新天地一侧马路边)",
+        "大学城北地铁站E1出口",
+        "科韵路地铁站B口",
+        "车限南地铁站A口",
+        "东圃地铁站A出口",
+        "增城广场地铁站(F出口公交总站充电桩位置)",
+        "广州华商学院(本科正门靠天桥底公交站)",
+        "新塘白江地铁站D1口(真肝早点签)",
+        "三元里地铁站A1出口直行50米公交站",
+        "燕塘地铁站C出口右边报刊亭旁边",
+        "黄村地铁站B口左手边黄村招呼站里面候车",
+        "双岗地铁A出往左手边走100米人行天桥处",
+        "珠江新城地铁站A1出口公交站",
+        "客村地铁站B出口正前方直走树下面",
+        "万胜围地铁站B出口红色报刊亭右手方向10米",
+        "广州东站汽车客运站候车室(站内乘车)",
+        "岗顶地铁站C出口",
+        "越秀公园地铁站C出口旁公交站",
+        "石牌桥地铁A出口"
+      ],
+      "arrivalPoints": [
+        "宝安中心地铁站",
+        "深大北门公交站",
+        "世界之窗地铁站",
+        "车公庙地铁站",
+        "市民中心地铁站(市民广场东公交站)",
+        "深圳大剧院地铁站",
+        "红山地铁站 (龙华区)",
+        "五和地铁站 (龙岗区)",
+        "木棉湾地铁站 (龙岗区)"
+      ],
+      "schedules": [
+        {
+          "departureTime": "07:00",
+          "arrivalTime": "07:20",
+          "departurePoints": [
+            "中环西路公交站(广工马路对面)",
+            "广大生活区公交站广大1号天桥下 (靠商中)",
+            "中大天桥下(靠GOGO新天地一侧马路边)",
+            "大学城北地铁站E1出口",
+            "科韵路地铁站B口",
+            "车限南地铁站A口",
+            "东圃地铁站A出口"
+          ],
+          "arrivalPoints": [
+            "宝安中心地铁站",
+            "深大北门公交站",
+            "世界之窗地铁站",
+            "车公庙地铁站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "07:00",
+          "arrivalTime": "07:40",
+          "departurePoints": [
+            "增城广场地铁站(F出口公交总站充电桩位置)",
+            " 广州华商学院(本科正门靠天桥底公交站)",
+            "新塘白江地铁站D1口(真肝早点签"
+          ],
+          "arrivalPoints": [
+            "深大北门公交站",
+            "市民中心地铁站(市民广场东公交站)",
+            "深圳大剧院地铁站"
+          ],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "07:00",
+          "arrivalTime": "07:50",
+          "departurePoints": [
+            "三元里地铁站A1出口直行50米公交站 ",
+            "燕塘地铁站C出口右边报刊亭旁边",
+            "黄村地铁站B口左手边黄村招呼站里面候车",
+            "双岗地铁A出往左手边走100米人行天桥处"
+          ],
+          "arrivalPoints": [
+            "宝安地铁站",
+            " 宝安中心地铁站地铁1号和5号线双地铁口",
+            "深圳大剧院地铁站"
+          ],
+          "price": 40,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "8:00",
+          "arrivalTime": "8:10",
+          "departurePoints": [
+            "增城广场地铁站",
+            "广州华商学院",
+            "黄村地铁站B口左手边黄村招呼站里面候车",
+            "双岗地铁A出往左手边走100米人行天桥处"
+          ],
+          "arrivalPoints": ["市民中心地铁站", "深圳大剧院地铁站"],
+          "price": 40,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "8:00",
+          "arrivalTime": "8:35",
+          "departurePoints": [
+            "珠江新城地铁站A1出口公交站",
+            "客村地铁站B出口正前方直走树下面",
+            "万胜围地铁站B出口红色报刊亭右手方向10米"
+          ],
+          "arrivalPoints": [
+            "宝安中心地铁站",
+            "深大北门公交站",
+            "世界之窗地铁站",
+            "大剧院地铁站"
+          ],
+          "price": 40,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+
+        {
+          "departureTime": "8:00",
+          "arrivalTime": "9:00",
+          "departurePoints": [
+            "广州东站汽车客运站候车室(站内乘车)",
+            "岗顶地铁站C出08:30 口",
+            " 车地铁站D出口"
+          ],
+          "arrivalPoints": [
+            "红山地铁站 (龙华区)",
+            "五和地铁站 (龙岗区)",
+            "木棉湾地铁站 (龙岗区)"
+          ],
+          "price": 33,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "8:40",
+          "arrivalTime": "9:00",
+          "departurePoints": [
+            "越秀公园地铁站C出口旁公交站",
+            "石牌桥地铁A出口",
+            " 车地铁站D出口"
+          ],
+          "arrivalPoints": [
+            "宝安中心地铁站",
+            "深大北门公交站",
+            "市民中心地铁站",
+            "大剧院地铁站"
+          ],
+          "price": 33,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "9:00",
+          "arrivalTime": "9:10",
+          "departurePoints": [
+            "增城广场地铁站(F出口公交总站充电桩位置)",
+            "广州华商学院(本科正门靠天桥底公交站)",
+            " 车地铁站D出口"
+          ],
+          "arrivalPoints": ["市民中心地铁站", "大剧院地铁站"],
+          "price": 40,
+          "ticketType": "正价票",
+          "remarks": "咨询电话：13827185500"
+        },
+        {
+          "departureTime": "9:00",
+          "arrivalTime": "9:10",
+          "departurePoints": [
+            "三元里地铁站A1出口直行50米公交站",
+            "燕塘地铁站C出口右边报10:00 刊亭旁边"
+          ],
+          "arrivalPoints": [" 宝安地铁站", "宝安中心地铁站"],
+          "price": 40,
+          "ticketType": "正价票",
+          "remarks": "豪华大巴"
+        }
+      ]
+    },
+
+    {
+      "start": "广州",
+      "end": "珠海",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "越秀公园地铁站C出口招呼站",
+        "石牌桥地铁站A出口",
+        "万胜围地铁C出口马路边"
+      ],
+      "arrivalPoints": [
+        "官塘",
+        "南古道至北公交站(北师大)",
+        "拱北华侨宾馆对面公交站"
+      ],
+      "schedules": [
+        {
+          "departureTime": "08:50",
+          "arrivalTime": "09:10",
+          "departurePoints": [
+            "越秀公园地铁站C出口招呼站",
+            "石牌桥地铁站A出口",
+            " 万胜围地铁C出口马路边",
+            "体育西地铁站c出口"
+          ],
+          "arrivalPoints": ["香洲区府", "拱北口岸"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181106，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:20",
+          "arrivalTime": "20:50",
+          "departurePoints": [
+            "体育西地铁站c出口",
+            "石牌桥地铁站A出口",
+            "万胜围地铁C出口马路边"
+          ],
+          "arrivalPoints": [
+            "官塘",
+            "北理工",
+            "南古道至北公交站(北师大)",
+            "香洲区府",
+            "拱北华侨宾馆对面公交站"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181106，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "8:20",
+          "arrivalTime": "9:50",
+          "departurePoints": [
+            "区庄地铁站C出口",
+            "石牌桥地铁站A出口",
+            "万胜围地铁C出口马路边"
+          ],
+          "arrivalPoints": [
+            "官塘",
+            "北理工",
+            "南古道至北公交站(北师大)",
+            "香洲区府",
+            "拱北华侨宾馆对面公交站",
+            "拱北口岸 (公交站)"
+          ],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181106，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
+    },
+
+    {
+      "start": "广州",
+      "end": "雷州",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "嘉禾望岗地铁站H口路边",
+        "车波南地铁站B口",
+        "体育西地铁站G出",
+        "纪念堂地铁站",
+        "西场地铁站F出口",
+        "富力半岛花园公交站",
+        "嘉禾望岗G出口"
+      ],
+      "arrivalPoints": ["雷州阿里山公交站", "龙门总站", "英利车站"],
+      "schedules": [
+        {
+          "departureTime": "07:20",
+          "arrivalTime": "09:25",
+          "departurePoints": [
+            "嘉禾望岗G出口",
+            "车玻南地铁站B口",
+            "体育西地铁站G",
+            "纪念堂地铁站",
+            "西场地铁站F出口",
+            "富力半岛花园公交站"
+          ],
+          "arrivalPoints": ["雷州阿里山公交站", "龙门总站", "英利车站"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "19:20",
+          "arrivalTime": "20:40",
+          "departurePoints": [
+            "嘉禾望岗G出口",
+            "车南地铁站B门",
+            "体育西地铁站G出"
+          ],
+          "arrivalPoints": ["雷州阿里山公交站", "龙门总站", "英利车站"],
+          "price": 120,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:50",
+          "arrivalTime": "00:00",
+          "departurePoints": [
+            "嘉禾望岗地铁站H口路边",
+            "车波南地铁站B口",
+            "体育西地铁站G出",
+            "纪念堂地铁站",
+            "西场地铁站F出口",
+            "富力半岛花园公交站"
+          ],
+          "arrivalPoints": ["雷州阿里山公交站", "龙门总站", "英利车站"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:50",
+          "arrivalTime": "00:00",
+          "departurePoints": [
+            "嘉禾望岗G出口",
+            "车南地铁站B口",
+            "体育西地铁站G"
+          ],
+          "arrivalPoints": ["雷州阿里山公交站", "龙门总站", "英利车站"],
+          "price": 120,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+
+        {
+          "departureTime": "20:50",
+          "arrivalTime": "00:00",
+          "departurePoints": [
+            "嘉禾望岗地铁站H口路边",
+            "车波南地铁站B口",
+            "体育西地铁站G出",
+            "纪念堂地铁站",
+            "西场地铁站F出口",
+            "富力半岛花园公交站"
+          ],
+          "arrivalPoints": ["雷州阿里山公交站", "龙门总站", "英利车站"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        }
+      ]
+    },
+
+    {
+      "start": "广州",
+      "end": "徐闻",
+      "status": "有班次",
+      "date": "2024-06-16",
+      "departurePoints": [
+        "嘉禾望岗地铁站H口路边",
+        "车波南地铁站B口",
+        "体育西地铁站G出口",
+        "纪念堂地铁站",
+        "西场地铁站F出口",
+        "富力半岛花园公交站",
+        "嘉禾望岗G出口"
+      ],
+      "arrivalPoints": ["徐闻人民公园", "迈陈 (拾来家具城)"],
+      "schedules": [
+        {
+          "departureTime": "07:20",
+          "arrivalTime": "09:25",
+          "departurePoints": [
+            "嘉禾望岗G出口",
+            "车波南地铁站B口",
+            "体育西地铁站G",
+            "纪念堂地铁站",
+            "西场地铁站F出口",
+            "富力半岛花园公交站"
+          ],
+          "arrivalPoints": ["徐闻人民公园", "迈陈 (拾来家具城)"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "19:20",
+          "arrivalTime": "20:40",
+          "departurePoints": [
+            "嘉禾望岗G出口",
+            "车南地铁站B门",
+            "体育西地铁站G出"
+          ],
+          "arrivalPoints": ["徐闻人民公园", "迈陈 (拾来家具城)"],
+          "price": 120,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时无需停车休息。"
+        },
+        {
+          "departureTime": "20:50",
+          "arrivalTime": "22:45",
+          "departurePoints": [
+            "嘉禾望岗地铁站H口路边",
+            "车波南地铁站B口",
+            "体育西地铁站G出",
+            "纪念堂地铁站",
+            "西场地铁站F出口",
+            "富力半岛花园公交站"
+          ],
+          "arrivalPoints": ["徐闻人民公园", "迈陈 (拾来家具城)"],
+          "price": 100,
+          "ticketType": "正价票",
+          "remarks": "寄货联系电话：13827181207，务必提前20分钟到达乘车地点与司机联系，凌晨2-5时不停车。"
+        }
+      ]
     },
     {
-      "id": "66e9",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "广州",
+      "end": "佛山",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": ["广州天河城东门"],
+      "arrivalPoints": [
+        "华南师范大学 (南海校区) 北门",
+        "广东轻工职业技术学院 (北院) 大门口对面公交站",
+        "佛山科学技术学院 (仙溪校区) 北区西门公交站"
+      ],
+      "schedules": [
+        {
+          "departureTime": "17:30",
+          "arrivalTime": null,
+          "departurePoints": ["广州天河城东门"],
+          "arrivalPoints": [
+            "华南师范大学 (南海校区) 北门",
+            "华南师范大学南海校区大门口(阳光KFC直下100米)",
+            "广东轻工职业技术学院 (北院) 大门口对面公交站",
+            "佛山科学技术学院 (仙溪校区) 北区西门公交站"
+          ],
+          "price": 22.8,
+          "ticketType": "正价票",
+          "remarks": null
+        },
+        {
+          "departureTime": "19:30",
+          "arrivalTime": null,
+          "departurePoints": ["广州天河城东门"],
+          "arrivalPoints": [
+            "华南师范大学 (南海校区) 北门",
+            "华南师范大学南海校区大门(阳光KFC直下100米)",
+            "广东轻工职业技术学院(北院) 大门口对面公交站",
+            "佛山科学技术学院 (仙溪校区) 北区西门公交站"
+          ],
+          "price": 22.8,
+          "ticketType": "正价票",
+          "remarks": null
+        }
+      ]
     },
     {
-      "id": "c830",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "广州",
+      "end": "阳江",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": ["越秀公园地铁C出口"],
+      "arrivalPoints": ["坡渔家风情街"],
+      "schedules": [
+        {
+          "departureTime": "7:30",
+          "arrivalTime": "07:40",
+          "departurePoints": ["越秀公园地铁C出口"],
+          "arrivalPoints": ["坡渔家风情街"],
+          "price": 89,
+          "ticketType": "正价票",
+          "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+        }
+      ]
     },
     {
-      "id": "1979",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2233444",
-      "age_group": "成人"
+      "start": "深圳",
+      "end": "雷州",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [
+        "爱联地铁站C出口公交站",
+        "福田竹子林A 出口",
+        "华南城 (上木枯村公交站)",
+        "龙华汽车站 (旁油松加油站)",
+        "石岩 (台湾工业区公交站台)",
+        "深南北环立交3公交站",
+        "西乡大门",
+        "三围路口",
+        "福永客运站对面",
+        "沙井客运站"
+      ],
+      "arrivalPoints": ["雷州华侨宾馆", "南兴车站", "龙门总站", "英利车站"],
+      "schedules": [
+        {
+          "departureTime": "6:20",
+          "arrivalTime": "07:40",
+          "departurePoints": [
+            "爱联地铁站C出口公交站",
+            "福田竹子林A 出口",
+            "华南城 (上木枯村公交站)",
+            "龙华汽车站 (旁油松加油站)",
+            "石岩 (台湾工业区公交站台)",
+            "深南北环立交3公交站",
+            "西乡大门",
+            "三围路口",
+            "福永客运站对面",
+            "沙井客运站",
+            "西乡国安居门口",
+            "凤凰立交公交站 (往沙井方向",
+            "福永汽车站对面天桥底下 (报亭旁边)",
+            "沙井新桥派出所公交站至(东莞方向)"
+          ],
+          "arrivalPoints": [
+            "雷州华侨宾馆",
+            "南兴车站",
+            "龙门总站",
+            "英利车站",
+            "龙门大酒店宾馆"
+          ],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+
+        {
+          "departureTime": "11:30",
+          "arrivalTime": "13:00",
+          "departurePoints": [
+            "龙华汽车站 (旁油松加油站",
+            "深南北环立交3公交站",
+            "西乡国安居门口",
+            "凤凰立交公交站 (往沙井方向",
+            "福永汽车站对面天桥底下 (报亭旁边)",
+            "沙井新桥派出所公交站至(东莞方向)"
+          ],
+          "arrivalPoints": [
+            "雷州华侨宾馆",
+            "南兴车站",
+            "龙门大酒店宾馆",
+            "英利车站"
+          ],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        }
+      ]
     },
     {
-      "id": "2cb9",
-      "name": "1222",
-      "id_type": "身份证",
-      "id_nums": "2222",
-      "age_group": "成人"
+      "start": "深圳",
+      "end": "惠州",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [
+        "高新园地铁站D (大冲公交站往前20米)",
+        "招商银行大厦公交O站(车公庙C口)",
+        "市民广场西公交站 (罗湖方向)",
+        "大剧院地铁E口"
+      ],
+      "arrivalPoints": [
+        "惠州卫生职业技术学院",
+        "惠州城市职业学院东校区门口",
+        " 惠学院公交站",
+        "花边岭广场公交站(君尚百货和星巴克门口)",
+        "东平市场公交站",
+        "云山城轨公交站(德威大厦对面)"
+      ],
+      "schedules": [
+        {
+          "departureTime": "09:00",
+          "arrivalTime": "09:30",
+          "departurePoints": [
+            "高新园地铁站D (大冲公交站往前20米)",
+            "招商银行大厦公交O站(车公庙C口)",
+            "市民广场西公交站 (罗湖方向)",
+            "大剧院地铁E口"
+          ],
+          "arrivalPoints": [
+            "惠州卫生职业技术学院",
+            "惠州城市职业学院东校区门口",
+            " 惠学院公交站",
+            "花边岭广场公交站(君尚百货和星巴克门口)",
+            "东平市场公交站",
+            "云山城轨公交站(德威大厦对面)"
+          ],
+          "price": 49.9,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+
+        {
+          "departureTime": "10:00",
+          "arrivalTime": "10:30",
+          "departurePoints": [
+            "高新园地铁站D (大冲公交站往前20米)",
+            "招商银行大厦公交O站(车公庙C口)",
+            "市民广场西公交站 (罗湖方向)",
+            "大剧院地铁E口"
+          ],
+          "arrivalPoints": [
+            "惠州卫生职业技术学院",
+            "惠州城市职业学院东校区门口",
+            " 惠学院公交站",
+            "花边岭广场公交站(君尚百货和星巴克门口)",
+            "东平市场公交站",
+            "云山城轨公交站(德威大厦对面)"
+          ],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "12:00",
+          "arrivalTime": "12:30",
+          "departurePoints": [
+            "高新园地铁站D (大冲公交站往前20米)",
+            "招商银行大厦公交O站(车公庙C口)",
+            "市民广场西公交站 (罗湖方向)",
+            "大剧院地铁E口"
+          ],
+          "arrivalPoints": [
+            "惠州卫生职业技术学院",
+            "惠州城市职业学院东校区门口",
+            " 惠学院公交站",
+            "花边岭广场公交站(君尚百货和星巴克门口)",
+            "东平市场公交站",
+            "云山城轨公交站(德威大厦对面)"
+          ],
+          "price": 49.9,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "14:00",
+          "arrivalTime": "14:30",
+          "departurePoints": [
+            "高新园地铁站D (大冲公交站往前20米)",
+            "招商银行大厦公交O站(车公庙C口)",
+            "市民广场西公交站 (罗湖方向)",
+            "大剧院地铁E口"
+          ],
+          "arrivalPoints": [
+            "惠州卫生职业技术学院",
+            "惠州城市职业学院东校区门口",
+            "惠州学院公交站",
+            "花边岭广场公交站(君尚百货和星巴克门口)"
+          ],
+          "price": 49.9,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "18:00",
+          "arrivalTime": "18:40",
+          "departurePoints": [
+            "高新园地铁站D (大冲公交站往前20米)",
+            "招商银行大厦公交O站(车公庙C口)",
+            "市民广场西公交站 (罗湖方向)",
+            "大剧院地铁E口"
+          ],
+          "arrivalPoints": [
+            "惠州卫生职业技术学院",
+            "惠州城市职业学院东校区门口",
+            " 惠学院公交站",
+            "花边岭广场公交站(君尚百货和星巴克门口)",
+            "东平市场公交站",
+            "云山城轨公交站(德威大厦对面)"
+          ],
+          "price": 49.9,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        }
+      ]
     },
     {
-      "id": "e1b7",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2",
-      "age_group": "成人"
+      "start": "深圳",
+      "end": "中山",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [
+        "大剧院地铁站C口 (前面50米地王大厦公交站)",
+        "深大地铁站A3出口右手边 (深大地铁接驳站公交站)",
+        "宝安中心地铁站D出口(公交站台)"
+      ],
+      "arrivalPoints": [
+        "港口红星美凯龙公交站",
+        "东明花园公交站台",
+        "电子科技大学北",
+        "石岐区利和广场公交站台",
+        "五桂山广东药科大学",
+        "五桂山厂东理工职业学院"
+      ],
+      "schedules": [
+        {
+          "departureTime": "08:00",
+          "arrivalTime": "08:50",
+          "departurePoints": [
+            "大剧院地铁站C口 (前面50米地王大厦公交站)",
+            "深大地铁站A3出口右手边 (深大地铁接驳站公交站)",
+            "宝安中心地铁站D出口(公交站台)"
+          ],
+          "arrivalPoints": [
+            "港口红星美凯龙公交站",
+            "东明花园公交站台",
+            "电子科技大学北",
+            "石岐区利和广场公交站台",
+            "五桂山广东药科大学",
+            "五桂山厂东理工职业学院"
+          ],
+          "price": 50,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+
+        {
+          "departureTime": "13:00",
+          "arrivalTime": "13:50",
+          "departurePoints": [
+            "大剧院地铁站C口 (前面50米地王大厦公交站)",
+            "深大地铁站A3出口右手边 (深大地铁接驳站公交站)",
+            "宝安中心地铁站D出口(公交站台)"
+          ],
+          "arrivalPoints": [
+            "港口红星美凯龙公交站",
+            "东明花园公交站台",
+            "电子科技大学北",
+            "石岐区利和广场公交站台",
+            "五桂山广东药科大学",
+            "五桂山厂东理工职业学院"
+          ],
+          "price": 50,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "15:30",
+          "arrivalTime": "16:20",
+          "departurePoints": [
+            "大剧院地铁站C口 (前面50米地王大厦公交站)",
+            "深大地铁站A3出口右手边 (深大地铁接驳站公交站)",
+            "宝安中心地铁站D出口(公交站台)"
+          ],
+          "arrivalPoints": [
+            "港口红星美凯龙公交站",
+            "东明花园公交站台",
+            "电子科技大学北",
+            "石岐区利和广场公交站台",
+            "五桂山广东药科大学",
+            "五桂山厂东理工职业学院"
+          ],
+          "price": 50,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "18:00",
+          "arrivalTime": "19:50",
+          "departurePoints": [
+            "大剧院地铁站C口 (前面50米地王大厦公交站)",
+            "深大地铁站A3出口右手边 (深大地铁接驳站公交站)",
+            "宝安中心地铁站D出口(公交站台)"
+          ],
+          "arrivalPoints": [
+            "港口红星美凯龙公交站",
+            "东明花园公交站台",
+            "电子科技大学北",
+            "石岐区利和广场公交站台",
+            "五桂山广东药科大学",
+            "五桂山厂东理工职业学院"
+          ],
+          "price": 50,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        }
+      ]
     },
     {
-      "id": "1c26",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2",
-      "age_group": "成人"
+      "start": "东莞",
+      "end": "徐闻",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [
+        "长安汽车站 (西北门)",
+        "塘厦天桥公交车站(樟木头方向玉林顺发便利店门口)",
+        "九江水道(公交站)",
+        "常平站(出站口)>马屋村(公交站)",
+        "东坑路口站(公交站)",
+        "鸿图广场(公交站)",
+        "莞路口(公交站)",
+        "东莞南城(公交站)",
+        "厚街高速入口治安亭"
+      ],
+      "arrivalPoints": ["下桥站", "新国线中心客运站"],
+      "schedules": [
+        {
+          "departureTime": "08:00",
+          "arrivalTime": "08:50",
+          "departurePoints": ["长安汽车站 (西北门)"],
+          "arrivalPoints": ["下桥站", "新国线中心客运站"],
+          "price": 140,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+
+        {
+          "departureTime": "13:00",
+          "arrivalTime": "13:50",
+          "departurePoints": [
+            "塘厦天桥公交车站(樟木头方向玉林顺发便利店门口)",
+            "九江水道(公交站)",
+            "常平站(出站口)>马屋村(公交站)",
+            "东坑路口站(公交站)",
+            "鸿图广场(公交站)",
+            "莞路口(公交站)",
+            "东莞南城(公交站)",
+            "厚街高速入口治安亭"
+          ],
+          "arrivalPoints": ["下桥站", "新国线中心客运站"],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "15:30",
+          "arrivalTime": "16:20",
+          "departurePoints": ["长安汽车站 (西北门)"],
+          "arrivalPoints": ["下桥站", "新国线中心客运站"],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "18:00",
+          "arrivalTime": "19:50",
+          "departurePoints": ["长安汽车站 (西北门)"],
+          "arrivalPoints": ["下桥站", "新国线中心客运站"],
+          "price": 150,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        }
+      ]
     },
     {
-      "id": "0683",
-      "name": "2",
-      "id_type": "身份证",
-      "id_nums": "2",
-      "age_group": "成人"
+      "start": "东莞",
+      "end": "珠海",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [],
+      "arrivalPoints": [],
+      "schedules": [
+        
+
+        {
+          "departureTime": "12:00",
+          "arrivalTime": "12:50",
+          "departurePoints": [
+            "鸿福路地铁站C2出口",
+            "虎门富民服装商务中心(富民商务中心公交站)"
+          ],
+          "arrivalPoints": [
+            "官塘公交站",
+            "北理工",
+            "北师大",
+            "香洲区府公交站",
+            "拱北公交站"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+        {
+          "departureTime": "14:00",
+          "arrivalTime": "15:50",
+          "departurePoints": [
+            "鸿福路地铁站C2出口",
+            "虎门富民服装商务中心(富民商务中心公交站)"
+          ],
+          "arrivalPoints": [
+            "官塘公交站",
+            "北理工",
+            "北师大",
+            "香洲区府公交站",
+            "拱北公交站"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        },
+
+        {
+          "departureTime": "15:00",
+          "arrivalTime": "16:50",
+          "departurePoints": [
+            "鸿福路地铁站C2出口",
+            "虎门富民服装商务中心(富民商务中心公交站)"
+          ],
+          "arrivalPoints": [
+            "官塘公交站",
+            "北理工",
+            "北师大",
+            "香洲区府公交站",
+            "拱北公交站"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "[座席: 客服13827185500]"
+        }
+      ]
     },
     {
-      "id": "3ccf",
-      "name": "3",
-      "id_type": "护照",
-      "id_nums": "2444",
-      "age_group": "儿童"
+      "start": "珠海",
+      "end": "徐闻",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [],
+      "arrivalPoints": [],
+      "schedules": [
+        {
+          "departureTime": "08:00",
+          "arrivalTime": "08:50",
+          "departurePoints": [
+            "金鼎市场 (公交站)","北理工(公交站)B站台","上冲 (公交站)A站台","翠微 (公交站)","南泉路口公交站(往斗门方向)","翠湾公交站(往斗门方向)","广生公交车站(往斗门方向)","广昌(公交站)","艺术学院公交站","灶镇金山林大酒店","东澳村(公交)"
+          ],
+          "arrivalPoints": [
+            "下桥站",
+            "曲界镇新城商行 (海鸥路口)",
+            "前山 (糖厂小卖部)",
+            "迈陈(拾来家具城)"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "新国线直达快车，凌晨2-5时不停车。寄货联系电话:13827181106--- 告知: 务必提前20分钟到达乘车地点与司机联系"
+        },
+        {
+          "departureTime": "18:00",
+          "arrivalTime": "18:50",
+          "departurePoints": [
+            "金鼎市场 (公交站)","北理工(公交站)B站台","上冲 (公交站)A站台","翠微 (公交站)","南泉路口公交站(往斗门方向)","翠湾公交站(往斗门方向)","广生公交车站(往斗门方向)","广昌(公交站)","艺术学院公交站","灶镇金山林大酒店","东澳村(公交)"
+          ],
+          "arrivalPoints": [
+            "下桥站",
+            "曲界镇新城商行 (海鸥路口)",
+            "前山 (糖厂小卖部)",
+            "迈陈(拾来家具城)"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "新国线直达快车，凌晨2-5时不停车。寄货联系电话:13827181106--- 告知: 务必提前20分钟到达乘车地点与司机联系"
+        }
+        
+      ]
+    },
+    {
+      "start": "珠海",
+      "end": "雷州",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": ["金鼎市场 (公交站)","北理工(公交站)B站台","上冲 (公交站)A站台","翠微 (公交站)","南泉路口公交站(往斗门方向)","翠湾公交站(往斗门方向)","广生公交车站(往斗门方向)","广昌(公交站)","艺术学院公交站","灶镇金山林大酒店","东澳村(公交)"],
+      "arrivalPoints": ["雷州阿里山公交站","龙门总站" ,"英利车站"],
+      "schedules": [
+        {
+          "departureTime": "08:00",
+          "arrivalTime": "08:50",
+          "departurePoints": [
+            "金鼎市场 (公交站)","北理工(公交站)B站台","上冲 (公交站)A站台","翠微 (公交站)","南泉路口公交站(往斗门方向)","翠湾公交站(往斗门方向)","广生公交车站(往斗门方向)","广昌(公交站)","艺术学院公交站","灶镇金山林大酒店","东澳村(公交)"
+          ],
+          "arrivalPoints": [
+            "雷州阿里山公交站","龙门总站" ,"英利车站"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "新国线直达快车，凌晨2-5时不停车。寄货联系电话:13827181106--- 告知: 务必提前20分钟到达乘车地点与司机联系"
+        },
+        {
+          "departureTime": "18:00",
+          "arrivalTime": "18:50",
+          "departurePoints": [
+            "金鼎市场 (公交站)","北理工(公交站)B站台","上冲 (公交站)A站台","翠微 (公交站)","南泉路口公交站(往斗门方向)","翠湾公交站(往斗门方向)","广生公交车站(往斗门方向)","广昌(公交站)","艺术学院公交站","灶镇金山林大酒店","东澳村(公交)"
+          ],
+          "arrivalPoints": [
+            "雷州阿里山公交站","龙门总站" ,"英利车站"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "新国线直达快车，凌晨2-5时不停车。寄货联系电话:13827181106--- 告知: 务必提前20分钟到达乘车地点与司机联系"
+        },
+        {
+          "departureTime": "20:00",
+          "arrivalTime": "20:50",
+          "departurePoints": [
+            "金鼎市场 (公交站)","北理工(公交站)B站台","上冲 (公交站)A站台","翠微 (公交站)","南泉路口公交站(往斗门方向)","翠湾公交站(往斗门方向)","广生公交车站(往斗门方向)","广昌(公交站)","艺术学院公交站","灶镇金山林大酒店","东澳村(公交)"
+          ],
+          "arrivalPoints": [
+            "雷州阿里山公交站","龙门总站" ,"英利车站"
+          ],
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": "新国线直达快车，凌晨2-5时不停车。寄货联系电话:13827181106--- 告知: 务必提前20分钟到达乘车地点与司机联系"
+        }
+       
+        
+      ]
+    },
+    {
+      "start": "珠海",
+      "end": "佛山",
+      "status": "有班次",
+      "date": "2024-06-23",
+      "departurePoints": [
+        "拱北口岸大巴停车场",
+        "华侨宾馆公交站 (维克酒店前方)",
+        "红山二恒星园公交站(往上冲方向)",
+        "京师家园对面，北师大隧道出口前14:30面50米 (翠湖里招牌)",
+        "北理工东门(对面人行天桥底)"
+      ],
+      "arrivalPoints": [
+        "南海万科广场星巴克",
+        "广东轻工职业技术学院(北院) 大门口对面公交站",
+        "华南师范大学南海校区大门口 (东南门)"
+      ],
+      "schedules": [
+        {
+          "departureTime": "08:00",
+          "arrivalTime": "08:50",
+          "departurePoints": [
+            "拱北口岸大巴停车场",
+            "华侨宾馆公交站 (维克酒店前方)",
+            "红山二恒星园公交站(往上冲方向)",
+            "京师家园对面，北师大隧道出口前14:30面50米 (翠湖里招牌)",
+            "北理工东门(对面人行天桥底)"
+          ],
+          "arrivalPoints": [
+            "南海万科广场星巴克",
+            "广东轻工职业技术学院(北院) 大门口对面公交站",
+            "华南师范大学南海校区大门口 (东南门)"
+          ],
+          
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": ""
+        },
+        {
+          "departurePoints": [
+            "拱北口岸大巴停车场",
+            "华侨宾馆公交站 (维克酒店前方)",
+            "红山二恒星园公交站(往上冲方向)",
+            "京师家园对面，北师大隧道出口前14:30面50米 (翠湖里招牌)",
+            "北理工东门(对面人行天桥底)"
+          ],
+          "arrivalPoints": [
+            "南海万科广场星巴克",
+            "广东轻工职业技术学院(北院) 大门口对面公交站",
+            "华南师范大学南海校区大门口 (东南门)"
+          ],
+          
+          "departureTime": "17:00",
+          "arrivalTime": "17:50",
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": ""
+        },
+        {
+          "departurePoints": [
+            "拱北口岸大巴停车场",
+            "华侨宾馆公交站 (维克酒店前方)",
+            "红山二恒星园公交站(往上冲方向)",
+            "京师家园对面，北师大隧道出口前14:30面50米 (翠湖里招牌)",
+            "北理工东门(对面人行天桥底)"
+          ],
+          "arrivalPoints": [
+            "南海万科广场星巴克",
+            "广东轻工职业技术学院(北院) 大门口对面公交站",
+            "华南师范大学南海校区大门口 (东南门)"
+          ],
+          "departureTime": "17:00",
+          "arrivalTime": "17:50",
+          "price": 58,
+          "ticketType": "正价票",
+          "remarks": ""
+        }
+      ]
     }
+    
   ]
 }

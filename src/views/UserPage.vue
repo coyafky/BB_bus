@@ -178,7 +178,7 @@ function navigateToUseragreement() {
 }
 
 function navigateToTicketImformation() {
-    router.push('/TicketImformation');
+    router.push('/TicketInformation');
 }
 
 function navigateToHome() {

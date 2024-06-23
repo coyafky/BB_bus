@@ -87,6 +87,7 @@
             <van-icon name="search" />
             立即查询
           </button>
+          <!-- 点击查询之后把 selectedStartCity 和 selectedEndCity 传给 Search.vue 获取对应schedule的数据 传入这部分数据进入到Pinia中-->
         </div>
 
 

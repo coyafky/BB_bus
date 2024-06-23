@@ -134,9 +134,8 @@ const router = createRouter({
       path: "/editpassenger",
       name: "editpassenger",
       component: editpassenger,
-    }
-    
-   
+    },
+  
   ],
 
 });
