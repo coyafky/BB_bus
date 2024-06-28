@@ -4,26 +4,29 @@
 
     </Header>
 
-    <div class="ticket-booking-container">
+    <div class="route-info">
 
       <!-- 起点终点 -->
       <div class="start">
         <div>
-          {{ startCity }}
+          {{ cityStore.selectedStartCity }}
         </div>
         <div>
-          {{ startPoint }}
+          
           <!-- 上车点 -->
+           {{ chooseRouteStore.chooseStartPoint }}
         </div>
       </div>
 
       <div class="time">
         <div>
-          {{ date }}
+          {{ dateStore.selectedDate }}
         </div>
-
         <div>
-          {{ time }}
+          ———————>
+        </div>
+        <div>
+          {{ chooseRouteStore.depatureTime}}
           <!-- 上车时间 -->
         </div>
 
@@ -31,10 +34,10 @@
 
       <div class="end">
         <div>
-          {{ endCity }}
+          {{ cityStore.selectedEndCity}}
         </div>
         <div>
-          {{ endPoint }}
+          {{ chooseRouteStore.chooseEndPoint }}
           <!-- 下车点 -->
         </div>
       </div>
@@ -55,13 +58,15 @@
       </div>
      
       <div class="ticket-counter">
-        <span>成人票数，200/张</span>
-        <Counter v-model="adultCount" label="成人票数" price="180" class="counter" />
+        <span>成人票数</span>
+        <span> (￥{{chooseRouteStore.price}})/张</span>
+        <Counter v-model="adultCount" label="成人票数" class="counter" />
       </div>
    
       <div class="ticket-counter">
-        <span>儿童票数￥100/张</span>
-        <Counter v-model="childCount" label="儿童票数" price="120" class="counter" />
+        <span>儿童票数</span>
+        <span> (￥{{chooseRouteStore.price/2}})/张</span>
+        <Counter v-model="childCount" label="儿童票数" class="counter" />
       </div>
 
     <!-- 交通部规定 -->
@@ -111,7 +116,7 @@
         订单的总金额:
       </span>
       <span class="price">
-        ￥{{ totalPrice }}
+        {{ totalPrice}}
       </span>
     </div>
 
@@ -156,7 +161,7 @@
       </button>
     </div>
     <div class="submit-button_1">
-      <button class="submit-button">
+      <button class="submit-button" @click="submitorder">
         提交订单
       </button>
     </div>
@@ -174,68 +179,89 @@ import Counter from '@/components/CounterTicket.vue';
 import Header from '@/components/Header.vue';
 import { Select } from "@element-plus/icons-vue";
 
+import { useStartEndPointsStore } from '@/stores/startEndPointsStore'; // 引入你的 Pinia store
+import { useDateStore } from '@/stores/dateStore';
+import { useCityStore } from '@/stores/cityStore';
+import {useRouteStore} from '@/stores/routeStore';
+import {useChooseRouteStore} from '@/stores/chooseRouteStore';
+
+const startEndPointsStore = useStartEndPointsStore();
+const dateStore = useDateStore();
+const cityStore = useCityStore();
+const routeStore = useRouteStore();
+const chooseRouteStore = useChooseRouteStore();
+
 
 const router = useRouter();
 
-const station = ref({
-  departure: '深圳',
-  arrival: '廉江乡镇',
-  departure_time: '2024-06-07 21:00',
-  arrival_time: '2024-06-07 23:00',
-});
 
 // 定义计数器状态
 const adultCount = ref(0);
 const childCount = ref(0);
 
-const passenger = ref({
-  name: '',
-  phone: '',
-  id_card: ''
+
+const totalPrice = computed(() => {
+  return adultCount.value * chooseRouteStore.price + childCount.value * (chooseRouteStore.price / 2);
 });
 
-// 假设成人票价为180元/张，儿童票价为100元/张
-const adultPrice = ref(180);
-const childPrice = ref(100);
-
-// 计算总金额
-const totalPrice = computed(() => adultCount.value * adultPrice.value + childCount.value * childPrice.value);
-
-const onSubmit = () => {
-  console.log("提交订单");
-  // 提交订单逻辑
-};
 
 provide('counterValues', {
   adultCount,
   childCount,
 });
+
+
+function submitorder() {
+  console.log("提交订单");
+  // 提交订单逻辑
+  router.push({
+    path: '/orderTicket/unfinished',
+    query: { hasOrder: true } // 传递一个查询参数
+  });
+  // 传一个值到该页面中
+  // orderTicket/unfinished如果接收了该值，就使用订单组件，否则使用空组件
+  //传递一个查询参数
+}
+
+
 </script>
 
 <style scoped>
 .ticket-booking-page {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+ 
   height: 100vh;
   background-color: #f1f0f5;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-
+  padding: 0;
+  margin: 0;
   background-color: #d92825;
   color: white;
+
+}
+
+::v-deep .text {
+  position: relative;
+  left: -25px;
 }
 
 
-.ticket-booking-container {
+
+.route-info{
+  background-color: #d92825;
+  color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 
@@ -290,7 +316,7 @@ provide('counterValues', {
 .ticket-counter {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+ 
   align-items: center;
   padding: 10px;
   border-top: 1px solid #f1f0f5;

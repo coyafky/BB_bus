@@ -14,7 +14,11 @@
                 <span class="station-info">
                     <button class="station_point_item_picker" @click="selectDeparturePoint(point)">
                         <span class="departure-icon" :class="{ 'selected-icon': selectedDeparturePoint === point }">上</span>
-                        {{ point }}
+
+                        <span>
+                            {{ point.name}}
+                        </span>
+                        <span class="time">{{ point.departureTime }}</span>
                     </button>
                 </span>
             </div>
@@ -41,30 +45,25 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useStartEndPointsStore } from '@/stores/startEndPointsStore'; // 引入你的 Pinia store
 import { MdRoundDirectionsBus } from '@kalimahapps/vue-icons';
+import { useChooseRouteStore } from '@/stores/chooseRouteStore';
+
 
 const startEndPointsStore = useStartEndPointsStore();
+const chooseRouteStore = useChooseRouteStore();
 const departurePoints = startEndPointsStore.departurePoints;
 const arrivalPoints = startEndPointsStore.arrivalPoints;
 
 const selectedDeparturePoint = ref(null);
 const selectedArrivalPoint = ref(null);
 
-onMounted(() => {
-    const route = useRoute();
-    const query = route.query;
-    if (query.departurePoints && query.arrivalPoints) {
-        // 解析并设置 departurePoints 和 arrivalPoints
-        departurePoints.value = JSON.parse(query.departurePoints);
-        arrivalPoints.value = JSON.parse(query.arrivalPoints);
-    }
-});
+
 
 const router = useRouter();
 
-const goToPayment = () => {
-    router.push('/paymentPage');
-};
 
+function departurePointNames (point){
+    return point.map(point=>point.name)
+}
 const selectDeparturePoint = (point) => {
     selectedDeparturePoint.value = point;
 };
@@ -72,6 +71,30 @@ const selectDeparturePoint = (point) => {
 const selectArrivalPoint = (point) => {
     selectedArrivalPoint.value = point;
 };
+const goToPayment = () => {
+    console.log(selectedDeparturePoint.value);
+    console.log(selectedArrivalPoint.value);
+    if (selectedDeparturePoint.value && selectedArrivalPoint.value)
+    {
+    chooseRouteStore.setChooseStartPoint(selectedDeparturePoint.value.name)
+    chooseRouteStore.setChooseEndPoint(selectedArrivalPoint.value)
+    chooseRouteStore.setDepatureTime (selectedDeparturePoint.value.departureTime)
+    console.log(chooseRouteStore.chooseStartPoint);
+    console.log(chooseRouteStore.chooseEndPoint);
+    console.log(chooseRouteStore.depatureTime);
+    router.push('/paymentPage');
+    }
+    else
+    {
+        alert('请选择上下车点');
+    }
+     
+
+    // 选择上下车点后，将上下车点的信息存储在pinia中
+  
+};
+
+
 </script>
 
 <style scoped>

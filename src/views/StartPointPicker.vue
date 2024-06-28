@@ -32,67 +32,15 @@ import Header from '@/components/Header.vue';
 import { useRouter } from 'vue-router'
 import { ref, onMounted, computed, inject } from 'vue';
 import axios from 'axios';
+import { useRouteStore } from '@/stores/routeStore';
 
-
-const departurePointStore = useDeparturePointStore();
-const departurePoints = ref([]);
-
-
-const cityStore = useCityStore();
-
-
-// 从Pinia中获取城市信息
-const startCity = computed(() => cityStore.selectedStartCity);
-const endCity = computed(() => cityStore.selectedEndCity);
-
-defineProps({
-    route: {
-        type: Object,
-        required: true
-    }
-});
+const routeStore = useRouteStore();
+const departurePoints = routeStore.departurePoints;
+console.log(departurePoints);
 
 
 
-const routes = ref([]);
 
-const router = useRouter();
-
-
-
-const fetchRoutes = async () => {
-  try {
-    const response = await axios.get('http://localhost:3000/routes', {
-      params: {
-        start: startCity.value,
-        end: endCity.value
-      }
-    });
-    routes.value = response.data;
-    // 假设我们选择第一个有 departurePoints 的 route
-    const selectedRoute = routes.value.find(route => route.departurePoints);
-    if (selectedRoute) {
-      departurePoints.value = selectedRoute.departurePoints;
-    }
-
-  } catch (error) {
-    console.error('Error fetching routes:', error);
-  }
-};
-
-onMounted(() => {
-  fetchRoutes();
-});
-const selectAllPoints = () => {
-
-  router.push('/queryPage');
-};
-
-const selectDeparturePoint = (point) => {
-  departurePointStore.setDeparturePoint(point);
-  router.push('/queryPage');
-};
-console.log(routes.value);
 </script>
 
 <style scoped>

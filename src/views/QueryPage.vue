@@ -24,9 +24,7 @@
 
         <div class="date_container">
             <div class="previous_div">
-                <button @click="getPreviousDay" class="previous">
-                    前一天
-                </button>
+                <button :disabled="isPreviousDayDisabled" :style="{ color: isPreviousDayDisabled ? '#666666' : '#d92a27' }" @click="getPreviousDay">前一天</button>
             </div>
             <div class="vertical-line"></div>
             <div class="showdate">
@@ -34,10 +32,10 @@
                     <Calendar />
                 </el-icon>
                 <span>
-                    {{ formattedDate }}
+                    {{ dateStore.selectedDate }}
                 </span>
                 <span>
-                    ({{ dayOfWeek }})
+                    ({{ dateStore.selectedDayOfWeek }})
                 </span>
             </div>
 
@@ -52,15 +50,23 @@
         <div class="fliter">
             <div class="query-item">
                 <button class="allbus">
-                    <TaTopologyBus />
-                    所有班次
+                    <div class="fliter_icon">
+                        <TaTopologyBus />
+                    </div>
+                    <div>
+                        所有班次
+                    </div>
                 </button>
             </div>
             <div class="query-item">
 
-                <button @click="Timefilter">
-                    <CiTimer />
-                    时间段筛选
+                <button @click="Timefilter" class="time_filter">
+                    <div class="fliter_icon">
+                        <van-icon name="clock-o" />
+                    </div>
+                    <div>
+                        时间段筛选
+                    </div>
                 </button>
                 <!-- 跳转到时间段筛选夜间 -->
             </div>
@@ -68,17 +74,25 @@
 
                 <!-- 跳转到上车点筛选页面 -->
 
-                <button @click="StartPointfilter">
-                    <IcSolidRhombusArrowRight />
-                    上车点筛选
+                <button @click="StartPointfilter" class="start_point_filter">
+                    <div class="fliter_icon">
+                        <van-icon name="play-circle-o" />
+                    </div>
+                    <div>
+                        上车点筛选
+                    </div>
                 </button>
             </div>
             <div class="query-item">
 
                 <!--  -->
-                <button @click="EndPointfilter">
+                <button @click="EndPointfilter"  class="end_point_filter">
+                   <div class="fliter_icon">
                     <MdRoundPinDrop />
-                    下车点筛选
+                   </div>
+                    <div>
+                        下车点筛选
+                    </div>
                 </button>
 
             </div>
@@ -86,9 +100,18 @@
 
 
         <div class="container">
-            <!-- 其他代码 -->
-            <div class="card_container">
-                <Card v-for="route in filteredRoutes" :key="route.id" :route="route"  class="card" />
+
+            <div v-if="routeStore.status === '无班次'">
+                <!-- 这个页面展示空组件  表示没有获取到班次信息  检测到 获取route中status="无班次"-->
+                 <EmptyComponent/>
+            </div>
+
+            <!-- 表示非空，并且渲染 route中的其他信息 -->
+            <div  v-else  class="card_container">
+
+                <Card >
+                    
+                </Card>
             </div>
         </div>
 
@@ -100,23 +123,34 @@
 <script setup>
 import { ref, computed, provide, onMounted } from 'vue';
 import goback from '@/components/goback.vue';
+
 import { useCityStore } from '../stores/cityStore';
 import { useDeparturePointStore } from '../stores/departurePointStore';
+import { useRouteStore } from '@/stores/routeStore';
+import { useDateStore } from '@/stores/dateStore';
+
 import { RouterView, RouterLink } from 'vue-router';
 import { CiTimer } from "@kalimahapps/vue-icons";
 import { MdRoundPinDrop } from "@kalimahapps/vue-icons";
 import { IcSolidRhombusArrowRight } from "@kalimahapps/vue-icons";
 import { TaTopologyBus } from "@kalimahapps/vue-icons";
+
 import { Calendar } from '@element-plus/icons-vue';
 
+import EmptyComponent from '@/components/EmptyComponent.vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
 import Card from '@/components/Card.vue';
 
 const cityStore = useCityStore();
 const departurePointStore = useDeparturePointStore();
+const routeStore = useRouteStore();
 const router = useRouter();
+const dateStore = useDateStore();
 
+const date = ref(dateStore.selectedDate); // 从Pinia存储中获取日期
+
+const daysInEnglish = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 // 从Pinia中获取城市信息
 const startCity = computed(() => cityStore.selectedStartCity);
 const endCity = computed(() => cityStore.selectedEndCity);
@@ -125,75 +159,153 @@ const value1 = ref(new Date());
 const currentTime = ref(new Date());
 const routes = ref([]);
 
-const dayOfWeek = computed(() => {
-    const date = new Date(value1.value);
-    const days = ['日', '一', '二', '三', '四', '五', '六'];
-    return `星期${days[date.getDay()]}`;
-});
 
-const formattedDate = computed(() => {
-    const date = new Date(value1.value);
+
+
+
+
+const getWeekDays = () => {
+    const currentDate = new Date(date.value);
+    const dayOfWeek = daysInEnglish[currentDate.getDay()];
+
+    dateStore.setSelectedDayOfWeek(dayOfWeek);  // 将dayOfWeek传入到pinia中
+    return dayOfWeek;
+};
+
+
+const formatDate = (date) => {
+    // 格式化日期为 "YYYY-MM-DD" 的字符串
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // 月份从0开始，所以需要+1
+
+    const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
+};
+// 获取前一天的日期
+const getPreviousDay = () => {
+    const selectedDateObj = new Date(date.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // 设置时间为00:00:00，以便进行日期比较
+        // 调整到北京时间
+    const offset = 8; // 北京时区偏移量（UTC+8）
+    const beijingTime = new Date(today.getTime() + offset * 60 * 60 * 1000);
+
+    if (selectedDateObj.getTime() <=  beijingTime.getTime()) {
+        // 如果选择的日期是今天或更早，前一天按钮不可点击
+        return;
+    }
+    selectedDateObj.setDate(selectedDateObj.getDate() - 1);
+    const formattedDate = formatDate(selectedDateObj);
+    date.value = formattedDate;
+    dateStore.setSelectedDate(formattedDate); // 更新日期
+    dateStore.setSelectedDayOfWeek(getWeekDays());
+    
+}
+
+// 获取后一天的日期
+const getNextDay = () => {
+    const selectedDateObj = new Date(date.value);
+    selectedDateObj.setDate(selectedDateObj.getDate() + 1);
+    const formattedDate = formatDate(selectedDateObj);
+    date.value = formattedDate;
+    dateStore.setSelectedDate(formattedDate); // 更新日期
+    dateStore.setSelectedDayOfWeek(getWeekDays());
+};
+
+const isPreviousDayDisabled = computed(() => {
+    const selectedDateObj = new Date(date.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // 设置时间为00:00:00，以便进行日期比较
+    const offset = 8; // 北京时区偏移量（UTC+8）
+    const beijingTime = new Date(today.getTime() + offset * 60 * 60 * 1000);
+
+    return selectedDateObj.getTime() <= beijingTime.getTime();
 });
 
 const fetchRoutes = async () => {
-  try {
-    console.log('Fetching routes...');
-    const response = await axios.get('http://localhost:3000/routes', {
-      params: {
-        start: startCity.value,
-        end: endCity.value
-      }
-    });
-    console.log('Routes fetched:', response.data);
-    routes.value = response.data;
-  } catch (error) {
-    console.error('Error fetching routes:', error);
-  }
+
+    try {
+        console.log('Fetching routes...');
+        const response = await axios.get('http://localhost:3000/routes', {
+            params: {
+                start: startCity.value,
+                end: endCity.value
+            }
+        });
+        console.log('Routes fetched:', response.data);
+        const routesData = response.data[0]; // 假设数据总是以数组形式返回，且至少有一个元素
+
+        // 获取 start, end, status 的值
+        const start = routesData.start;
+        const end = routesData.end;
+        const status = routesData.status;
+        routeStore.setStatus(status);
+        if(status === "有班次"){
+            const arrivalPoint = routesData.arrivalPoints;
+        const departurePoints = routesData.departurePoints;
+
+        const Allschedules = routesData.weeklyScheduleOverview[dateStore.selectedDayOfWeek];
+
+        routeStore.setStart(start);
+        routeStore.setEnd(end);
+        
+        routeStore.setSchedules(Allschedules);
+        routeStore.setDeparturePoints(departurePoints);
+        routeStore.setArrivalPoints(arrivalPoint);
+
+        console.log('Start:', start);
+        console.log('End:', end);
+        console.log('Status:', status);
+        console.log("week", Allschedules);
+        console.log(Allschedules[0]);
+        // 其他操作...
+        console.log(routeStore.start);
+        console.log(routeStore.end);
+        console.log(routeStore.status);
+        console.log(arrivalPoint);
+        console.log(departurePoints);
+        console.log(routeStore.departurePoints);
+        console.log(routeStore.arrivalPoints);
+        console.log(routeStore.schedules);
+        for (let i = 0; i < routeStore.schedules.schedules.length; i++) {
+            console.log(routeStore.schedules.schedules[i]);
+            // 处理每个对象的属性
+            // 在pinia中存储schedules每个对象
+        }
+
+
+        console.log('Departure Start Time:', Allschedules.schedules[0].departureStartTime);
+        console.log('Departure End Time:', Allschedules.schedules[0].depatureEndTime);
+        console.log('Departure Points:', Allschedules.schedules[0].departurePoints);
+        console.log('Arrival Points:', Allschedules.schedules[0].arrivalPoints);
+        console.log('Price:', Allschedules.schedules[0].price);
+        console.log('---');
+        }
+
+    } catch (error) {
+        console.error('Error fetching routes:', error);
+    }
 };
 
-onMounted(() => {
-  fetchRoutes();
-  // 确保 selectedDeparturePoint 是从 store 中获取的
-  const selectedDeparturePoint = departurePointStore.selectedDeparturePoint;
-  console.log('Selected Departure Point:', selectedDeparturePoint);
-});
+fetchRoutes();
 
-const filteredRoutes = computed(() => {
-  const selectedDeparturePoint = departurePointStore.selectedDeparturePoint;
-  if (!selectedDeparturePoint) return routes.value;
-  if (!routes.value) return []; // 确保 routes.value 不是 undefined 或 null
-  return routes.value.map(route => ({
-    ...route,
-    schedules: route.schedules.filter(schedule => 
-      schedule.departurePoints.includes(selectedDeparturePoint)
-    )
-  })).filter(route => route.schedules.length > 0);
-});
 
-provide('routes', routes);
 
-function getPreviousDay() {
-  value1.value.setDate(value1.value.getDate() - 1);
-}
 
-function getNextDay() {
-  value1.value.setDate(value1.value.getDate() + 1);
-}
+
+
+
 
 function Timefilter() {
-  router.push('/Timeperiodfilter');
+    router.push('/Timeperiodfilter');
 }
 
 function StartPointfilter() {
-  router.push('/StartPiontPicker')
+    router.push('/StartPiontPicker')
 }
 
 function EndPointfilter() {
-  router.push('/EndPiontPicker')
+    router.push('/EndPiontPicker')
 }
 </script>
 
@@ -267,7 +379,6 @@ function EndPointfilter() {
 }
 
 .vertical-line {
-
     border-left: 1px solid #dedede;
     /* 设置竖线的样式，可以调整颜色和粗细 */
     height: 100%;
@@ -307,12 +418,12 @@ function EndPointfilter() {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
     background-color: white;
-    border-bottom: 1px solid #f0f0f2;
-    height: 50px;
+    
+    height: 35px;
 }
 
 .query-item button {
@@ -322,13 +433,51 @@ function EndPointfilter() {
 }
 
 .allbus {
-    color: #c95353
+    color: #c95353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+.time_filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c8c8c;
+}
+.start_point_filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c8c8c;
+}
+
+.end_point_filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8c8c8c;
+    
+}
+
+
+.fliter_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px
+}
+
+
 
 .next {
     color: #c95353
 }
-.card{
-    margin-bottom: 10px
+
+.card {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+   width: 100%;
 }
 </style>

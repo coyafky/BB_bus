@@ -51,7 +51,7 @@ const props = defineProps({
   /* 允许文本容器填充剩余空间 */
   text-align: center;
   position: relative;
-  left:-15px;
+
   color:#fffbfa;
 }
 </style>

@@ -1,10 +1,42 @@
 <template>
     <div>
-        Unfinished_Tobetraveled1
+      <div v-if="hasOrder">
+        <OrderCard />
+      </div>
+      <div v-else-if="emptyState">
+      <van-empty
+        image="https://fastly.jsdelivr.net/npm/@vant/assets/custom-empty-image.png"
+        image-size="80"
+        description="描述文字"
+      />
     </div>
-</template>
+    <div v-else>
+      <!-- 默认情况下的内容 -->
+      <van-empty
+        image="https://fastly.jsdelivr.net/npm/@vant/assets/custom-empty-image.png"
+        image-size="80"
+        description="描述文字"
+      />
+    </div>
+    </div>
+  </template>
+  
 
 <script setup>
+import OrderCard from '@/components/OrderCard.vue';
+import { ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+const route = useRoute();
+const hasOrder = ref(route.query.hasOrder === 'true');
+const emptyState = ref(route.query.emptyState === 'true');
+watch(
+  () => route.query,
+  (newQuery) => {
+    hasOrder.value = newQuery.hasOrder === 'true';
+    emptyState.value = newQuery.emptyState === 'true';
+  }
+);
+
 
 </script>
 

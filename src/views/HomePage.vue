@@ -36,7 +36,7 @@
           <van-icon name="circle" class="circle1" />
           <!-- 点击后，进入到选择起点页面 -->
           <button @click="navigateToStart" class="start-button">
-            <div>
+            <div class="start_notice">
               起点：
             </div>
             <div class="city">
@@ -49,7 +49,7 @@
         <div class="end">
           <van-icon name="circle" class="circle2" />
           <button @click="navigateToEnd" class="end-button">
-            <div>
+            <div class="end_notice">
               终点：
             </div>
             <div class="city">
@@ -61,14 +61,17 @@
 
         <div class="time">
           <van-icon name="clock-o" class="small-icon" />
-      
-            <van-cell :value="date" @click="show = true" class="cell">
+          <div class="time_notice">
+            时间
+          </div>
+          <van-cell :value="date" @click="show = true" class="cell">
 
-            </van-cell>
-          
+          </van-cell>
+
 
           <div class="current-dayofweek">
-            ({{ currentDayOfWeek }})
+            {{getWeekDays () }}
+
           </div>
           <van-calendar v-model:show="show" @confirm="onConfirm" />
 
@@ -89,8 +92,6 @@
           </button>
           <!-- 点击查询之后把 selectedStartCity 和 selectedEndCity 传给 Search.vue 获取对应schedule的数据 传入这部分数据进入到Pinia中-->
         </div>
-
-
       </div>
 
     </div>
@@ -103,46 +104,62 @@
 
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import Footer from '@/components/Footer.vue'
-import { RouterLink } from 'vue-router';
-import { AkCircle } from "@kalimahapps/vue-icons";
-import { AnOutlinedMinusCircle } from "@kalimahapps/vue-icons";
-import { AnOutlinedClockCircle } from "@kalimahapps/vue-icons";
+
 import { McAnnouncementLine } from "@kalimahapps/vue-icons";
 import { useCityStore } from '../stores/cityStore';
 import { useRouter } from 'vue-router';
 import { ShoppingCart } from '@element-plus/icons-vue';
+import { useDateStore } from '@/stores/dateStore';
+
 
 const router = useRouter();
+
 const cityStore = useCityStore();
-const value1 = ref(new Date()) // 设置默认日期为当前日期
+const dateStore = useDateStore();
+
 
 const date = ref(new Date().toISOString().split('T')[0]); // 设置初始日期为当前日期
-const show = ref(false);
+const show = ref(false); // 控制日历组件的显示状态
+const daysInEnglish = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const formatDate = (date) => {
+  // 格式化日期为 "YYYY-MM-DD" 的字符串
   const year = date.getFullYear();
+
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 };
+
+
+    // 设置默认日期
+
+const today = new Date();
+date.value = formatDate(today);
+dateStore.setSelectedDate(date.value);
+
+
 const onConfirm = (value) => {
-  show.value = false;
+   // 用户确认选择日期后，关闭日历并更新日期显示
+   show.value = false;
   date.value = formatDate(value);
+
+  dateStore.setSelectedDate(date.value);  // 将date传入到pinia中
+
+};
+const getWeekDays = () => {
+  const currentDate = new Date(date.value);
+  const dayOfWeek = daysInEnglish[currentDate.getDay()];
+
+  dateStore.setSelectedDayOfWeek(dayOfWeek);  // 将dayOfWeek传入到pinia中
+  return dayOfWeek;
 };
 
-function getDayOfWeek(date) {
-  const daysOfWeek = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
-  return daysOfWeek[date.getDay()];
-}
-// 使用computed来创建一个响应式的currentDayOfWeek，它会自动更新当value1改变时
-const currentDayOfWeek = computed(() => {
-  if (date.value) {
-    return getDayOfWeek(new Date(date.value));
-  } else {
-    return getDayOfWeek(new Date()); // 如果date没有值，则显示当前日期的星期几
-  }
-});
+
+
+
+
 
 function navigateToTicketInformation() {
   router.push('/TicketInformation');
@@ -157,7 +174,7 @@ function navigateToEnd() {
 }
 
 const isSearchReady = computed(() => {
-  return cityStore.selectedStartCity && cityStore.selectedEndCity && value1.value;
+  return cityStore.selectedStartCity && cityStore.selectedEndCity
 });
 
 
@@ -179,6 +196,8 @@ const changeStartAndEnd = () => {
   cityStore.selectedStartCity = cityStore.selectedEndCity;
   cityStore.selectedEndCity = temp;
 }
+
+
 
 
 
@@ -307,6 +326,10 @@ const changeStartAndEnd = () => {
   font-size: medium;
 }
 
+.start_notice {
+  color: #666666
+}
+
 .end {
 
   display: flex;
@@ -333,6 +356,19 @@ const changeStartAndEnd = () => {
   margin: 10px;
   /* 上下左右的边距都是10px */
   font-size: medium;
+}
+
+.end_notice {
+  color: #666666;
+}
+
+.city {
+  color: #666666;
+}
+
+.time_notice {
+  color: #666666;
+  padding: 10px;
 }
 
 .time {
@@ -386,14 +422,14 @@ const changeStartAndEnd = () => {
   top: 20%;
   right: 10%;
   width: 50px;
-  height:50px;
+  height: 50px;
   border-radius: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .change_button {
- 
+
   width: 100%;
   /* 设置按钮的宽度 */
   height: 100%;
