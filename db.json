@@ -9906,7 +9906,743 @@
     {
       "start": "广州",
       "end": "东莞",
-      "status": "无班次"
+      "status": "有班次",
+      "departurePoints": [
+        "岗顶地铁站",
+        "车陂地铁站",
+        "广州南站",
+        "广州东站(广园路天桥)",
+        "燕塘地铁口C出口",
+        "广东省汽车客运站"
+      ],
+      "arrivalPoints": [
+        "蛤地地铁B口公交站",
+        "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+        "黄江车站（候车大厅门口)",
+        "东莞职业技术学院南门对面公交站",
+        "东莞理工学院松山湖校区北门公交站",
+        "广东医科大学后门公交站（松山湖校区）",
+        "城市学院正门",
+        "南博职业技术学校（东八路口公交站)"
+      ],
+      "weeklyScheduleOverview": {
+        "Monday": {
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Tuesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Friday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Sunday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "广州东站(广园路天桥)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 29,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "广州南站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 49,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "岗顶地铁站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "车陂地铁站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        }
+
+
+      }
     },
 
     {
@@ -14545,7 +15281,1422 @@
     {
       "start": "深圳",
       "end": "广州",
-      "status": "有班次"
+      "status": "有班次",
+      "departurePoints": [
+        "宝安中心地铁站",
+        "深大北门公交站",
+        "世界之窗地铁站",
+        "车公庙地铁站",
+        "市民中心地铁站(市民广场东公交站)",
+        "深圳大剧院地铁站",
+        "红山地铁站 (龙华区)",
+        "五和地铁站 (龙岗区)",
+        "木棉湾地铁站 (龙岗区)"
+      ],
+      "arrivalPoints": [
+        "中环西路公交站(广工马路对面)",
+        "广大生活区公交站广大1号天桥下 (靠商中)",
+        "中大天桥下(靠GOGO新天地一侧马路边)",
+        "大学城北地铁站E1出口",
+        "科韵路地铁站B口",
+        "车限南地铁站A口",
+        "东圃地铁站A出口",
+        "增城广场地铁站(F出口公交总站充电桩位置)",
+        "广州华商学院(本科正门靠天桥底公交站)",
+        "新塘白江地铁站D1口(真肝早点签)",
+        "三元里地铁站A1出口直行50米公交站",
+        "燕塘地铁站C出口右边报刊亭旁边",
+        "黄村地铁站B口左手边黄村招呼站里面候车",
+        "双岗地铁A出往左手边走100米人行天桥处",
+        "珠江新城地铁站A1出口公交站",
+        "客村地铁站B出口正前方直走树下面",
+        "万胜围地铁站B出口红色报刊亭右手方向10米",
+        "广州东站汽车客运站候车室(站内乘车)",
+        "岗顶地铁站C出口",
+        "越秀公园地铁站C出口旁公交站",
+        "石牌桥地铁A出口"
+      ],
+      "weeklyScheduleOverview": {
+        "Monday": {
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        },
+        "Tuesday":{
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        },
+        "Friday":{
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        },
+        "Sunday":{
+          "schedules": [
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:20",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "07:05"
+                },
+                {
+                  "name": "世界之窗地铁站",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "车公庙地铁站",
+                  "departureTime": "07:15"
+                }
+              ],
+              "arrivalPoints": [
+                "中环西路公交站(广工马路对面)",
+                "广大生活区公交站广大1号天桥下 (靠商中)",
+                "中大天桥下(靠GOGO新天地一侧马路边)",
+                "大学城北地铁站E1出口"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "07:10"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "新塘白江地铁站D1口(真肝早点签)"
+              ],
+              "price": 140,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "07:00",
+              "depatureEndTime": "07:50",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "07:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "07:10"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "07:20"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边",
+                "黄村地铁站B口左手边黄村招呼站里面候车",
+                "双岗地铁A出往左手边走100米人行天桥处"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:10",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "珠江新城地铁站A1出口公交站",
+                "客村地铁站B出口正前方直走树下面",
+                "万胜围地铁站B出口红色报刊亭右手方向10米"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "8:35",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "8:10"
+                }
+              ],
+              "arrivalPoints": [
+                "广州东站汽车客运站候车室(站内乘车)",
+                "岗顶地铁站C出口",
+                "车地铁站D出口"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:00",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "红山地铁站 (龙华区)",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "五和地铁站 (龙岗区)",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "木棉湾地铁站 (龙岗区)",
+                  "departureTime": "8:40"
+                }
+              ],
+              "arrivalPoints": [
+                "越秀公园地铁站C出口旁公交站",
+                "石牌桥地铁A出口",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "8:40",
+              "depatureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "宝安中心地铁站",
+                  "departureTime": "8:40"
+                },
+                {
+                  "name": "深大北门公交站",
+                  "departureTime": "8:50"
+                }
+              ],
+              "arrivalPoints": [
+                "增城广场地铁站(F出口公交总站充电桩位置)",
+                "广州华商学院(本科正门靠天桥底公交站)",
+                "车地铁站D出口"
+              ],
+              "price": 33,
+              "ticketType": "正价票",
+              "remarks": "咨询电话：13827185500"
+            },
+            {
+              "departureStartTime": "9:00",
+              "depatureEndTime": "9:10",
+              "departurePoints": [
+                {
+                  "name": "市民中心地铁站(市民广场东公交站)",
+                  "departureTime": "9:00"
+                },
+                {
+                  "name": "深圳大剧院地铁站",
+                  "departureTime": "9:10"
+                }
+              ],
+              "arrivalPoints": [
+                "三元里地铁站A1出口直行50米公交站",
+                "燕塘地铁站C出口右边报刊亭旁边"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "豪华大巴"
+            }
+          ]
+        }
+      }
     },
 
     {
@@ -14569,7 +16720,7 @@
         "Monday": {
           "schedules": [
             {
-              "departureTime": "6:20",
+              "departureStartTime": "6:20",
               "depatureEndTime": "7:40",
 
               "departurePoints": [
@@ -14620,7 +16771,7 @@
               "remarks": "[座席: 客服13827185500]"
             },
             {
-              "departureTime": "11:30",
+              "departureStartTime": "11:30",
               "depatureEndTime": "13:00",
               "departurePoints": [
                 {
@@ -14654,7 +16805,7 @@
               "remarks": "[座席: 客服13827185500]"
             },
             {
-              "departureTime": "16:30",
+              "departureStartTime": "16:30",
               "depatureEndTime": "17:20",
               "departurePoints": [
                 {
@@ -14688,7 +16839,949 @@
               "remarks": "[座席: 客服13827185500]"
             },
             {
-              "departureTime": "17:30",
+              "departureStartTime": "17:30",
+              "depatureEndTime": "18:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "17:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "17:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "17:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "18:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "18:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "18:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            }
+          ]
+        },
+        "Tuesday":{
+          "schedules": [
+            {
+              "departureStartTime": "6:20",
+              "depatureEndTime": "7:40",
+
+              "departurePoints": [
+                {
+                  "name": "爱联地铁站C出口公交站",
+                  "departureTime": "6:20"
+                },
+                {
+                  "name": "福田竹子林A 出口",
+                  "departureTime": "6:30"
+                },
+                {
+                  "name": "华南城 (上木枯村公交站)",
+                  "departureTime": "6:40"
+                },
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "6:50"
+                },
+                {
+                  "name": "石岩 (台湾工业区公交站台)",
+                  "departureTime": "7:00"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "7:10"
+                },
+                {
+                  "name": "西乡大门",
+                  "departureTime": "7:20"
+                },
+                {
+                  "name": "三围路口",
+                  "departureTime": "7:30"
+                },
+                {
+                  "name": "福永客运站对面",
+                  "departureTime": "7:35"
+                },
+                {
+                  "name": "沙井客运站",
+                  "departureTime": "7:40"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "11:30",
+              "depatureEndTime": "13:00",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "11:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "11:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "11:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "12:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "12:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "12:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "16:30",
+              "depatureEndTime": "17:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "16:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "16:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "16:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "17:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "17:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "17:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "17:30",
+              "depatureEndTime": "18:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "17:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "17:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "17:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "18:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "18:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "18:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "6:20",
+              "depatureEndTime": "7:40",
+
+              "departurePoints": [
+                {
+                  "name": "爱联地铁站C出口公交站",
+                  "departureTime": "6:20"
+                },
+                {
+                  "name": "福田竹子林A 出口",
+                  "departureTime": "6:30"
+                },
+                {
+                  "name": "华南城 (上木枯村公交站)",
+                  "departureTime": "6:40"
+                },
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "6:50"
+                },
+                {
+                  "name": "石岩 (台湾工业区公交站台)",
+                  "departureTime": "7:00"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "7:10"
+                },
+                {
+                  "name": "西乡大门",
+                  "departureTime": "7:20"
+                },
+                {
+                  "name": "三围路口",
+                  "departureTime": "7:30"
+                },
+                {
+                  "name": "福永客运站对面",
+                  "departureTime": "7:35"
+                },
+                {
+                  "name": "沙井客运站",
+                  "departureTime": "7:40"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "11:30",
+              "depatureEndTime": "13:00",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "11:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "11:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "11:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "12:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "12:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "12:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "16:30",
+              "depatureEndTime": "17:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "16:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "16:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "16:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "17:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "17:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "17:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "17:30",
+              "depatureEndTime": "18:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "17:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "17:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "17:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "18:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "18:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "18:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "6:20",
+              "depatureEndTime": "7:40",
+
+              "departurePoints": [
+                {
+                  "name": "爱联地铁站C出口公交站",
+                  "departureTime": "6:20"
+                },
+                {
+                  "name": "福田竹子林A 出口",
+                  "departureTime": "6:30"
+                },
+                {
+                  "name": "华南城 (上木枯村公交站)",
+                  "departureTime": "6:40"
+                },
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "6:50"
+                },
+                {
+                  "name": "石岩 (台湾工业区公交站台)",
+                  "departureTime": "7:00"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "7:10"
+                },
+                {
+                  "name": "西乡大门",
+                  "departureTime": "7:20"
+                },
+                {
+                  "name": "三围路口",
+                  "departureTime": "7:30"
+                },
+                {
+                  "name": "福永客运站对面",
+                  "departureTime": "7:35"
+                },
+                {
+                  "name": "沙井客运站",
+                  "departureTime": "7:40"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "11:30",
+              "depatureEndTime": "13:00",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "11:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "11:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "11:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "12:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "12:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "12:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "16:30",
+              "depatureEndTime": "17:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "16:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "16:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "16:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "17:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "17:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "17:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "17:30",
+              "depatureEndTime": "18:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "17:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "17:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "17:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "18:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "18:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "18:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            }
+          ]
+        },
+        "Friday": {
+          "schedules": [
+            {
+              "departureStartTime": "6:20",
+              "depatureEndTime": "7:40",
+
+              "departurePoints": [
+                {
+                  "name": "爱联地铁站C出口公交站",
+                  "departureTime": "6:20"
+                },
+                {
+                  "name": "福田竹子林A 出口",
+                  "departureTime": "6:30"
+                },
+                {
+                  "name": "华南城 (上木枯村公交站)",
+                  "departureTime": "6:40"
+                },
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "6:50"
+                },
+                {
+                  "name": "石岩 (台湾工业区公交站台)",
+                  "departureTime": "7:00"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "7:10"
+                },
+                {
+                  "name": "西乡大门",
+                  "departureTime": "7:20"
+                },
+                {
+                  "name": "三围路口",
+                  "departureTime": "7:30"
+                },
+                {
+                  "name": "福永客运站对面",
+                  "departureTime": "7:35"
+                },
+                {
+                  "name": "沙井客运站",
+                  "departureTime": "7:40"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "11:30",
+              "depatureEndTime": "13:00",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "11:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "11:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "11:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "12:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "12:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "12:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "16:30",
+              "depatureEndTime": "17:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "16:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "16:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "16:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "17:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "17:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "17:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "17:30",
+              "depatureEndTime": "18:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "17:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "17:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "17:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "18:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "18:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "18:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "6:20",
+              "depatureEndTime": "7:40",
+
+              "departurePoints": [
+                {
+                  "name": "爱联地铁站C出口公交站",
+                  "departureTime": "6:20"
+                },
+                {
+                  "name": "福田竹子林A 出口",
+                  "departureTime": "6:30"
+                },
+                {
+                  "name": "华南城 (上木枯村公交站)",
+                  "departureTime": "6:40"
+                },
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "6:50"
+                },
+                {
+                  "name": "石岩 (台湾工业区公交站台)",
+                  "departureTime": "7:00"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "7:10"
+                },
+                {
+                  "name": "西乡大门",
+                  "departureTime": "7:20"
+                },
+                {
+                  "name": "三围路口",
+                  "departureTime": "7:30"
+                },
+                {
+                  "name": "福永客运站对面",
+                  "departureTime": "7:35"
+                },
+                {
+                  "name": "沙井客运站",
+                  "departureTime": "7:40"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "11:30",
+              "depatureEndTime": "13:00",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "11:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "11:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "11:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "12:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "12:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "12:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "16:30",
+              "depatureEndTime": "17:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "16:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "16:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "16:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "17:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "17:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "17:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "17:30",
+              "depatureEndTime": "18:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "17:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "17:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "17:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "18:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "18:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "18:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            }
+          ]
+        },
+        "Sunday":{
+          "schedules": [
+            {
+              "departureStartTime": "6:20",
+              "depatureEndTime": "7:40",
+
+              "departurePoints": [
+                {
+                  "name": "爱联地铁站C出口公交站",
+                  "departureTime": "6:20"
+                },
+                {
+                  "name": "福田竹子林A 出口",
+                  "departureTime": "6:30"
+                },
+                {
+                  "name": "华南城 (上木枯村公交站)",
+                  "departureTime": "6:40"
+                },
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "6:50"
+                },
+                {
+                  "name": "石岩 (台湾工业区公交站台)",
+                  "departureTime": "7:00"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "7:10"
+                },
+                {
+                  "name": "西乡大门",
+                  "departureTime": "7:20"
+                },
+                {
+                  "name": "三围路口",
+                  "departureTime": "7:30"
+                },
+                {
+                  "name": "福永客运站对面",
+                  "departureTime": "7:35"
+                },
+                {
+                  "name": "沙井客运站",
+                  "departureTime": "7:40"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "11:30",
+              "depatureEndTime": "13:00",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "11:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "11:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "11:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "12:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "12:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "12:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "16:30",
+              "depatureEndTime": "17:20",
+              "departurePoints": [
+                {
+                  "name": "龙华汽车站 (旁油松加油站)",
+                  "departureTime": "16:30"
+                },
+                {
+                  "name": "深南北环立交3公交站",
+                  "departureTime": "16:40"
+                },
+                {
+                  "name": "西乡国安居门口",
+                  "departureTime": "16:50"
+                },
+                {
+                  "name": "凤凰立交公交站 (往沙井方向)",
+                  "departureTime": "17:00"
+                },
+                {
+                  "name": "福永汽车站对面天桥底下 (报亭旁边)",
+                  "departureTime": "17:10"
+                },
+                {
+                  "name": "沙井新桥派出所公交站至(东莞方向)",
+                  "departureTime": "17:20"
+                }
+              ],
+              "arrivalPoints": ["下桥站", "新国线中心客运站"],
+              "price": 150,
+              "ticketType": "正价票",
+              "remarks": "[座席: 客服13827185500]"
+            },
+            {
+              "departureStartTime": "17:30",
               "depatureEndTime": "18:20",
               "departurePoints": [
                 {
@@ -18785,6 +21878,916 @@
     },
     {
       "start": "东莞",
+      "end": "佛山",
+      "status": "有班次",
+      "departurePoints": [
+        "蛤地地铁B口公交站",
+        "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+        "黄江车站（候车大厅门口)",
+        "东莞职业技术学院南门对面公交站",
+        "东莞理工学院松山湖校区北门公交站",
+        "广东医科大学后门公交站（松山湖校区）",
+        "城市学院正门",
+        "南博职业技术学校（东八路口公交站)"
+      ],
+      "arrivalPoints": [
+        "祖庙地铁站",
+        "佛山汽车站",
+        "南海广场",
+        "顺德学院地铁站",
+        "乐从汽车站",
+        "三水汽车站",
+        "高明汽车站"
+      ],
+      "weeklyScheduleOverview": {
+        "Monday": {
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Tuesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Friday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Sunday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "蛤地地铁B口公交站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "祖庙地铁站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "07:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "佛山汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "8:15"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "8:30"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "8:45"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "9:00"
+                }
+              ],
+              "arrivalPoints": [
+                "南海广场",
+                "顺德学院地铁站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                  "departureTime": "9:35"
+                },
+                {
+                  "name": "黄江车站（候车大厅门口)",
+                  "departureTime": "10:10"
+                }
+              ],
+              "arrivalPoints": [
+                "乐从汽车站"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "东莞职业技术学院南门对面公交站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "东莞理工学院松山湖校区北门公交站",
+                  "departureTime": "12:45"
+                },
+                {
+                  "name": "广东医科大学后门公交站（松山湖校区）",
+                  "departureTime": "13:00"
+                },
+                {
+                  "name": "城市学院正门",
+                  "departureTime": "13:15"
+                },
+                {
+                  "name": "南博职业技术学校（东八路口公交站)",
+                  "departureTime": "13:30"
+                }
+              ],
+              "arrivalPoints": [
+                "三水汽车站",
+                "高明汽车站"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        }
+      }
+    },
+
+
+    {
+      "start": "东莞",
       "end": "广州",
       "status": "有班次",
       "departurePoints": [
@@ -21872,6 +25875,8 @@
         }
       }
     },
+
+  
 
 
     {
@@ -26491,12 +30496,7 @@
         }
       }
     },
-   
-    {
-      "start": "佛山",
-      "end": "广州",
-      "status": "无班次"
-    },
+  
     {
       "start": "佛山",
       "end": "江门",
@@ -26517,6 +30517,244 @@
       "end": "慧州",
       "status": "无班次"
     },
+    {
+      "start": "佛山",
+      "end": "广州",
+      "status": "有班次",
+      "departurePoints": [
+        "华南师范大学 (南海校区) 北门",
+        "广东轻工职业技术学院 (北院) 大门口对面公交站",
+        "佛山科学技术学院 (仙溪校区) 北区西门公交站"
+      ],
+      "arrivalPoints": ["广州天河城东门"],
+      "weeklyScheduleOverview": {
+        "Monday": {
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        },
+        "Tuesday":{
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        },
+        "Friday":{
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        },
+        "Sunday":{
+          "schedules": [
+            {
+              "departureStartTime": "17:30",
+              "departureEndTime": "17:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "17:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            },
+            {
+              "departureStartTime": "19:30",
+              "departureEndTime": "19:40",
+              "departurePoints": [
+                {
+                  "name": "华南师范大学 (南海校区) 北门",
+                  "departureTime": "19:30"
+                }
+              ],
+              "arrivalPoints": ["广州天河城东门"],
+              "price": 22.8,
+              "ticketType": "正价票",
+              "remarks": "null"
+            }
+          ]
+        }
+      }
+    },
+
     {
       "start": "佛山",
       "end": "雷州",
@@ -26935,7 +31173,742 @@
     {
       "start": "佛山",
       "end": "东莞",
-      "status": "有班次"
+      "status": "有班次",
+      "departurePoints": [
+        "祖庙地铁站",
+        "佛山汽车站",
+        "南海广场",
+        "顺德学院地铁站",
+        "乐从汽车站",
+        "三水汽车站",
+        "高明汽车站"
+      ],
+      "arrivalPoints": [
+        "蛤地地铁B口公交站",
+        "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+        "黄江车站（候车大厅门口)",
+        "东莞职业技术学院南门对面公交站",
+        "东莞理工学院松山湖校区北门公交站",
+        "广东医科大学后门公交站（松山湖校区）",
+        "城市学院正门",
+        "南博职业技术学校（东八路口公交站)"
+      ],
+      "weeklyScheduleOverview": {
+        "Monday": {
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Tuesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Friday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        },
+        "Sunday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "departureEndTime": "7:40",
+              "departurePoints": [
+                {
+                  "name": "祖庙地铁站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "蛤地地铁B口公交站"
+              ],
+              "price": 35,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "7:45",
+              "departureEndTime": "8:20",
+              "departurePoints": [
+                {
+                  "name": "佛山汽车站",
+                  "departureTime": "07:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "8:00",
+              "departureEndTime": "9:00",
+              "departurePoints": [
+                {
+                  "name": "南海广场",
+                  "departureTime": "8:00"
+                },
+                {
+                  "name": "顺德学院地铁站",
+                  "departureTime": "8:15"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "9:35",
+              "departureEndTime": "10:10",
+              "departurePoints": [
+                {
+                  "name": "乐从汽车站",
+                  "departureTime": "9:35"
+                }
+              ],
+              "arrivalPoints": [
+                "塘厦林村新太阳城（公交站台）光辉家具斜对面",
+                "黄江车站（候车大厅门口)"
+              ],
+              "price": 45,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            },
+            {
+              "departureStartTime": "12:30",
+              "departureEndTime": "13:40",
+              "departurePoints": [
+                {
+                  "name": "三水汽车站",
+                  "departureTime": "12:30"
+                },
+                {
+                  "name": "高明汽车站",
+                  "departureTime": "12:45"
+                }
+              ],
+              "arrivalPoints": [
+                "东莞职业技术学院南门对面公交站",
+                "东莞理工学院松山湖校区北门公交站",
+                "广东医科大学后门公交站（松山湖校区）",
+                "城市学院正门",
+                "南博职业技术学校（东八路口公交站)"
+              ],
+              "price": 40,
+              "ticketType": "正价票",
+              "remarks": "票务数据来源:模拟"
+            }
+          ]
+        }
+      }
     },
     {
       "start": "佛山",
@@ -29760,7 +34733,138 @@
     {
       "start": "阳江",
       "end": "广州",
-      "status": "有班次"
+      "status": "有班次",
+      "departurePoints": ["坡渔家风情街"],
+      "arrivalPoints": ["越秀公园地铁C出口"],
+      "weeklyScheduleOverview": {
+        "Monday": {
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        },
+        "Tuesday":{
+         "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        },
+        "Wednesday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        },
+        "Thursday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        },
+        "Friday":{
+        "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        },
+        "Saturday":{
+          "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        },
+        "Sunday":{
+         "schedules": [
+            {
+              "departureStartTime": "7:30",
+              "depatureEndTime": "07:40",
+              "departurePoints": [
+                {
+                  "name": "坡渔家风情街",
+                  "departureTime": "7:30"
+                }
+              ],
+              "arrivalPoints": ["越秀公园地铁C出口"],
+              "price": 89,
+              "ticketType": "正价票",
+              "remarks": "该旅游产品 由广州长鹏国际旅行社有限公司提供，订单未确认之至前，规则如下: [1] 出发前2天: 12:00后不可退改 [2] 出发前2天: 12:00前退改，收取10%违约金 订单一旦确认成功，不退不改"
+            }
+          ]
+        }
+      }
+    
     },
     {
       "start": "阳江",

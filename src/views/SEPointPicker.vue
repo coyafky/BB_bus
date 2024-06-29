@@ -118,7 +118,7 @@ const goToPayment = () => {
 
 .header {
     display: flex;
-    font-weight: bold;
+   
     margin-bottom: 10px;
 }
 
@@ -144,6 +144,7 @@ const goToPayment = () => {
     align-items: center;
     justify-content: center;
     padding-right: 5px;
+    color: #545353;
 }
 
 .bus_svg {

@@ -1,34 +1,41 @@
 <template>
   <footer class="footer">
-    <router-link to="/">
-      <div class="footer-item">
-        <span>
+    <router-link to="/" class="All_footer_item">
+
+      <div class="footer-icon">
         <AkHomeAlt1 />
-      </span>
-      <span>
+      </div>
+      <div class="footer-text">
         首页
-      </span>
       </div>
+
+
     </router-link>
-    <router-link to="/orderTicket">
-      <div class="footer-item" >
-        <span>
-          <el-icon :class="icons" ><ShoppingCart/></el-icon>
-        </span>
-      <span>
+    <router-link to="/orderTicket" class="All_footer_item">
+      <div class="footer-icon">
+        <el-icon :class="icons">
+        <ShoppingCart />
+      </el-icon>
+
+      </div>
+     
+      <div class="footer-text">
         订单
-      </span>
       </div>
+
+
+
     </router-link>
-    <router-link to="/user">
-      <div class="footer-item">
-        <span>
-          <el-icon  :class="icons"><User /></el-icon>
-      </span>
-      <span>
-        我的
-      </span>
-      </div>
+    <router-link to="/user" class="All_footer_item">
+    
+        <div class="footer-icon">
+          <el-icon :class="icons">
+            <User />
+          </el-icon>
+        </div>
+        <div class="footer-text">
+          我的
+        </div>
     </router-link>
   </footer>
 </template>
@@ -51,32 +58,18 @@ const props = defineProps()
   /* 样式定义 */
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: last baseline;
   height: 50px;
   background-color: rgb(255, 255, 255);
-  
+
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
 
-.footer .router-link-active {
-  display: flex;
-  flex-direction: row;
-  /* 或 row，取决于你希望图标和文字的排列方式 */
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: inherit;
-  margin: 0 0;
-  /* 添加左右边距 */
-  color: red;
-  border-radius: 50px;
-  font-weight: bold;
-}
+
 
 .footer .router-link-active svg {
   height: 24px;
@@ -88,37 +81,45 @@ const props = defineProps()
   /* 添加图标和文字之间的间距 */
 }
 
-
-.footer-item {
+.All_footer_item {
   display: flex;
+  height: 100%;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: inherit;
+  align-items: last baseline;
+  padding: 0;
+  margin: 0;
   text-decoration: none;
- 
-  color: inherit;
-  margin: 0 3px;
-  /* 添加左右边距 */
+  color: #969696;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-}
-a:hover {
-    color: #409eff;
-}
-a:after{
-  color: red;
-}
-.icons{
-  font-weight: bold;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-}
-.footer-item span{
+
+
+
+
+
+
+.footer-item span {
   margin-bottom: 0px;
   padding-bottom: 0px;
-  font-size: 14px;
+
 }
 
+.footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: auto;
+
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.footer-text {
+
+  font-size: 12px;
+}
+
+.All_footer_item.router-link-active .footer-icon svg { 
+  color: red; 
+}
 </style>

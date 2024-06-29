@@ -4,7 +4,8 @@
     </Header>
 
     <div class="all_content">
-        <div class="content">
+        <div class="point-container">
+            <div class="content">
             <button>
                 所有
             </button>
@@ -12,7 +13,7 @@
 
         <div class="point">
             <div class="all_point1">
-                <button @click ="selectAllPoints">
+                <button @click="selectAllPoints">
                     所有站点
                 </button>
             </div>
@@ -20,101 +21,101 @@
                 <button @click="selectDeparturePoint(departurePoint)">{{ departurePoint }}</button>
             </div>
         </div>
+        </div>
     </div>
 
 
 </template>
 
 <script setup>
-import {useDeparturePointStore} from '@/stores/departurePointStore';
+import { useDeparturePointStore } from '@/stores/departurePointStore';
 import { useCityStore } from '../stores/cityStore';
 import Header from '@/components/Header.vue';
 import { useRouter } from 'vue-router'
 import { ref, onMounted, computed, inject } from 'vue';
 import axios from 'axios';
 import { useRouteStore } from '@/stores/routeStore';
+const router = useRouter();
 
 const routeStore = useRouteStore();
 const departurePoints = routeStore.departurePoints;
 console.log(departurePoints);
 
 
+function selectAllPoints() {
+    router.push('/QueryPage');
+}
 
+function selectDeparturePoint(departurePoint) {
+    console.log(departurePoint);
+    router.push(
+        {
+          
+            path: '/QueryPage',
+            query: {  departurePoint }
+          
+        }
+    )
+}
 
 </script>
 
 <style scoped>
-.content {
+.all_content {
+    padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  
+  
+  .point {
     display: flex;
-    padding: 0;
-    margin-left: 0;
-}
-
-.content button {
-    border: 2px solid red;
-    border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 0;
-
-    height: auto;
-    background-color: white;
-
-}
-
-.point {
+    flex-direction: column;
+  }
+  
+  .point-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
+  }
+  
+  .all_point1, .all_point2 {
+    padding-left: 0px;
+    flex: 0 0 50%; /* 每个子元素占据50%的宽度，确保每行2个元素 */
+    box-sizing: border-box;
+    padding: 5px; /* 可选：添加一些间距 */
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .all_point1{
+    color: #db3832;
+  }
+  .all_point2{
+    color: #878787;
+  }
 
-.point div {
-    flex-basis: 49%;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.all_point1 button {
-    display: flex;
-    align-items: start;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background-color: white;
+  .content button {
+    width: 20%;
     padding: 10px;
-    margin: 0;
-    font-size: 16px;
-    color: red;
-    /* 其他样式属性 */
-    border-bottom: 1px solid #e3e3e3;
-    border-right: 1px solid #e3e3e3;
-    border-top: 1px solid #e3e3e3;
-    border-left: 1px solid #e3e3e3;
-    border-radius: 1px;
-}
-.all_point2 button {
-    display: flex;
-    align-items: start;
+    padding-left: 10px;
+  
+    border: 1px solid #db3832;
+    border-radius: 5px; /* 圆角边框 */
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .all_point1 button, .all_point2 button {
+    padding-left: 0px;
     width: 100%;
-    height: 100%;
-    border: none;
-    background-color: white;
     padding: 10px;
-    margin: 0;
-    font-size: 16px;
-    
-    /* 其他样式属性 */
-    border-bottom: 1px solid #e3e3e3;
-    border-right: 1px solid #e3e3e3;
-    border-top: 1px solid #e3e3e3;
-    border-left: 1px solid #e3e3e3;
-    border-radius: 10%;
-    margin-left: 0.5px;
-    box-shadow: #e3e3e3 0px 0px 0px 0.2px;
-}
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* 圆角边框 */
+    background-color: #fff;
+    cursor: pointer;
+    text-align: start;
+  }
 </style>

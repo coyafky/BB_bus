@@ -33,7 +33,7 @@ const props = defineProps({
   /* 添加这一行来居中文本 */
   background-color: #d92825;
   color: white;
-  font-size: 20px;
+  
   padding-right: 10px;
 
   padding-top: 10px;
@@ -45,13 +45,17 @@ const props = defineProps({
   z-index: 100;
   /* 确保标题在其他内容之上 */
 }
+.goback {
+  position: absolute; /* 绝对定位 */
+  left: 2px; /* 距离左边10px */
+  font-size: 16px;
+}
 
 .text {
-  flex-grow: 1;
-  /* 允许文本容器填充剩余空间 */
-  text-align: center;
-  position: relative;
-
+  flex: 1; /* 占据剩余空间 */
+  text-align: center; /* 文本居中 */
+ 
+  font-size: 20px;
   color:#fffbfa;
 }
 </style>

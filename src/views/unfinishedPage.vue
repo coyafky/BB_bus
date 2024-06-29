@@ -5,7 +5,7 @@
       </div>
       <div v-else-if="emptyState">
       <van-empty
-        image="https://fastly.jsdelivr.net/npm/@vant/assets/custom-empty-image.png"
+        image="@/assets/image/no_order.png"
         image-size="80"
         description="描述文字"
       />
@@ -13,7 +13,7 @@
     <div v-else>
       <!-- 默认情况下的内容 -->
       <van-empty
-        image="https://fastly.jsdelivr.net/npm/@vant/assets/custom-empty-image.png"
+        image="../assets/image/no_order.png"
         image-size="80"
         description="描述文字"
       />

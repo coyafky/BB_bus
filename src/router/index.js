@@ -20,7 +20,7 @@ import StartPiontPicker from "@/views/StartPointPicker.vue";
 import EndPiontPicker from "@/views/EndPointPicker.vue";
 import StartEndPiontPicker from "@/views/SEPointPicker.vue";
 import editpassenger from "@/views/editpassengerPage.vue";
-
+import chooseVoucher from "@/views/ChooseVoucher.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -134,6 +134,11 @@ const router = createRouter({
       path: "/editpassenger",
       name: "editpassenger",
       component: editpassenger,
+    },
+    {
+      path: "/chooseVoucher",
+      name: "chooseVoucher",
+      component: chooseVoucher,
     },
   
   ],

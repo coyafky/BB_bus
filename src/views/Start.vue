@@ -10,7 +10,7 @@
       <h3>
         当前城市：
       </h3>
-      <div>
+      <div class="c_city">
         <span>{{ currentCity }}</span>
       </div>
     </div>
@@ -111,12 +111,14 @@ button:hover {
    /* 增加内边距 */
   margin-bottom: 20px;
   border-radius: 8px; /* 添加一些圆角以增加卡片感 */
-
+  
 }
 
 
 .current-city span {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   height: 50px;
   background-color: white;
@@ -127,6 +129,7 @@ button:hover {
   padding: 10px; /* 根据需要调整内边距 */
   box-sizing: border-box; /* 包含内边距在宽度内 */
   text-align: center; /* 根据需要调整文本对齐 */
+  font-size: 18px;
 }
 
 h3{

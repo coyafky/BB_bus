@@ -31,10 +31,10 @@
                 <el-icon>
                     <Calendar />
                 </el-icon>
-                <span>
+                <span class="date">
                     {{ dateStore.selectedDate }}
                 </span>
-                <span>
+                <span class="dayofweek">
                     ({{ dateStore.selectedDayOfWeek }})
                 </span>
             </div>
@@ -53,7 +53,7 @@
                     <div class="fliter_icon">
                         <TaTopologyBus />
                     </div>
-                    <div>
+                    <div class="fliter_text">
                         所有班次
                     </div>
                 </button>
@@ -78,7 +78,7 @@
                     <div class="fliter_icon">
                         <van-icon name="play-circle-o" />
                     </div>
-                    <div>
+                    <div class="fliter_text">
                         上车点筛选
                     </div>
                 </button>
@@ -90,7 +90,7 @@
                    <div class="fliter_icon">
                     <MdRoundPinDrop />
                    </div>
-                    <div>
+                    <div class="fliter_text">
                         下车点筛选
                     </div>
                 </button>
@@ -99,7 +99,7 @@
         </div>
 
 
-        <div class="container">
+        <div class="maybe_container">
 
             <div v-if="routeStore.status === '无班次'">
                 <!-- 这个页面展示空组件  表示没有获取到班次信息  检测到 获取route中status="无班次"-->
@@ -109,7 +109,7 @@
             <!-- 表示非空，并且渲染 route中的其他信息 -->
             <div  v-else  class="card_container">
 
-                <Card >
+                <Card class="card" >
                     
                 </Card>
             </div>
@@ -121,18 +121,17 @@
 </template>
 
 <script setup>
-import { ref, computed, provide, onMounted } from 'vue';
-import goback from '@/components/goback.vue';
+import { ref, computed, provide, onMounted ,watch } from 'vue';
+import goback from '@/components/gobackforquerypage.vue';
 
 import { useCityStore } from '../stores/cityStore';
 import { useDeparturePointStore } from '../stores/departurePointStore';
 import { useRouteStore } from '@/stores/routeStore';
 import { useDateStore } from '@/stores/dateStore';
 
-import { RouterView, RouterLink } from 'vue-router';
-import { CiTimer } from "@kalimahapps/vue-icons";
+import { useRoute } from 'vue-router';
 import { MdRoundPinDrop } from "@kalimahapps/vue-icons";
-import { IcSolidRhombusArrowRight } from "@kalimahapps/vue-icons";
+
 import { TaTopologyBus } from "@kalimahapps/vue-icons";
 
 import { Calendar } from '@element-plus/icons-vue';
@@ -145,6 +144,8 @@ import Card from '@/components/Card.vue';
 const cityStore = useCityStore();
 const departurePointStore = useDeparturePointStore();
 const routeStore = useRouteStore();
+const route = useRoute();
+
 const router = useRouter();
 const dateStore = useDateStore();
 
@@ -155,9 +156,6 @@ const daysInEnglish = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', '
 const startCity = computed(() => cityStore.selectedStartCity);
 const endCity = computed(() => cityStore.selectedEndCity);
 
-const value1 = ref(new Date());
-const currentTime = ref(new Date());
-const routes = ref([]);
 
 
 
@@ -291,11 +289,6 @@ fetchRoutes();
 
 
 
-
-
-
-
-
 function Timefilter() {
     router.push('/Timeperiodfilter');
 }
@@ -307,16 +300,48 @@ function StartPointfilter() {
 function EndPointfilter() {
     router.push('/EndPiontPicker')
 }
+
+
+
+
+
+// 监听路由变化
+watch(() => route.query, (newQuery) => {
+    if (newQuery.departurePoint) {
+        const departurePoint = newQuery.departurePoint;
+        // 在这里处理传递的上车点数据
+        console.log('Departure Point:', departurePoint);
+    }
+
+    if (newQuery.arrivalPoint) {
+        const arrivalPoint = newQuery.arrivalPoint;
+        // 在这里处理传递的下车点数据
+        console.log('Arrival Point:', arrivalPoint);
+    }
+
+    if (newQuery.startTime && newQuery.endTime) {
+        const startTime = newQuery.startTime;
+        const endTime = newQuery.endTime;
+        // 在这里处理传递的时间范围数据
+        console.log('Start Time:', startTime);
+        console.log('End Time:', endTime);
+
+    }
+
+}, { immediate: true, deep: true });
+
+
+
 </script>
 
 
 
 <style scoped>
+/* 基本的样式 */
 .container {
     display: flex;
     flex-direction: column;
     background-color: #f0f0f2;
-
 }
 
 .header {
@@ -326,7 +351,6 @@ function EndPointfilter() {
     color: white;
     padding: 10px;
     position: relative;
-
 }
 
 .city-container {
@@ -342,50 +366,40 @@ function EndPointfilter() {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     background-color: white;
     border-bottom: 1px solid #f0f0f2;
-
     max-height: 55px;
     min-height: 50px;
     height: 100%;
-    /* 设置总的div高度为100% */
-
 }
 
-.date_container>div {
+.date_container > div {
     flex: 0;
-    /* 设置每个子div的flex比例为1，平均占据可用空间 */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.date_container>div:nth-child(1),
-.date_container>div:nth-child(5) {
+.date_container > div:nth-child(1),
+.date_container > div:nth-child(5) {
     flex: 2;
-    /* 让第一个和第三个子div占据1/5的比例 */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.date_container>div:nth-child(3) {
+.date_container > div:nth-child(3) {
     flex: 5;
-    /* 让第二个子div占据3/5的比例 */
     color: #d92a27;
     font-size: 20px;
-
 }
 
 .vertical-line {
     border-left: 1px solid #dedede;
-    /* 设置竖线的样式，可以调整颜色和粗细 */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .date_container button {
@@ -396,7 +410,7 @@ function EndPointfilter() {
     border: none;
     background-color: inherit;
     width: auto;
-    width: 100%
+    width: 100%;
 }
 
 .showdate el-icon {
@@ -412,6 +426,9 @@ function EndPointfilter() {
     justify-content: center;
     color: #a8a8a8;
 }
+.previous_div button{
+    font-size: 15px;
+}
 
 .fliter {
     display: flex;
@@ -422,7 +439,6 @@ function EndPointfilter() {
     padding-left: 15px;
     padding-right: 15px;
     background-color: white;
-    
     height: 35px;
 }
 
@@ -437,47 +453,94 @@ function EndPointfilter() {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
-}
-.time_filter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #8c8c8c;
-}
-.start_point_filter{
+.time_filter {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #8c8c8c;
 }
 
-.end_point_filter{
+.start_point_filter {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #8c8c8c;
-    
 }
 
-
-.fliter_icon{
+.end_point_filter {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 5px
+    color: #8c8c8c;
 }
 
-
+.fliter_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5px;
+}
 
 .next {
-    color: #c95353
+    color: #c95353;
+    font-size: 15px;
 }
 
-.card {
-    margin-top: 2px;
+
+.card_container{
     display: flex;
-    flex-direction: column;
-   width: 100%;
+    flex-direction: row;
+    width: 100%;
+}
+.card{
+    width: 100%;
+    max-width: 100%; /* 确保不会超出父容器的宽度 */
+}
+.date{
+    font-size: 16px;
+}
+.dayofweek{
+    font-size: 16px;
+}
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .header {
+        padding: 5px;
+    }
+
+    .city-container {
+        font-size: 20px;
+    }
+
+    .date_container {
+        max-height: 45px;
+        min-height: 40px;
+    }
+
+    .date_container > div:nth-child(3) {
+        font-size: 18px;
+    }
+
+    .fliter {
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 30px;
+    }
+
+    .query-item button {
+        font-size: 14px;
+    }
+
+    .card {
+        margin-top: 1px;
+    }
+}
+@media (max-width: 390px) {
+    .fliter_text {
+        font-size: 12px;
+    }
 }
 </style>

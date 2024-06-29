@@ -48,7 +48,7 @@
 
         <div class="end">
           <van-icon name="circle" class="circle2" />
-          <button @click="navigateToEnd" class="end-button">
+          <button @click="navigateToEnd" class="end-button" placeholder="请选择目的地">
             <div class="end_notice">
               终点：
             </div>
@@ -60,20 +60,25 @@
         </div>
 
         <div class="time">
-          <van-icon name="clock-o" class="small-icon" />
-          <div class="time_notice">
-            时间
+          <div>
+            <van-icon name="clock-o" class="small-icon" />
           </div>
-          <van-cell :value="date" @click="show = true" class="cell">
+          <div class="time_all">
 
-          </van-cell>
+            <div class="time_notice">
+              时间:
+            </div>
+            <van-cell :value="date" @click="show = true" class="cell">
+
+            </van-cell>
 
 
-          <div class="current-dayofweek">
-            {{getWeekDays () }}
+            <div class="current-dayofweek">
+              ({{ getWeekDays() }})
 
+            </div>
+            <van-calendar v-model:show="show" @confirm="onConfirm" />
           </div>
-          <van-calendar v-model:show="show" @confirm="onConfirm" />
 
         </div>
 
@@ -133,7 +138,7 @@ const formatDate = (date) => {
 };
 
 
-    // 设置默认日期
+// 设置默认日期
 
 const today = new Date();
 date.value = formatDate(today);
@@ -141,8 +146,8 @@ dateStore.setSelectedDate(date.value);
 
 
 const onConfirm = (value) => {
-   // 用户确认选择日期后，关闭日历并更新日期显示
-   show.value = false;
+  // 用户确认选择日期后，关闭日历并更新日期显示
+  show.value = false;
   date.value = formatDate(value);
 
   dateStore.setSelectedDate(date.value);  // 将date传入到pinia中
@@ -307,7 +312,7 @@ const changeStartAndEnd = () => {
   align-items: center;
   font-size: medium;
   padding: 10px;
-
+  padding-left: 0px;
 
 }
 
@@ -324,6 +329,7 @@ const changeStartAndEnd = () => {
   margin: 10px;
   /* 上下左右的边距都是10px */
   font-size: medium;
+  padding-left: 0px;
 }
 
 .start_notice {
@@ -338,7 +344,7 @@ const changeStartAndEnd = () => {
   align-items: center;
   font-size: medium;
   padding: 10px;
-
+  padding-left: 0px;
 
 }
 
@@ -356,6 +362,7 @@ const changeStartAndEnd = () => {
   margin: 10px;
   /* 上下左右的边距都是10px */
   font-size: medium;
+  padding-left: 0px;
 }
 
 .end_notice {
@@ -365,12 +372,6 @@ const changeStartAndEnd = () => {
 .city {
   color: #666666;
 }
-
-.time_notice {
-  color: #666666;
-  padding: 10px;
-}
-
 .time {
   display: flex;
   justify-self: start;
@@ -378,7 +379,28 @@ const changeStartAndEnd = () => {
   align-items: center;
   font-size: medium;
   padding: 10px;
+  flex-direction: row;
+  padding-left: 0px;
 }
+.time_notice {
+  color: #666666;
+  padding: 10px;
+}
+
+.time_all {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #ededed;
+  flex-grow: 1;
+}
+
+.current-dayofweek {
+  color: #666666;
+}
+
+
 
 .cell {
   display: flex;
@@ -394,15 +416,18 @@ const changeStartAndEnd = () => {
 
 
 .circle1 {
-  color: green;
+  color: #8ec257;
   margin-right: 10px;
   font-weight: bold;
+  font-size: 20px;
+  
 }
 
 .circle2 {
   color: #f83600;
   margin-right: 10px;
   font-weight: bolder;
+  font-size: 20px;
 }
 
 .small-icon {
@@ -410,6 +435,7 @@ const changeStartAndEnd = () => {
   color: white;
   background: #aab2bd;
   border-radius: 50%;
+  font-size: 20px;
 }
 
 
@@ -472,21 +498,6 @@ const changeStartAndEnd = () => {
 }
 
 
-
-
-.time {
-  display: flex;
-  justify-self: start;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
-  font-size: medium;
-}
-
-.time v .demonstration span {
-
-  margin-right: 10px;
-}
 
 
 

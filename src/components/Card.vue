@@ -22,7 +22,7 @@
                 <div class="route">
                     <div class="start_route">
                         <!-- icon 起 -->
-                        <span>
+                        <span class="Start_text">
                             起
                         </span>
                         <!-- 起点 -->
@@ -32,7 +32,7 @@
                     
                     <div class="end_route">
                         <!-- icon 终 -->
-                        <span>终</span>
+                        <span class="End_text">终</span>
                        <!-- 终点 -->
                        {{ schedule.arrivalPoints?.join(' > ') }}
                     </div>
@@ -115,13 +115,14 @@ function navigateToStartEndPiontPicker(schedule){
     flex-direction: column;
     margin: 5px auto;
     background-color: #ffffff;
+    width: 100%;
 }
 
 .schedule-item {
    
     display: flex;
     flex-direction: row;
-    
+    width: 100%;
     
 }
 
@@ -137,7 +138,7 @@ function navigateToStartEndPiontPicker(schedule){
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
+    width: 150%;
     margin: 0 auto;
     border-radius: 5px;
     word-wrap: break-word;
@@ -149,22 +150,42 @@ function navigateToStartEndPiontPicker(schedule){
     text-align: left;
     /* 确保文本左对齐 */
     border-radius: 5px;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    word-wrap: break-word;
+    font-size: 14px;
 
 }
 
-.start_route span {
+
+
+.Start_text{
+    
+  
+    width: auto;
+    height: auto;
+
+    align-items: center;
+    text-align: center;
+    color: #c4dea9;
+    border: 1px solid #c4dea9;
+    border-radius: 50%;
     margin-right: 5px;
 }
 
-.end_route span {
+.End_text{
+    width: auto;
+    height: auto;
+    align-items: center;
+    color: #fc8f79;
+    border: 1px solid #fc8f79;
+    border-radius: 50%;
     margin-right: 5px;
 }
+
+
 
 .remarks {
     
-    
+    font-size: 14px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -184,6 +205,9 @@ function navigateToStartEndPiontPicker(schedule){
 }
 
 .inner-remark-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     background-color: #4ab1ff;
     color: white;
@@ -191,8 +215,12 @@ function navigateToStartEndPiontPicker(schedule){
 }
 
 .icon {
-    width: 0.8em;
-    height: 0.8em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.7em;
+    height: 0.7em;
 }
 
 .time {
@@ -208,7 +236,7 @@ function navigateToStartEndPiontPicker(schedule){
 
 .buy_ticket {
     display: flex;
-    width: 400px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -219,26 +247,23 @@ function navigateToStartEndPiontPicker(schedule){
     justify-content: center;
     align-items: center;
     height: 35px;
-    width: 100%;
+    width: 80%;
     background-color: #24a4ff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .start_route span {
-    justify-content: center;
+    width: auto;
+    height: auto;
     align-items: center;
     color: #c4dea9;
     border: 1px solid #c4dea9;
     border-radius: 50%;
 }
 
-.end_route span {
-    align-items: center;
-    color: #fc8f79;
-    border: 1px solid #fc8f79;
-    border-radius: 50%;
-}
+
 </style>

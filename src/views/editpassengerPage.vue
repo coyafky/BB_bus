@@ -61,7 +61,6 @@ import Header from "@/components/Header.vue";
 
     display: flex;
     flex-direction: column;
-
     justify-content: flex-start;
 
 }
