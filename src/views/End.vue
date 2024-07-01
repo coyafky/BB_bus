@@ -40,7 +40,11 @@ const router = useRouter();
 const fetchCities = async () => {
   try {
     const response = await axios.get('http://localhost:3000/cities');
-    cities.value = response.data;
+    cities.value = response.data[0].cities;
+    console.log(cities.value);
+   
+
+
   } catch (error) {
     console.error(error);
   }

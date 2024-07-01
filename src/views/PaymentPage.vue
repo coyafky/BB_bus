@@ -218,7 +218,7 @@ function submitorder() {
   // 提交订单逻辑
   router.push({
     path: '/orderTicket/unfinished',
-    query: { hasOrder: true } // 传递一个查询参数
+    
   });
   // 传一个值到该页面中
   // orderTicket/unfinished如果接收了该值，就使用订单组件，否则使用空组件
@@ -243,16 +243,6 @@ function addPassanger() {
     path: '/addpassnegers',
   });
 }
-
-watch(() => route.query, (newQuery) => {
-    if (newQuery) {
-        const { departurePoint, arrivalPoint, timeRange } = newQuery;
-        // 在这里处理传递的数据
-        console.log('Departure Point:', departurePoint);
-        console.log('Arrival Point:', arrivalPoint);
-        console.log('Time Range:', timeRange);
-    }
-}, { immediate: true, deep: true });
 
 </script>
 

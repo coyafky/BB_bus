@@ -39,4 +39,6 @@ export const useRouteStore = defineStore('route', {
     },
    
   },
+},{
+  persist: true
 });

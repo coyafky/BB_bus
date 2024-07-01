@@ -26,4 +26,6 @@ export const useTicketInformationStore = defineStore('ticketInformation', {
       this.arrivalPoint_time = arrivalPoint_time;
     },
   },
+},{
+  persist: true
 })

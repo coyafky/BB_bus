@@ -23,4 +23,6 @@ export const useChooseRouteStore = defineStore('chooseRoute', {
             this.price = price;
         }
     },
+},{
+    persist: true
 })

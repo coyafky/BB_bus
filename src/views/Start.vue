@@ -22,8 +22,8 @@
 
     <ul class="city-list">
       <li v-for="city in cities" :key="city.id">
-        <button @click="selectCity(city)">{{ city.name }}</button>
-      </li>
+          <button @click="selectCity(city)">{{ city.name }}</button>
+        </li>
     </ul>
     </div>
   </div>
@@ -41,13 +41,17 @@ const parenthead = ref('选择起点城市');
 
 const cities = ref([]);
 const cityStore = useCityStore();
-const selectedStartCity = computed(() => cityStore.selectedStartCity);
+
 const router = useRouter();
 
 const fetchCities = async () => {
   try {
     const response = await axios.get('http://localhost:3000/cities');
-    cities.value = response.data;
+    cities.value = response.data[0].cities;
+    console.log(cities.value);
+   
+
+
   } catch (error) {
     console.error(error);
   }

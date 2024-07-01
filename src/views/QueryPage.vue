@@ -24,7 +24,9 @@
 
         <div class="date_container">
             <div class="previous_div">
-                <button :disabled="isPreviousDayDisabled" :style="{ color: isPreviousDayDisabled ? '#666666' : '#d92a27' }" @click="getPreviousDay">前一天</button>
+                <button :disabled="isPreviousDayDisabled"
+                    :style="{ color: isPreviousDayDisabled ? '#666666' : '#d92a27' }"
+                    @click="getPreviousDay">前一天</button>
             </div>
             <div class="vertical-line"></div>
             <div class="showdate">
@@ -86,10 +88,10 @@
             <div class="query-item">
 
                 <!--  -->
-                <button @click="EndPointfilter"  class="end_point_filter">
-                   <div class="fliter_icon">
-                    <MdRoundPinDrop />
-                   </div>
+                <button @click="EndPointfilter" class="end_point_filter">
+                    <div class="fliter_icon">
+                        <MdRoundPinDrop />
+                    </div>
                     <div class="fliter_text">
                         下车点筛选
                     </div>
@@ -103,14 +105,14 @@
 
             <div v-if="routeStore.status === '无班次'">
                 <!-- 这个页面展示空组件  表示没有获取到班次信息  检测到 获取route中status="无班次"-->
-                 <EmptyComponent/>
+                <EmptyComponent />
             </div>
 
             <!-- 表示非空，并且渲染 route中的其他信息 -->
-            <div  v-else  class="card_container">
+            <div v-else class="card_container">
 
-                <Card class="card" >
-                    
+                <Card class="card">
+
                 </Card>
             </div>
         </div>
@@ -121,7 +123,7 @@
 </template>
 
 <script setup>
-import { ref, computed, provide, onMounted ,watch } from 'vue';
+import { ref, computed, provide, onMounted, watch } from 'vue';
 import goback from '@/components/gobackforquerypage.vue';
 
 import { useCityStore } from '../stores/cityStore';
@@ -184,11 +186,11 @@ const getPreviousDay = () => {
     const selectedDateObj = new Date(date.value);
     const today = new Date();
     today.setHours(0, 0, 0, 0); // 设置时间为00:00:00，以便进行日期比较
-        // 调整到北京时间
+    // 调整到北京时间
     const offset = 8; // 北京时区偏移量（UTC+8）
     const beijingTime = new Date(today.getTime() + offset * 60 * 60 * 1000);
 
-    if (selectedDateObj.getTime() <=  beijingTime.getTime()) {
+    if (selectedDateObj.getTime() <= beijingTime.getTime()) {
         // 如果选择的日期是今天或更早，前一天按钮不可点击
         return;
     }
@@ -197,7 +199,7 @@ const getPreviousDay = () => {
     date.value = formattedDate;
     dateStore.setSelectedDate(formattedDate); // 更新日期
     dateStore.setSelectedDayOfWeek(getWeekDays());
-    
+
 }
 
 // 获取后一天的日期
@@ -220,7 +222,12 @@ const isPreviousDayDisabled = computed(() => {
     return selectedDateObj.getTime() <= beijingTime.getTime();
 });
 
+
+
 const fetchRoutes = async () => {
+    console.log('startCity:', startCity.value);
+    console.log('endCity:', endCity.value);
+
 
     try {
         console.log('Fetching routes...');
@@ -231,53 +238,71 @@ const fetchRoutes = async () => {
             }
         });
         console.log('Routes fetched:', response.data);
-        const routesData = response.data[0]; // 假设数据总是以数组形式返回，且至少有一个元素
+
+        const routesData = response.data[0].routes; // 假设数据总是以数组形式返回，且至少有一个元素
+        console.log(routesData);
+        console.log(routesData[0]);
+
+        function getRoutesByStartAndEnd(routesData, start, end) {
+            return routesData.filter(route => route.start === start && route.end === end);
+        }
+        console.log(getRoutesByStartAndEnd(routesData, startCity.value, endCity.value));
+        
+        const routesData2 = getRoutesByStartAndEnd(routesData, startCity.value, endCity.value);
+        console.log(routesData2[0]);
+
+        const routes = routesData2[0];
+
+        console.log(routes);
 
         // 获取 start, end, status 的值
-        const start = routesData.start;
-        const end = routesData.end;
-        const status = routesData.status;
+        const start = routes.start;
+        const end = routes.end;
+        console.log(start, end);
+
+        const status = routes.status;
+        console.log(status);
         routeStore.setStatus(status);
-        if(status === "有班次"){
-            const arrivalPoint = routesData.arrivalPoints;
-        const departurePoints = routesData.departurePoints;
+        if (status === "有班次") {
+            const arrivalPoint = routes.arrivalPoints;
+            const departurePoints = routes.departurePoints;
 
-        const Allschedules = routesData.weeklyScheduleOverview[dateStore.selectedDayOfWeek];
+            const Allschedules = routes.weeklyScheduleOverview[dateStore.selectedDayOfWeek];
 
-        routeStore.setStart(start);
-        routeStore.setEnd(end);
-        
-        routeStore.setSchedules(Allschedules);
-        routeStore.setDeparturePoints(departurePoints);
-        routeStore.setArrivalPoints(arrivalPoint);
+            routeStore.setStart(start);
+            routeStore.setEnd(end);
 
-        console.log('Start:', start);
-        console.log('End:', end);
-        console.log('Status:', status);
-        console.log("week", Allschedules);
-        console.log(Allschedules[0]);
-        // 其他操作...
-        console.log(routeStore.start);
-        console.log(routeStore.end);
-        console.log(routeStore.status);
-        console.log(arrivalPoint);
-        console.log(departurePoints);
-        console.log(routeStore.departurePoints);
-        console.log(routeStore.arrivalPoints);
-        console.log(routeStore.schedules);
-        for (let i = 0; i < routeStore.schedules.schedules.length; i++) {
-            console.log(routeStore.schedules.schedules[i]);
-            // 处理每个对象的属性
-            // 在pinia中存储schedules每个对象
-        }
+            routeStore.setSchedules(Allschedules);
+            routeStore.setDeparturePoints(departurePoints);
+            routeStore.setArrivalPoints(arrivalPoint);
+
+            console.log('Start:', start);
+            console.log('End:', end);
+            console.log('Status:', status);
+            console.log("week", Allschedules);
+            console.log(Allschedules[0]);
+            // 其他操作...
+            console.log(routeStore.start);
+            console.log(routeStore.end);
+            console.log(routeStore.status);
+            console.log(arrivalPoint);
+            console.log(departurePoints);
+            console.log(routeStore.departurePoints);
+            console.log(routeStore.arrivalPoints);
+            console.log(routeStore.schedules);
+            for (let i = 0; i < routeStore.schedules.schedules.length; i++) {
+                console.log(routeStore.schedules.schedules[i]);
+                // 处理每个对象的属性
+                // 在pinia中存储schedules每个对象
+            }
 
 
-        console.log('Departure Start Time:', Allschedules.schedules[0].departureStartTime);
-        console.log('Departure End Time:', Allschedules.schedules[0].depatureEndTime);
-        console.log('Departure Points:', Allschedules.schedules[0].departurePoints);
-        console.log('Arrival Points:', Allschedules.schedules[0].arrivalPoints);
-        console.log('Price:', Allschedules.schedules[0].price);
-        console.log('---');
+            console.log('Departure Start Time:', Allschedules.schedules[0].departureStartTime);
+            console.log('Departure End Time:', Allschedules.schedules[0].depatureEndTime);
+            console.log('Departure Points:', Allschedules.schedules[0].departurePoints);
+            console.log('Arrival Points:', Allschedules.schedules[0].arrivalPoints);
+            console.log('Price:', Allschedules.schedules[0].price);
+            console.log('---');
         }
 
     } catch (error) {
@@ -373,22 +398,22 @@ watch(() => route.query, (newQuery) => {
     height: 100%;
 }
 
-.date_container > div {
+.date_container>div {
     flex: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.date_container > div:nth-child(1),
-.date_container > div:nth-child(5) {
+.date_container>div:nth-child(1),
+.date_container>div:nth-child(5) {
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.date_container > div:nth-child(3) {
+.date_container>div:nth-child(3) {
     flex: 5;
     color: #d92a27;
     font-size: 20px;
@@ -426,7 +451,8 @@ watch(() => route.query, (newQuery) => {
     justify-content: center;
     color: #a8a8a8;
 }
-.previous_div button{
+
+.previous_div button {
     font-size: 15px;
 }
 
@@ -489,21 +515,26 @@ watch(() => route.query, (newQuery) => {
 }
 
 
-.card_container{
+.card_container {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
-.card{
+
+.card {
     width: 100%;
-    max-width: 100%; /* 确保不会超出父容器的宽度 */
+    max-width: 100%;
+    /* 确保不会超出父容器的宽度 */
 }
-.date{
+
+.date {
     font-size: 16px;
 }
-.dayofweek{
+
+.dayofweek {
     font-size: 16px;
 }
+
 /* 移动端适配 */
 @media (max-width: 600px) {
     .header {
@@ -519,7 +550,7 @@ watch(() => route.query, (newQuery) => {
         min-height: 40px;
     }
 
-    .date_container > div:nth-child(3) {
+    .date_container>div:nth-child(3) {
         font-size: 18px;
     }
 
@@ -538,6 +569,7 @@ watch(() => route.query, (newQuery) => {
         margin-top: 1px;
     }
 }
+
 @media (max-width: 390px) {
     .fliter_text {
         font-size: 12px;

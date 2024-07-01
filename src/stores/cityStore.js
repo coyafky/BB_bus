@@ -28,4 +28,6 @@ export const useCityStore = defineStore('city', () => {
     setSelectedStartCity,
     setSelectedEndCity,
   };
+}, {
+  persist: true, // 启用持久化存储
 });
