@@ -231,11 +231,8 @@ const fetchRoutes = async () => {
 
     try {
         console.log('Fetching routes...');
-        const response = await axios.get('http://localhost:3000/routes', {
-            params: {
-                start: startCity.value,
-                end: endCity.value
-            }
+        const response = await axios.get('https://bb-bus-server.vercel.app/routes', {
+            
         });
         console.log('Routes fetched:', response.data);
 

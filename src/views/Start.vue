@@ -46,7 +46,7 @@ const router = useRouter();
 
 const fetchCities = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/cities');
+    const response = await axios.get('https://bb-bus-server.vercel.app/cities');
     console.log(response.data); 
     
     cities.value = response.data[0].cities;
