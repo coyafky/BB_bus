@@ -56,14 +56,6 @@ app.get('/routes', async (req, res) => {
   }
 });
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://coya20020824:w17wquMkSMYO8A61@cluster0.xwpbb0f.mongodb.net/', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.error(err));
-
-
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
