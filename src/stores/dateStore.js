@@ -19,6 +19,4 @@ export const useDateStore = defineStore('date', {
         this.setSelectedDayOfWeek(daysInEnglish[dayIndex]);
       },
   },
-},{
-  persist: false,
 });

@@ -35,7 +35,7 @@ const router = useRouter();
 const routeStore = useRouteStore();
 const departurePoints = routeStore.departurePoints;
 console.log(departurePoints);
-
+console.log(departurePoints[0]);
 
 function selectAllPoints() {
   router.push('/QueryPage');

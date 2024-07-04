@@ -1,71 +1,71 @@
 <template>
     <div class="card">
-        
-        <div class="All_schedule-item" v-for="(schedule, index) in routeStore.Allschedules" :key="index">
+
+        <div class="All_schedule-item" v-for="(schedule, index) in filteredSchedules" :key="index">
             <!-- 其他内容 -->
             <div class="card-body">
-            <div class="schedule-item">
-                <div class="time">
-                    <div class="time_notice">
-                       <!-- 起始最早时间 -->
-                        {{schedule.departureStartTime}}
-                    </div>
-                    <div>
-                        至
-                    </div>
-                    <div class="time_notice">
-                        <!-- 终止最晚时间 -->
-                         {{ schedule.depatureEndTime}}
-                    </div>
-                </div>
-
-                <div class="route">
-                    <div class="start_route">
-                        <!-- icon 起 -->
-                        <span class="Start_text">
-                            起
-                        </span>
-                        <!-- 起点 -->
-                        {{ departurePointNames(schedule.departurePoints).join(' > ') }}
-                        
-                    </div>
-                    
-                    <div class="end_route">
-                        <!-- icon 终 -->
-                        <span class="End_text">终</span>
-                       <!-- 终点 -->
-                       {{ schedule.arrivalPoints?.join(' > ') }}
-                    </div>
-
-                    <div class="remarks">
-                        <div class="outer-remark-icon">
-                            <div class="inner-remark-icon">
-                            <FaBusSimple class="icon"/>
-                        </div>
+                <div class="schedule-item">
+                    <div class="time">
+                        <div class="time_notice">
+                            <!-- 起始最早时间 -->
+                            {{ schedule.departureStartTime }}
                         </div>
                         <div>
-                           <!-- 备注 -->
-                            {{ schedule.remarks }}
+                            至
                         </div>
+                        <div class="time_notice">
+                            <!-- 终止最晚时间 -->
+                            {{ schedule.depatureEndTime }}
+                        </div>
+                    </div>
+
+                    <div class="route">
+                        <div class="start_route">
+                            <!-- icon 起 -->
+                            <span class="Start_text">
+                                起
+                            </span>
+                            <!-- 起点 -->
+                            {{ departurePointNames(schedule.departurePoints).join(' > ') }}
+
+                        </div>
+
+                        <div class="end_route">
+                            <!-- icon 终 -->
+                            <span class="End_text">终</span>
+                            <!-- 终点 -->
+                            {{ schedule.arrivalPoints?.join(' > ') }}
+                        </div>
+
+                        <div class="remarks">
+                            <div class="outer-remark-icon">
+                                <div class="inner-remark-icon">
+                                    <FaBusSimple class="icon" />
+                                </div>
+                            </div>
+                            <div>
+                                <!-- 备注 -->
+                                {{ schedule.remarks }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buy_ticket">
+                        <button @click="navigateToStartEndPiontPicker(schedule)">
+                            {{ schedule.price }} {{ schedule.ticketType }}
+                            <!-- 跳转到选择上下车点页面 -->
+                        </button>
                     </div>
                 </div>
 
-                <div class="buy_ticket">
-                    <button @click="navigateToStartEndPiontPicker(schedule)">
-                        {{ schedule.price }} {{ schedule.ticketType }}
-                        <!-- 跳转到选择上下车点页面 -->
-                    </button>
-                </div>
             </div>
-           
-        </div>
         </div>
 
     </div>
 </template>
 
 <script setup>
-import { ref ,computed} from 'vue'
+import { ref, computed, inject } from 'vue'
 import { useRouter } from 'vue-router'
 import { FaBusSimple } from '@kalimahapps/vue-icons';
 import { useStartEndPointsStore } from '@/stores/startEndPointsStore';
@@ -76,6 +76,44 @@ const router = useRouter();
 const startEndPointsStore = useStartEndPointsStore();
 const routeStore = useRouteStore();
 const chooseRouteStore = useChooseRouteStore();
+
+const departurePoint = inject('departurePoint');
+const arrivalPoint = inject('arrivalPoint');
+
+
+
+console.log(departurePoint.value);
+console.log(arrivalPoint.value);
+
+
+
+
+
+const filteredSchedules = computed(() => {
+    let schedules = routeStore.Allschedules;
+
+    
+
+    if (departurePoint.value) {
+        schedules = schedules.filter(schedule => {
+            return schedule.departurePoints.some(point => point.name === departurePoint.value);
+        });
+    }
+    if (arrivalPoint.value) {
+        schedules = schedules.filter(schedule => {
+            return schedule.arrivalPoints.includes(arrivalPoint.value);
+        });
+    }
+    if (departurePoint.value && arrivalPoint.value) {
+        schedules = schedules.filter(schedule => {
+            return schedule.departurePoints.some(point => point.name === departurePoint.value) && schedule.arrivalPoints.includes(arrivalPoint.value);
+        });
+    }
+    return schedules;
+
+});
+
+
 // console.log(routeStore.schedules.schedules);
 // for (let i = 0; i < routeStore.schedules.schedules.length; i++) {
 //     console.log(routeStore.schedules.schedules[i]);
@@ -83,18 +121,20 @@ const chooseRouteStore = useChooseRouteStore();
 //     // 在pinia中存储schedules每个对象
 // }
 
-function departurePointNames (point){
-    return point.map(point=>point.name)
+
+
+function departurePointNames(point) {
+    return point.map(point => point.name)
 }
 
-function navigateToStartEndPiontPicker(schedule){
+function navigateToStartEndPiontPicker(schedule) {
     console.log(schedule);
     // 跳转到选择上下车点页面
     // 在pinia中存储schedules startpoint 和 endpoint
-    startEndPointsStore. setPoints(schedule.departurePoints, schedule.arrivalPoints);
+    startEndPointsStore.setPoints(schedule.departurePoints, schedule.arrivalPoints);
     console.log(startEndPointsStore.departurePoints, startEndPointsStore.arrivalPoints);
     // router.push('/start-end-point-picker');
-    chooseRouteStore. setPrice(schedule.price);
+    chooseRouteStore.setPrice(schedule.price);
     router.push('/StartEndPiontPicker');
 }
 
@@ -107,10 +147,11 @@ function navigateToStartEndPiontPicker(schedule){
     margin: 8px auto;
     padding-top: 10px;
     padding-bottom: 10px;
-   
+
 
 }
-.All_schedule-item{
+
+.All_schedule-item {
     display: flex;
     flex-direction: column;
     margin: 5px auto;
@@ -119,18 +160,18 @@ function navigateToStartEndPiontPicker(schedule){
 }
 
 .schedule-item {
-   
+
     display: flex;
     flex-direction: row;
     width: 100%;
-    
+
 }
 
-.time_notice{
+.time_notice {
     font-size: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
-  
+
 }
 
 .route {
@@ -157,9 +198,9 @@ function navigateToStartEndPiontPicker(schedule){
 
 
 
-.Start_text{
-    
-  
+.Start_text {
+
+
     width: auto;
     height: auto;
 
@@ -171,7 +212,7 @@ function navigateToStartEndPiontPicker(schedule){
     margin-right: 5px;
 }
 
-.End_text{
+.End_text {
     width: auto;
     height: auto;
     align-items: center;
@@ -184,7 +225,7 @@ function navigateToStartEndPiontPicker(schedule){
 
 
 .remarks {
-    
+
     font-size: 14px;
     display: flex;
     flex-direction: row;
@@ -264,6 +305,4 @@ function navigateToStartEndPiontPicker(schedule){
     border: 1px solid #c4dea9;
     border-radius: 50%;
 }
-
-
 </style>

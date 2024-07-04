@@ -55,7 +55,7 @@
                     <div class="fliter_icon">
                         <TaTopologyBus />
                     </div>
-                    <div class="fliter_text">
+                    <div class="fliter_text" @click="selectAllSchedules">
                         所有班次
                     </div>
                 </button>
@@ -111,9 +111,9 @@
             <!-- 表示非空，并且渲染 route中的其他信息 -->
             <div v-else class="card_container">
 
-                <Card class="card">
+                <Card class="card" />
 
-                </Card>
+               
             </div>
         </div>
 
@@ -325,8 +325,6 @@ function EndPointfilter() {
 
 
 
-
-
 // 监听路由变化
 watch(() => route.query, (newQuery) => {
     if (newQuery.departurePoint) {
@@ -351,6 +349,16 @@ watch(() => route.query, (newQuery) => {
     }
 
 }, { immediate: true, deep: true });
+
+
+const departurePoint = ref(route.query.departurePoint);
+const arrivalPoint = ref(route.query.arrivalPoint);
+provide('departurePoint', departurePoint);
+true
+provide('arrivalPoint', arrivalPoint);
+
+
+
 
 
 

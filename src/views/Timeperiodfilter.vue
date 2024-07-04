@@ -29,14 +29,6 @@ import Header from '@/components/Header.vue';
 import { useRouter } from 'vue-router'
 const router = useRouter();
 
-function navigateToQuerypage(startTime, endTime) {
-    console.log(startTime, endTime);
-    router.push({
-        path: '/QueryPage',
-        query: { startTime, endTime }
-    });
-}
-
 const timeArray = [
     {
         startTime: '08:00',
@@ -59,6 +51,14 @@ const timeArray = [
         endTime: '21:00'
     }
 ];
+function navigateToQuerypage(startTime, endTime) {
+    console.log(startTime, endTime);
+    router.push({
+        path: '/QueryPage',
+        query: { startTime, endTime }
+    });
+}
+
 </script>
 
 <style scoped>
